@@ -1,0 +1,369 @@
+import earrings from "./../assets/images/earrings.jpg";
+import rings from "./../assets/images/rings.png";
+import necklace from "./../assets/images/necklace.jpeg";
+
+export const categoriesList = [
+  {
+    name: "Earrings",
+    src: rings,
+    items: [
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 3,
+        name: "Golden Owl Earrings",
+        category: "Earrings",
+        price: 25,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/717foItSdPL._AC_UL400_.jpg",
+        materials: "Gold, Silver, Diamond",
+
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 4,
+        name: "Carmesin & Golden Rose Earrings",
+        category: "Earrings",
+        price: 30,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/81oS4t4TN8S._AC_UL400_.jpg",
+        materials: "Pink Gold, Rubies, Silver",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Rings",
+    src: rings,
+    items: [
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+
+        id: 5,
+        name: "Rings of the Destiny",
+        category: "rings",
+        price: 50,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/61UKcdwbdmL._AC_UL400_.jpg",
+        materials: "Gold, Pink Gold, Silver",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 6,
+        name: "Ring of Queen  ",
+        category: "rings",
+        price: 55,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/61hzPBgWsvL._AC_UL400_.jpg",
+        materials: "Silver, Diamonds from Cleopatra's tomb",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 7,
+        name: "Rings of the Destiny",
+        category: "rings",
+        price: 50,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/61UKcdwbdmL._AC_UL400_.jpg",
+        materials: "Gold, Pink Gold, Silver",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 8,
+        name: "Ring of Queen  ",
+        category: "rings",
+        price: 55,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/61hzPBgWsvL._AC_UL400_.jpg",
+        materials: "Silver, Diamonds from Cleopatra's tomb",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Necklaces",
+    src: rings,
+    items: [
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 9,
+        name: "Luxury Titanium Steel Necklace",
+        category: "necklaces",
+        price: 50,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/61bdAVPLCtL._AC_UL400_.jpg",
+        materials: "Titanium, Steel, blue Emerald",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 10,
+        name: "Butterfly Ancient Goddess Necklace",
+        category: "necklaces",
+        price: 45,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/61Vo--hdD9L._AC_UL400_.jpg",
+        materials: "Black Titanium, Steel, Coal from the Moon ",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+    ],
+  },
+  {
+    name: "Earrings 2",
+    src: rings,
+    items: [
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater 2",
+        id: 3,
+        name: "Golden Owl Earrings 2",
+        category: "Earrings",
+        price: 25,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/717foItSdPL._AC_UL400_.jpg",
+        materials: "Gold, Silver, Diamond",
+
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+      {
+        description:
+          "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
+        id: 4,
+        name: "Carmesin & Golden Rose Earrings",
+        category: "Earrings 2",
+        price: 30,
+        imageSrc:
+          "https://m.media-amazon.com/images/I/81oS4t4TN8S._AC_UL400_.jpg",
+        materials: "Pink Gold, Rubies, Silver",
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: "Size & Fit",
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: "Details & Care",
+            description:
+              "This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy",
+          },
+          {
+            title: "Delivery & Free Returns",
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+      },
+    ],
+  },
+  
+];
+
+export default categoriesList;
+
+

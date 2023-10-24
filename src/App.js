@@ -11,6 +11,14 @@ import CartPage from "./components/CartPage";
 import ItemDetailPage from "./components/ItemDetailPage";
 import { useLocation } from "react-router-dom";
 
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+import StripePayment from "./components/StripePayment";
+
+const stripePromise = loadStripe(
+  "pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ"
+);
+
 function AppWrapper() {
   const location = useLocation();
   const showComponent = location.pathname === "/";
@@ -73,35 +81,41 @@ function AppComponent({ showComponent }) {
   };
 
   return (
-    <div className="god">
-      <Header cart={cart} itemCounters={itemCounters} />
-      {showComponent && <Main />}
-      <div id="categories">
-        <Routes>
-          <Route path="/" element={<Categories />} />
-          <Route
-            path="/category/:category"
-            element={<CategoryPage addToCart={addToCart} />}
-          />
-          <Route
-            path="/cart"
-            element={
-              <CartPage
-                cart={cart}
-                removeFromCart={removeFromCart}
-                addToCart={addToCart}
-                itemCounters={itemCounters}
-              />
-            }
-          />
-          <Route
-            path="/item/:itemId"
-            element={<ItemDetailPage addToCart={addToCart} />}
-          />
-        </Routes>
+    <Elements stripe={stripePromise}>
+      <div className="god">
+        <Header cart={cart} itemCounters={itemCounters} />
+        {showComponent && <Main />}
+        <div id="categories">
+          <Routes>
+            <Route path="/" element={<Categories />} />
+            <Route
+              path="/category/:category"
+              element={<CategoryPage addToCart={addToCart} />}
+            />
+            <Route
+              path="/cart"
+              element={
+                <CartPage
+                  cart={cart}
+                  removeFromCart={removeFromCart}
+                  addToCart={addToCart}
+                  itemCounters={itemCounters}
+                />
+              }
+            />
+            <Route
+              path="/item/:itemId"
+              element={<ItemDetailPage addToCart={addToCart} />}
+            />
+            <Route
+              path="/stripe-payment"
+              element={<StripePayment cart={cart} cartTotal={cartTotal} />}
+            />
+          </Routes>
+        </div>
+        {<Havealook />}
       </div>
-      {<Havealook />}
-    </div>
+    </Elements>
   );
 }
 

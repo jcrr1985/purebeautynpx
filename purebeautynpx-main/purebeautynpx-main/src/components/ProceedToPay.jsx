@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const ProceedToPay = ({ cart }) => {
   const total =
@@ -7,7 +8,9 @@ const ProceedToPay = ({ cart }) => {
   return (
     <div className="proceed-wrapper">
       <p>Total {total}</p>
-      <button className="button">Proceed to pay</button>
+      <Link className="button" to="/stripe-payment">
+        Proceed to pay!
+      </Link>
     </div>
   );
 };

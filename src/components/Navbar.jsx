@@ -26,6 +26,7 @@ const Navbar = ({ selectedCategoria }) => {
         {categoriesList &&
           categoriesList.map((category) => (
             <li
+              key={category.name}
               onClick={() => handleCategoryClick("all-items")}
               className={
                 selectedCategoria === category.name.toLowerCase()

@@ -531,3 +531,38 @@ a {
 .categories-carousel--caption{
   margin-bottom: 0;
 }
+
+.checkout-form--form{
+  background: #fff;;
+}
+
+.InputElement {
+  background-color: red;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.checkout-form--form{
+  background: rgb(140, 226, 197);
+  width: 70%;
+  padding: 1rem;
+  border-radius: 10px;
+}
+
+.StripeElement, .checkout--form-button--buy{
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 20px;
+  background: #fff;
+}
+
+.checkout--form-button--buy{
+  margin-bottom: 0;
+}
+
+.checkout--form-button--buy{
+  border: none;
+
+
+}

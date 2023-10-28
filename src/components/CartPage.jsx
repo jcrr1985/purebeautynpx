@@ -12,7 +12,7 @@ const CartPage = ({
 }) => {
   useEffect(() => {
     console.log("cart", cart);
-    console.log("cartTotal", cartTotal);
+    console.log("CART TOTAAAAAAAAAAAAAAAAAAAAAL", cartTotal);
   }, [cart, cartTotal]);
 
   return (
@@ -67,14 +67,7 @@ const CartPage = ({
             </div>
             <br />
             <br />
-            {cart.length && (
-              <ProceedToPay
-                cart={cart}
-                removeFromCart={removeFromCart}
-                addToCart={addToCart}
-                cartTotal={cartTotal}
-              />
-            )}
+            {cart.length && <ProceedToPay cartTotal={cartTotal} />}
             <MoreSuggestions
               cart={cart}
               removeFromCart={removeFromCart}

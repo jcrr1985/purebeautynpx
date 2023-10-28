@@ -1,5 +1,6 @@
-import { Grid, Modal } from "@mui/material";
+import { CircularProgress, Grid, Modal } from "@mui/material";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { set } from "animejs";
 
 //import axios
 import axios from "axios";
@@ -9,28 +10,32 @@ import { useState } from "react";
 const CheckoutForm = () => {
   const stripe = useStripe();
   const elements = useElements();
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("You clicked submit.");
 
-    const { error, paymentMethod } = await stripe.createPaymentMethod({
-      type: "card",
-      card: elements.getElement(CardElement),
-    });
+    setLoading(true);
 
-    if (!error) {
-      console.log("Stripe 23 | token generated!", paymentMethod);
-      const { id } = paymentMethod;
-
-      const data = await axios.post("http://localhost:3001/api/checkout", {
-        id,
-        amount: 1000,
+    try {
+      const { error, paymentMethod } = await stripe.createPaymentMethod({
+        type: "card",
+        card: elements.getElement(CardElement),
       });
-      console.log(data);
-    } else {
+      if (!error) {
+        const { id } = paymentMethod;
+        const data = await axios.post("http://localhost:3001/api/checkout", {
+          id,
+          amount: 10000,
+        });
+
+        elements.getElement(CardElement).clear();
+      }
+    } catch (error) {
       console.log(error.message);
     }
+
+    setLoading(false);
   };
 
   const [open, setOpen] = useState(true);
@@ -60,9 +65,10 @@ const CheckoutForm = () => {
           <Grid item xs={12} sm={4}>
             <button
               className="checkout--form-button--buy"
+              disabled={!stripe}
               style={{ width: "100%" }}
             >
-              Buy
+              {loading ? <CircularProgress /> : "Buy"}
             </button>
           </Grid>
         </Grid>

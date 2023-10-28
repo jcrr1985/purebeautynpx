@@ -14,6 +14,7 @@ import { useLocation } from "react-router-dom";
 import { loadStripe } from "@stripe/stripe-js";
 import { Elements } from "@stripe/react-stripe-js";
 import StripePayment from "./components/StripePayment";
+import Success from "./components/Success";
 
 const stripePromise = loadStripe(
   "pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ"
@@ -111,6 +112,8 @@ function AppComponent({ showComponent }) {
               path="/stripe-payment"
               element={<StripePayment cart={cart} cartTotal={cartTotal} />}
             />
+
+            <Route path="/success" element={<Success />} />
           </Routes>
         </div>
         {<Havealook />}

@@ -17,6 +17,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  margin: 1% 0;
 }
 
 .logo {
@@ -152,9 +153,7 @@ a {
 }
 
 .item-list {
-  gap: 3%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
+display: flex;
 
 
 }

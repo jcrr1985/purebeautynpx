@@ -1,11 +1,12 @@
 import earrings from "./../assets/images/earrings.jpg";
 import rings from "./../assets/images/rings.png";
 import necklace from "./../assets/images/necklace.jpeg";
+import dress1 from "./../assets/images/dress-1.jpg";
 
 export const categoriesList = [
   {
     name: "Earrings",
-    src: rings,
+    src: dress1,
     items: [
       {
         description:
@@ -14,8 +15,7 @@ export const categoriesList = [
         name: "Golden Owl Earrings",
         category: "Earrings",
         price: 25,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/717foItSdPL._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Gold, Silver, Diamond",
 
         deepDescription2: [
@@ -78,7 +78,7 @@ export const categoriesList = [
   },
   {
     name: "Rings",
-    src: rings,
+    src: dress1,
     items: [
       {
         description:
@@ -88,8 +88,7 @@ export const categoriesList = [
         name: "Rings of the Destiny",
         category: "rings",
         price: 50,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/61UKcdwbdmL._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Gold, Pink Gold, Silver",
         deepDescription2: [
           {
@@ -122,8 +121,7 @@ export const categoriesList = [
         name: "Ring of Queen  ",
         category: "rings",
         price: 55,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/61hzPBgWsvL._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Silver, Diamonds from Cleopatra's tomb",
         deepDescription2: [
           {
@@ -155,8 +153,7 @@ export const categoriesList = [
         name: "Rings of the Destiny",
         category: "rings",
         price: 50,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/61UKcdwbdmL._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Gold, Pink Gold, Silver",
         deepDescription2: [
           {
@@ -188,8 +185,7 @@ export const categoriesList = [
         name: "Ring of Queen  ",
         category: "rings",
         price: 55,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/61hzPBgWsvL._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Silver, Diamonds from Cleopatra's tomb",
         deepDescription2: [
           {
@@ -218,7 +214,7 @@ export const categoriesList = [
   },
   {
     name: "Necklaces",
-    src: rings,
+    src: dress1,
     items: [
       {
         description:
@@ -227,8 +223,7 @@ export const categoriesList = [
         name: "Luxury Titanium Steel Necklace",
         category: "necklaces",
         price: 50,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/61bdAVPLCtL._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Titanium, Steel, blue Emerald",
         deepDescription2: [
           {
@@ -260,8 +255,7 @@ export const categoriesList = [
         name: "Butterfly Ancient Goddess Necklace",
         category: "necklaces",
         price: 45,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/61Vo--hdD9L._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Black Titanium, Steel, Coal from the Moon ",
         deepDescription2: [
           {
@@ -290,7 +284,7 @@ export const categoriesList = [
   },
   {
     name: "Earrings 2",
-    src: rings,
+    src: dress1,
     items: [
       {
         description:
@@ -333,8 +327,7 @@ export const categoriesList = [
         name: "Carmesin & Golden Rose Earrings",
         category: "Earrings 2",
         price: 30,
-        imageSrc:
-          "https://m.media-amazon.com/images/I/81oS4t4TN8S._AC_UL400_.jpg",
+        imageSrc: "/images/dress-1.jpg",
         materials: "Pink Gold, Rubies, Silver",
         deepDescription2: [
           {
@@ -361,9 +354,6 @@ export const categoriesList = [
       },
     ],
   },
-  
 ];
 
 export default categoriesList;
-
-

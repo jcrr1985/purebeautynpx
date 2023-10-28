@@ -7,7 +7,7 @@ import axios from "axios";
 import { useState } from "react";
 
 //create functional component
-const CheckoutForm = () => {
+const CheckoutForm = ({ totalToPay }) => {
   const stripe = useStripe();
   const elements = useElements();
   const [loading, setLoading] = useState(false);
@@ -26,7 +26,7 @@ const CheckoutForm = () => {
         const { id } = paymentMethod;
         const data = await axios.post("http://localhost:3001/api/checkout", {
           id,
-          amount: 10000,
+          amount: totalToPay * 100,
         });
 
         elements.getElement(CardElement).clear();

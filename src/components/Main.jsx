@@ -5,7 +5,7 @@ const Main = () => {
   const navigate = useNavigate();
 
   const scrollToCategories = () => {
-    navigate('/')
+    navigate("/");
     const categoriesElement = document.getElementById("categories");
     categoriesElement.scrollIntoView({ behavior: "smooth" });
   };

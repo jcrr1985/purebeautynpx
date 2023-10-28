@@ -3,17 +3,18 @@ import React from "react";
 import { Link } from "react-router-dom";
 import CheckoutForm from "./CheckoutForm";
 
-const ProceedToPay = ({ cart }) => {
-  const total =
-    cart.length > 0 ? cart.reduce((total, item) => total + item.price, 0) : 0;
-
+const ProceedToPay = ({ cart, cartTotal }) => {
+  console.log(
+    "🚀 ~ file: ProceedToPay.jsx:7 ~ ProceedToPay ~ cartTotal:",
+    cartTotal
+  );
   return (
     <div className="proceed-wrapper">
-      <p>Total {total}</p>
+      <p>Total {cartTotal}</p>
       <Link className="button" to="/stripe-payment">
         Proceed to pay!
       </Link>{" "}
-      <CheckoutForm />
+      <CheckoutForm cartTotal={cartTotal} />
     </div>
   );
 };

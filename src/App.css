@@ -119,8 +119,8 @@ a {
 }
 
 .category img {
-  height: 130px;  object-fit: contain;     width: 175px;
-
+  object-fit: contain;
+  width: 175px;
 }
 
 .category p {
@@ -241,6 +241,7 @@ display: flex;
   padding-right: 10px;
   box-shadow: 0 0 10px rgba(48, 47, 92, 0.1);
   background-color: #f6f6f7;
+  overflow-y: auto; 
 }
 
 .proceed-wrapper {

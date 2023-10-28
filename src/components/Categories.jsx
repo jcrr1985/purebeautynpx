@@ -1,11 +1,7 @@
 import React from "react";
-import Carousel from './Carousel'
-
-
+import Carousel from "./Carousel";
 
 const Categories = () => {
-
-
   return (
     <>
       <div className="categories--description">
@@ -15,10 +11,10 @@ const Categories = () => {
           </h1>
         </div>
         <p className="font-light">
-          Our latest collections are full of items you will love
+          Our latest collections are full of items you will love!
         </p>
       </div>
-    <Carousel />  
+      <Carousel />
     </>
   );
 };

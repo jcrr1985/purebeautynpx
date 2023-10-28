@@ -3,35 +3,35 @@ import { useParams } from "react-router-dom";
 import Navbar from "./Navbar";
 import ItemElement from "./ItemElement";
 import itemsData from "./itemsData";
+import { Grid, Paper } from "@mui/material";
 
 const CategoryPage = ({ addToCart }) => {
   const { category } = useParams();
-  console.log("category", category);
 
-  const filteredItems =
+  const filteredEntities =
     category === "all-items"
       ? itemsData
-      : itemsData.filter((obj) => obj.name.toLowerCase() === category);
+      : itemsData.filter((item) => item.name.toLowerCase() === category);
 
-  const mergedItemsArray = filteredItems.map((obj) => obj.items);
+  const entityItems = filteredEntities.map((entity) => entity.items);
 
   return (
-    <div className="category-page">
-      <Navbar selectedCategoria={category} />
-      <div className="item-list">
-        {mergedItemsArray.flat().map((item) => (
+    <Grid container spacing={3}>
+      {entityItems.flat().map((item, index) => (
+        <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
           <ItemElement
             key={item.id}
             imageSrc={item.imageSrc}
             name={item.name}
             price={item.price}
             materials={item.materials}
-            addToCart={addToCart}
+            addToCart={() => addToCart(item, "add")}
             id={item.id}
+            item={item}
           />
-        ))}
-      </div>
-    </div>
+        </Grid>
+      ))}
+    </Grid>
   );
 };
 

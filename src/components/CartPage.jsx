@@ -2,11 +2,18 @@ import React, { useEffect } from "react";
 import ProceedToPay from "./ProceedToPay";
 import MoreSuggestions from "./MoreSuggestions";
 import BackButton from "./BackButton";
-import CartCounter from "./CartCounter"
-const CartPage = ({ cart, removeFromCart, addToCart, itemCounters }) => {
+import CartCounter from "./CartCounter";
+const CartPage = ({
+  cart,
+  removeFromCart,
+  addToCart,
+  itemCounters,
+  cartTotal,
+}) => {
   useEffect(() => {
     console.log("cart", cart);
-  }, [cart]);
+    console.log("cartTotal", cartTotal);
+  }, [cart, cartTotal]);
 
   return (
     <div className="cart-page-wrapper full-screen-cart">
@@ -26,23 +33,27 @@ const CartPage = ({ cart, removeFromCart, addToCart, itemCounters }) => {
             <div className="grid-container">
               {cart?.map((item, index) => (
                 <div key={index} className="cart-item up">
-                  <img src={item.imageSrc} alt={item.description}/>
+                  <img src={item.imageSrc} alt={item.description} />
                   <div className="cart-legend">
                     <p>{item.name}</p>
                     <p>{item.materials}</p>
                     <div className="quantity-buttons">
                       <div className="cart-page--buttons--container">
-                        <button onClick={() => {
-                          addToCart(item, "add");
-                          console.log('caartpage')
-                          }}>
+                        <button
+                          onClick={() => {
+                            addToCart(item, "add");
+                            console.log("caartpage");
+                          }}
+                        >
                           +
                         </button>
                         <button onClick={() => addToCart(item, "substract")}>
                           -
                         </button>
                       </div>
-                      <CartCounter cartItemQuantity={itemCounters[item.id] || 0} />
+                      <CartCounter
+                        cartItemQuantity={itemCounters[item.id] || 0}
+                      />
                       <a
                         className="cart-remove"
                         onClick={() => removeFromCart(item)}
@@ -61,12 +72,13 @@ const CartPage = ({ cart, removeFromCart, addToCart, itemCounters }) => {
                 cart={cart}
                 removeFromCart={removeFromCart}
                 addToCart={addToCart}
+                cartTotal={cartTotal}
               />
             )}
             <MoreSuggestions
-                            cart={cart}
-                            removeFromCart={removeFromCart}
-                            addToCart={addToCart}
+              cart={cart}
+              removeFromCart={removeFromCart}
+              addToCart={addToCart}
             />
           </>
         )}

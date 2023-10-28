@@ -6,7 +6,7 @@ import CategoryPage from "./components/CategoryPage";
 
 import Havealook from "./components/Havealook";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CartPage from "./components/CartPage";
 import ItemDetailPage from "./components/ItemDetailPage";
 import { useLocation } from "react-router-dom";
@@ -30,8 +30,21 @@ function AppComponent({ showComponent }) {
   const [cart, setCart] = useState([]);
   const [cartTotal, setCartTotal] = useState(0);
 
+  //effect for catTotal
+
+  useEffect(() => {
+    let total = 0;
+    cart.forEach((item) => {
+      total += item.price * item.quantity;
+    });
+    setCartTotal(total);
+    console.log("🚀 ~ file: App.js:42 ~ useEffect ~ cartTotal:", cartTotal);
+  });
+
   // Estado para rastrear los contadores de ítems
   const [itemCounters, setItemCounters] = useState({});
+
+  //effecto for itemCounters
 
   // Función para agregar un artículo al carrito
   const addToCart = (item, operator) => {
@@ -39,7 +52,7 @@ function AppComponent({ showComponent }) {
     if (existingItem) {
       if (operator === "add") {
         existingItem.quantity += 1;
-      } else if (operator === "substract" && existingItem.quantity > 1) {
+      } else if (operator === "substract" && existingItem.quantity > 0) {
         existingItem.quantity -= 1;
       }
       // Actualizar contador de ítem
@@ -101,6 +114,7 @@ function AppComponent({ showComponent }) {
                   removeFromCart={removeFromCart}
                   addToCart={addToCart}
                   itemCounters={itemCounters}
+                  cartTotal={cartTotal}
                 />
               }
             />

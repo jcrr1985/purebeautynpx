@@ -1,10 +1,13 @@
 import React from "react";
 import CartCounter from "./CartCounter";
+import QuantityButton from "./QuantityButton";
 
 const MoreSuggestions = ({ removeFromCart, addToCart }) => {
   return (
-    <div style={{textAlign: 'center',  marginTop: '2rem', }}>
-      <h3 style={{ textAlign: "center",  marginBottom: '3rem' }}>More suggestion for you</h3>
+    <div style={{ textAlign: "center", marginTop: "2rem" }}>
+      <h3 style={{ textAlign: "center", marginBottom: "3rem" }}>
+        More suggestion for you
+      </h3>
       <div className="grid-container suggestions">
         {dummySuggestedItems.map((item, index) => (
           <div
@@ -20,11 +23,19 @@ const MoreSuggestions = ({ removeFromCart, addToCart }) => {
               </a>
               <div className="quantity-buttons">
                 <div className="cart-page--buttons--container">
-                  <button onClick={() => addToCart(item, "add")}>+</button>
-                  <button>-</button>
+                  <QuantityButton
+                    item={item}
+                    operator="add"
+                    addToCart={addToCart}
+                  />
                 </div>
-                <CartCounter cartItemQuantity={item.quantity} />
+                <QuantityButton
+                  item={item}
+                  operator="substract"
+                  addToCart={addToCart}
+                />
               </div>
+              <CartCounter cartItemQuantity={item.quantity} />
             </div>
           </div>
         ))}

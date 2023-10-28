@@ -16,7 +16,7 @@ export const categoriesList = [
         category: "Earrings",
         price: 25,
         imageSrc: "/images/dress-1.jpg",
-        materials: "Gold, Silver, Diamond",
+        materials: "Gold, Silver, Diamond.",
 
         deepDescription2: [
           {

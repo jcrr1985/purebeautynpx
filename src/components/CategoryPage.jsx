@@ -7,6 +7,10 @@ import { Grid, Paper } from "@mui/material";
 
 const CategoryPage = ({ addToCart }) => {
   const { category } = useParams();
+  console.log(
+    "🚀 ~ file: CategoryPage.jsx:10 ~ CategoryPage ~ category:",
+    category
+  );
 
   const filteredEntities =
     category === "all-items"
@@ -17,20 +21,32 @@ const CategoryPage = ({ addToCart }) => {
 
   return (
     <Grid container spacing={3}>
-      {entityItems.flat().map((item, index) => (
-        <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
-          <ItemElement
-            key={item.id}
-            imageSrc={item.imageSrc}
-            name={item.name}
-            price={item.price}
-            materials={item.materials}
-            addToCart={() => addToCart(item, "add")}
-            id={item.id}
-            item={item}
-          />
+      <div className="left-cp">
+        <Grid item xs={12} md={4} lg={3}>
+          <Navbar selectedCategoria={category} />
         </Grid>
-      ))}
+      </div>
+
+      <div className="right-cp">
+        <Grid item xs={12}>
+          <Grid container spacing={3}>
+            {entityItems.flat().map((item, index) => (
+              <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+                <ItemElement
+                  key={item.id}
+                  imageSrc={item.imageSrc}
+                  name={item.name}
+                  price={item.price}
+                  materials={item.materials}
+                  addToCart={() => addToCart(item, "add")}
+                  id={item.id}
+                  item={item}
+                />
+              </Grid>
+            ))}
+          </Grid>
+        </Grid>
+      </div>
     </Grid>
   );
 };

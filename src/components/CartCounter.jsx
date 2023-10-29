@@ -6,7 +6,7 @@ const CartCounter = ({ cartItemQuantity }) => {
       style={{
         top: "-10px",
         right: "-10px",
-        background: "red",
+        background: "black",
         color: "white",
         borderRadius: "50%",
         fontSize: "0.8rem",

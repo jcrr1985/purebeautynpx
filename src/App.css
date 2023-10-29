@@ -532,9 +532,7 @@ a {
   margin-bottom: 0;
 }
 
-.checkout-form--form{
-  background: #fff;;
-}
+
 
 .InputElement {
   background-color: red;
@@ -544,8 +542,8 @@ a {
 }
 
 .checkout-form--form{
-  background: rgb(140, 226, 197);
-  width: 70%;
+  background: linear-gradient(to bottom, #6a5acd, #483d8b);
+    width: 70%;
   padding: 1rem;
   border-radius: 10px;
 }

@@ -6,7 +6,7 @@ import CheckoutForm from "./CheckoutForm";
 const ProceedToPay = ({ cartTotal }) => {
   return (
     <div className="proceed-wrapper">
-      <p>Total {cartTotal}</p>
+      <p>Total: {cartTotal}</p>
       <Link className="button" to="/stripe-payment">
         Proceed to pay!
       </Link>{" "}

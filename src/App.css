@@ -245,7 +245,7 @@ display: flex;
 }
 
 .proceed-wrapper {
-  /* width: 30%; */
+  font-style: oblique;
   text-align: center;
 }
 

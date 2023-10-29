@@ -7,11 +7,6 @@ import { Grid, Paper } from "@mui/material";
 
 const CategoryPage = ({ addToCart }) => {
   const { category } = useParams();
-  console.log(
-    "🚀 ~ file: CategoryPage.jsx:10 ~ CategoryPage ~ category:",
-    category
-  );
-
   const filteredEntities =
     category === "all-items"
       ? itemsData

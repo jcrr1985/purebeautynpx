@@ -6,7 +6,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import BackButton from "./BackButton";
 import CartCounter from "./CartCounter";
 
-const Header = ({ cart, itemCounters }) => { 
+const Header = ({ cart, itemCounters }) => {
   const [searchBarInputOpen, setSearchBarInputOpen] = useState(false);
 
   useEffect(() => {
@@ -34,8 +34,6 @@ const Header = ({ cart, itemCounters }) => {
     console.log("searchBarInputOpen", searchBarInputOpen);
   }, [searchBarInputOpen]);
 
-
-
   return (
     <div>
       <header>
@@ -48,21 +46,23 @@ const Header = ({ cart, itemCounters }) => {
           </div>
         </div>
         <div className="header-right">
-          { !searchBarInputOpen &&
-            <SearchIcon onClick={enableSearchBarInput} />}
-        <Link to="/cart">
-          <div>
-            <ShoppingCartIcon />
-            <CartCounter cartItemQuantity={totalItemsInCart} />
-          </div>
-        </Link>
+          {!searchBarInputOpen && <SearchIcon onClick={enableSearchBarInput} />}
+          <Link to="/cart">
+            <div>
+              <ShoppingCartIcon />
+              <CartCounter cartItemQuantity={totalItemsInCart} />
+            </div>
+          </Link>
         </div>
       </header>
       <div
         className={`search-input-container ${searchBarInputOpen ? "open" : ""}`}
       >
         {searchBarInputOpen && (
-          <div className="header-icons header-left-icon" onClick={closeSearchBarInput}>
+          <div
+            className="header-icons header-left-icon"
+            onClick={closeSearchBarInput}
+          >
             <CloseIcon sx={{ color: "#444" }} />
           </div>
         )}
@@ -72,11 +72,13 @@ const Header = ({ cart, itemCounters }) => {
           className={`search-input`}
           placeholder="Search"
         />
-        
-        <div className="header-icons header-right-icon" onClick={enableSearchBarInput}>
+
+        <div
+          className="header-icons header-right-icon"
+          onClick={enableSearchBarInput}
+        >
           <SearchIcon sx={{ color: "#444" }} />
         </div>
-
       </div>
     </div>
   );

@@ -382,6 +382,8 @@ input::placeholder {
 
 .navbar {
   padding-right: 1rem;
+  width: max-content;
+
 }
 
 .active-categorie {

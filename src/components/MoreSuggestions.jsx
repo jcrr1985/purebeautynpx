@@ -28,14 +28,24 @@ const MoreSuggestions = ({ removeFromCart, addToCart }) => {
                     operator="add"
                     addToCart={addToCart}
                   />
+
+                  <QuantityButton
+                    item={item}
+                    operator="substract"
+                    addToCart={addToCart}
+                  />
                 </div>
-                <QuantityButton
-                  item={item}
-                  operator="substract"
-                  addToCart={addToCart}
-                />
               </div>
-              <CartCounter cartItemQuantity={item.quantity} />
+
+              <div
+                style={{
+                  width: "100%",
+                  display: "flex",
+                  justifyContent: "center",
+                }}
+              >
+                <CartCounter cartItemQuantity={item.quantity} />
+              </div>
             </div>
           </div>
         ))}

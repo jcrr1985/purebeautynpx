@@ -39,7 +39,6 @@ function AppComponent({ showComponent }) {
       total += item.price * item.quantity;
     });
     setCartTotal(total);
-    console.log("🚀 ~ file: App.js:42 ~ useEffect ~ cartTotal:", cartTotal);
   });
 
   // Estado para rastrear los contadores de ítems

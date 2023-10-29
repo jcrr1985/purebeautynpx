@@ -8,7 +8,7 @@ const ProceedToPay = ({ cartTotal }) => {
     <div className="proceed-wrapper">
       <p>Total: {cartTotal}</p>
       <Link className="button" to="/stripe-payment">
-        Proceed to pay!
+        Proceed to pay
       </Link>{" "}
     </div>
   );

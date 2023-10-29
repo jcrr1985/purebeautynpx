@@ -570,3 +570,7 @@ a {
   width: fit-content;
   padding: .5px
 }
+
+.cart-page-wrapper{
+  flex-wrap: wrap;
+}

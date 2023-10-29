@@ -20,34 +20,35 @@ const CategoryPage = ({ addToCart }) => {
   const entityItems = filteredEntities.map((entity) => entity.items);
 
   return (
-    <Grid container spacing={3}>
-      <div className="left-cp">
-        <Grid item xs={12} md={4} lg={3}>
-          <Navbar selectedCategoria={category} />
-        </Grid>
-      </div>
-
-      <div className="right-cp">
-        <Grid item xs={12}>
-          <Grid container spacing={3}>
-            {entityItems.flat().map((item, index) => (
-              <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
-                <ItemElement
-                  key={item.id}
-                  imageSrc={item.imageSrc}
-                  name={item.name}
-                  price={item.price}
-                  materials={item.materials}
-                  addToCart={() => addToCart(item, "add")}
-                  id={item.id}
-                  item={item}
-                />
-              </Grid>
-            ))}
+    <div className="cart-page-wrapper">
+      <Grid container spacing={3}>
+        <div className="left-cp">
+          <Grid item xs={12} md={4} lg={3}>
+            <Navbar selectedCategoria={category} />
           </Grid>
-        </Grid>
-      </div>
-    </Grid>
+        </div>
+        <div className="right-cp">
+          <Grid item xs={12}>
+            <Grid container spacing={3}>
+              {entityItems.flat().map((item, index) => (
+                <Grid item key={index} xs={12} sm={6} md={4} lg={3}>
+                  <ItemElement
+                    key={item.id}
+                    imageSrc={item.imageSrc}
+                    name={item.name}
+                    price={item.price}
+                    materials={item.materials}
+                    addToCart={() => addToCart(item, "add")}
+                    id={item.id}
+                    item={item}
+                  />
+                </Grid>
+              ))}
+            </Grid>
+          </Grid>
+        </div>
+      </Grid>
+    </div>
   );
 };
 

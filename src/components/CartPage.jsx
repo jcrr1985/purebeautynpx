@@ -10,11 +10,6 @@ const CartPage = ({
   itemCounters,
   cartTotal,
 }) => {
-  useEffect(() => {
-    console.log("cart", cart);
-    console.log("CART TOTAAAAAAAAAAAAAAAAAAAAAL", cartTotal);
-  }, [cart, cartTotal]);
-
   return (
     <div className="cart-page-wrapper full-screen-cart">
       <div className="cart-page">

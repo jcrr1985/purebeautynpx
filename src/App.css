@@ -1,6 +1,16 @@
 
 @import url("./assets/fonts/fonts.css");
 
+@font-face {
+  font-family: 'Italiana';
+  src: local('Italiana'), url("./assets/fonts/Italiana-Regular.ttf") format('truetype');
+}
+
+@font-face {
+  font-family: 'Italianno';
+  src: local('Italianno'), url("./assets/fonts/Italianno-Regular.ttf") format('truetype');
+}
+
 *{
   box-sizing: border-box;
 }
@@ -671,7 +681,7 @@ gap:30rem;
 
 .we-are-happy{
   margin-top: 2rem;
-  margin-bottom: 6rem;
+  margin-bottom: 5px;
 
 }
 
@@ -680,4 +690,13 @@ gap:30rem;
   justify-content: space-between;
   align-items: flex-start;
   margin-top: 2rem;
+}
+
+.checkout-form--input{
+  width: 100%;
+  padding: 1rem;
+  border-radius: 5px;
+  background-color:  rgb(214, 214, 214);
+  border: none;
+  margin: .5rem 0;
 }

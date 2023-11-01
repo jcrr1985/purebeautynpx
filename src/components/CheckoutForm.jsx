@@ -18,6 +18,7 @@ import Swal from "sweetalert2";
 import CongratulationMessage from "./CongratulationsMessage";
 import DealButton from "./DealButton";
 import ButtonsMoreLess from "./ButtonsMoreLess";
+import ItemsInCheckout from "./ItemsInCheckout";
 
 const showPaymentErrorAlert = () => {
   Swal.fire("Oops!", "Payment unsuccessful", "warning");
@@ -80,7 +81,55 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, addToCart }) => {
         <div className="form-and-items-wrapper">
           <form className="checkout-form--form" onSubmit={handleSubmitPayment}>
             <div className="left">
+              {/* CARD INPUT */}
               <CardElement />
+
+              {/* address input */}
+              <input
+                className="checkout-form--input"
+                type="text"
+                placeholder="Address"
+              />
+
+              {/* adresss 2 input  */}
+
+              <input
+                className="checkout-form--input"
+                type="text"
+                placeholder="Address 2"
+              />
+
+              {/* country input  */}
+
+              <input
+                className="checkout-form--input"
+                type="text"
+                placeholder="Country"
+              />
+
+              {/* city input  */}
+              <input
+                className="checkout-form--input"
+                type="text"
+                placeholder="City"
+              />
+
+              {/* phone nuber input  */}
+
+              <input
+                className="checkout-form--input"
+                type="text"
+                placeholder="Phone Number"
+              />
+
+              {/* email input  */}
+
+              <input
+                className="checkout-form--input"
+                type="text"
+                placeholder="Email"
+              />
+
               {/* <!--BUY BUTTON--> */}
               <span>
                 {loading ? (
@@ -90,38 +139,10 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, addToCart }) => {
                 )}
               </span>
             </div>
-            {/* ITEMS DE LA DERECHA EN CHECKOUT */}
           </form>
 
-          <div className="items-in-checkout">
-            {cart.map((item, index) => (
-              <Card
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  minWidth: 500,
-                  margin: "1rem auto",
-                }}
-                key={index}
-                style={{ marginBottom: "1rem" }}
-              >
-                <img
-                  src={item.imageSrc}
-                  alt={item.name}
-                  style={{ maxWidth: "100px", marginRight: "1rem" }}
-                />
-                <CardContent>
-                  <Typography variant="body2">Name: {item.name}</Typography>
-                  <Typography variant="body2">Qty: {item.quantity}</Typography>
-                  <Typography variant="body2">Size: {item.size}</Typography>
-                  <Typography variant="body2">Price: {item.price}</Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
-              </Card>
-            ))}
-          </div>
+          {/* ITEMS DE LA DERECHA EN CHECKOUT */}
+          <ItemsInCheckout cart={cart} />
         </div>
       ) : (
         showSucces && (

@@ -7,7 +7,6 @@ const app = express();
 
 app.use(express.json());
 app.use(cors());
-
 app.post("/api/checkout", async (req, res) => {
   try {
     const { id, amount } = req.body;
@@ -26,10 +25,12 @@ app.post("/api/checkout", async (req, res) => {
   }
 });
 
+const privateKey = `${process.env.STRIPE_PRIVATE_API_KEY}`;
+
 app.listen(3001, () => console.log("Listening on port 3001"));
 
-// const stripe  = new Stripe(process.env.STRIPE_SECRET_KEY);
-
-const stripe = new Stripe(
-  "sk_test_51NmKBUIyGuUAStfNKhWESNJmDHtswQLwy1ALuX3V4sRD1p3W0ovgapMUjJfYfvR1pSBruLsCugySiXc0u56JbDkT00dLgCIhhV"
+console.log(
+  "🚀 ~ file: server.js:36 ~ process.env.STRIPE_PRIVATE_API_KEY:",
+  privateKey
 );
+const stripe = new Stripe(privateKey);

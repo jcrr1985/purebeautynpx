@@ -1,34 +1,24 @@
 import { Snackbar } from "@mui/material";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Alert from "@mui/material/Alert";
+import DealButton from "./DealButton";
 
-const CongratulationMessage = () => {
+const CongratulationMessage = ({ setItemCounters }) => {
+  console.log(
+    "🚀 ~ file: CongratulationsMessage.jsx:6 ~ CongratulationMessage ~ setItemCounters:",
+    setItemCounters
+  );
   const [open, setOpen] = useState(false);
+  console.log(setItemCounters); // Log to check if setItemCounters is passed correctly
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = (event, reason) => {
-    if (reason === "clickaway") {
-      return;
-    }
-
-    setOpen(false);
-  };
+  useEffect(() => {
+    setItemCounters({});
+  }, [setItemCounters]);
 
   return (
-    <div>
-      <Snackbar open={open} autoHideDuration={6000} onClose={handleClose}>
-        <Alert
-          elevation={6}
-          variant="filled"
-          onClose={handleClose}
-          severity="success"
-        >
-          Congratulations! You've bought X items!
-        </Alert>
-      </Snackbar>
+    <div className="congratulationsMessage-content-wrapper">
+      <p className="text-italianno">Tahnk you for purchase</p>
+      <DealButton message="Continue Shopping" />
     </div>
   );
 };

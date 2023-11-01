@@ -3,6 +3,7 @@ import ProceedToPay from "./ProceedToPay";
 import MoreSuggestions from "./MoreSuggestions";
 import BackButton from "./BackButton";
 import CartCounter from "./CartCounter";
+import ButtonsMoreLess from "./ButtonsMoreLess";
 const CartPage = ({
   cart,
   removeFromCart,
@@ -10,6 +11,7 @@ const CartPage = ({
   itemCounters,
   cartTotal,
 }) => {
+  console.log("🚀 ~ file: CartPage.jsx:14 ~ itemCounters:", itemCounters);
   return (
     <div className="cart-page-wrapper full-screen-cart">
       <div className="cart-page">
@@ -33,19 +35,7 @@ const CartPage = ({
                     <p>{item.name}</p>
                     <p>{item.materials}</p>
                     <div className="quantity-buttons">
-                      <div className="cart-page--buttons--container">
-                        <button
-                          onClick={() => {
-                            addToCart(item, "add");
-                            console.log("caartpage");
-                          }}
-                        >
-                          +
-                        </button>
-                        <button onClick={() => addToCart(item, "substract")}>
-                          -
-                        </button>
-                      </div>
+                      <ButtonsMoreLess item={item} addToCart={addToCart} />
                       <CartCounter
                         cartItemQuantity={itemCounters[item.id] || 0}
                       />
@@ -62,7 +52,9 @@ const CartPage = ({
             </div>
             <br />
             <br />
-            {cart.length && <ProceedToPay cartTotal={cartTotal} />}
+            {cart.length && (
+              <ProceedToPay cartTotal={cartTotal} itemCounters={itemCounters} />
+            )}
             <MoreSuggestions
               cart={cart}
               removeFromCart={removeFromCart}

@@ -29,7 +29,14 @@ function AppWrapper() {
 
 function AppComponent({ showComponent }) {
   const [cart, setCart] = useState([]);
+  //total a pagar: number
   const [cartTotal, setCartTotal] = useState(0);
+  // Estado para rastrear los contadores de ítems
+  const [itemCounters, setItemCounters] = useState({});
+  console.log(
+    "🚀 ~ file: App.js:36 ~ AppComponent ~ setItemCounters:",
+    setItemCounters
+  );
 
   //effect for catTotal
 
@@ -40,9 +47,6 @@ function AppComponent({ showComponent }) {
     });
     setCartTotal(total);
   });
-
-  // Estado para rastrear los contadores de ítems
-  const [itemCounters, setItemCounters] = useState({});
 
   //effecto for itemCounters
 
@@ -101,11 +105,14 @@ function AppComponent({ showComponent }) {
         {showComponent && <Main />}
         <div id="categories">
           <Routes>
+            {/* HOME */}
             <Route path="/" element={<Categories />} />
+            {/* <-CATEGORIES */}
             <Route
               path="/category/:category"
               element={<CategoryPage addToCart={addToCart} />}
             />
+            {/* CARTPAGE */}
             <Route
               path="/cart"
               element={
@@ -115,18 +122,28 @@ function AppComponent({ showComponent }) {
                   addToCart={addToCart}
                   itemCounters={itemCounters}
                   cartTotal={cartTotal}
+                  setItemCounters={setItemCounters}
                 />
               }
             />
+            {/* ITEMDETAILPAGE */}
             <Route
               path="/item/:itemId"
               element={<ItemDetailPage addToCart={addToCart} />}
             />
+            {/* STRIPEPAYMENT */}
             <Route
               path="/stripe-payment"
-              element={<StripePayment cartTotal={cartTotal} />}
+              element={
+                <StripePayment
+                  cartTotal={cartTotal}
+                  setItemCounters={setItemCounters}
+                  cart={cart}
+                  addToCart={addToCart}
+                />
+              }
             />
-
+            {/* sUCCESS */}
             <Route path="/success" element={<Success />} />
           </Routes>
         </div>

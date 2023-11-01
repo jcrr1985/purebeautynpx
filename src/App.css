@@ -1,3 +1,6 @@
+
+@import url("./assets/fonts/fonts.css");
+
 *{
   box-sizing: border-box;
 }
@@ -29,7 +32,6 @@ header {
 .inner-logo {
   border: 1px solid rgb(234, 233, 233);
   display: inline-grid;
-  padding: 1%;
   border-radius: 3px;
   width: 100px;
   height: 76px;
@@ -297,7 +299,7 @@ display: flex;
   align-items: center;
   color: #fff;
   border-radius: 50%;
-  width: 1.5rem;
+  width: 2.5rem;
   height: 1.5rem;
 }
 
@@ -541,17 +543,11 @@ a {
   border-radius: 4px;
 }
 
-.checkout-form--form{
-  background: linear-gradient(to bottom, #6a5acd, #483d8b);
-    width: 70%;
-  padding: 1rem;
-  border-radius: 10px;
-}
+
 
 .StripeElement, .checkout--form-button--buy{
   padding: 1rem;
-  margin-bottom: 1rem;
-  border-radius: 20px;
+
   background: #fff;
 }
 
@@ -575,4 +571,113 @@ a {
 
 .cart-page-wrapper{
   flex-wrap: wrap;
+}
+
+.btn-more-less{
+  padding: 0.6rem!important;
+    border-radius: 5px!important;
+    border: none!important;
+    background-color: #000!important;
+    color: #fff!important;
+    cursor: pointer!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    padding-left: 15px!;
+    padding-right: 15px;
+
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-width{
+  width: 90%!important;
+}
+.text-italianno {
+  font-family: 'Italianno', cursive;  font-weight: 400;
+  font-size: 48px;
+
+
+}
+
+.congratulationsMessage-content-wrapper{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  height: 65vh
+
+}
+
+.continue-shopping-btn{
+  margin-top: 2rem;
+  padding: 1rem;
+  border-radius: 4px;
+  background: #000;
+  border: none;
+  cursor: pointer;
+  color: #fff;
+  padding: 1.5rem 9rem;
+  font-size: 24px;
+  font-family: 'Italiana', sans-serif;
+
+}
+
+
+.StripeElement--complenete{
+  padding: 1.7rem 0;
+}
+
+.caja-dummy{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+  
+}
+
+.checkoutform-button{
+  width: -webkit-fill-available;
+  background: #000;
+  color: #fff;
+  padding: 1.5rem;
+  margin-top: 2rem;
+}
+
+
+.left{
+  width: 34%!important;
+
+}
+
+.items-in-checkout{
+  margin-bottom: 1rem;
+}
+
+.StripeElement {
+  background-color: rgb(214, 214, 214);
+}
+
+.checkout-form--form{
+  width: 80%;
+padding: 1rem;
+border-radius: 5px;
+display: flex;
+gap:30rem;
+}
+
+.we-are-happy{
+  margin-top: 2rem;
+  margin-bottom: 6rem;
+
+}
+
+.form-and-items-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 2rem;
 }

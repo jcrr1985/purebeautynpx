@@ -72,94 +72,90 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
 
   return (
     <>
-      <p className="text-italianno we-are-happy">
-        {" "}
-        We are Happy with you purchase! Lets do last steps
-      </p>
       {showPayment ? (
-        <div className="form-and-items-wrapper">
-          <form className="checkout-form--form" onSubmit={handleSubmitPayment}>
-            <div className="checkout-form-left">
-              {/* CARD INPUT */}
-              <CardElement
-                onChange={(event) => setIsCardComplete(event.complete)}
-              />
-
-              {/* address input */}
-              <input
-                className="checkout-form--input"
-                type="text"
-                placeholder="Address line 1"
-              />
-
-              {/* adresss 2 input  */}
-
-              <input
-                className="checkout-form--input"
-                type="text"
-                placeholder="Address line 2"
-              />
-
-              {/* country input  */}
-
-              <div className="doble-input">
+        <div>
+          <p className="text-italianno we-are-happy">
+            {" "}
+            <span>We are Happy with you purchase! </span>{" "}
+            <span>Lets do last steps</span>
+          </p>
+          <div className="form-and-items-wrapper">
+            <form
+              className="checkout-form--form"
+              onSubmit={handleSubmitPayment}
+            >
+              <div className="checkout-form-left">
+                {/* CARD INPUT */}
+                <CardElement
+                  onChange={(event) => setIsCardComplete(event.complete)}
+                />
+                {/* address input */}
                 <input
                   className="checkout-form--input"
                   type="text"
-                  placeholder="Country"
+                  placeholder="Address line 1"
                 />
-                {/* ZIP input  */}
+                {/* adresss 2 input  */}
                 <input
                   className="checkout-form--input"
                   type="text"
-                  placeholder="Code Postal"
+                  placeholder="Address line 2"
                 />
+                {/* country input  */}
+                <div className="doble-input">
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="Country"
+                  />
+                  {/* ZIP input  */}
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="Code Postal"
+                  />
+                </div>
+                <div className="doble-input">
+                  {" "}
+                  {/* city input  */}
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="City"
+                  />
+                  {/* phone nuber input  */}
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="Phone Number"
+                  />
+                </div>
+                {/* email input  */}
+                <input
+                  className="checkout-form--input"
+                  type="text"
+                  placeholder="Email"
+                />
+                {/* <!--BUY BUTTON--> */}
+                <span>
+                  {loading ? (
+                    <CircularProgress />
+                  ) : (
+                    <button
+                      disabled={!isCardComplete}
+                      className={`checkoutform-button ${
+                        !isCardComplete ? "disabled" : ""
+                      }`}
+                    >
+                      PLACE
+                    </button>
+                  )}
+                </span>
               </div>
-
-              <div className="doble-input">
-                {" "}
-                {/* city input  */}
-                <input
-                  className="checkout-form--input"
-                  type="text"
-                  placeholder="City"
-                />
-                {/* phone nuber input  */}
-                <input
-                  className="checkout-form--input"
-                  type="text"
-                  placeholder="Phone Number"
-                />
-              </div>
-
-              {/* email input  */}
-
-              <input
-                className="checkout-form--input"
-                type="text"
-                placeholder="Email"
-              />
-
-              {/* <!--BUY BUTTON--> */}
-              <span>
-                {loading ? (
-                  <CircularProgress />
-                ) : (
-                  <button
-                    disabled={!isCardComplete}
-                    className={`checkoutform-button ${
-                      !isCardComplete ? "disabled" : ""
-                    }`}
-                  >
-                    PLACE
-                  </button>
-                )}
-              </span>
-            </div>
-          </form>
-
-          {/* ITEMS DE LA DERECHA EN CHECKOUT */}
-          <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
+            </form>
+            {/* ITEMS DE LA DERECHA EN CHECKOUT */}
+            <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
+          </div>
         </div>
       ) : (
         showSucces && (

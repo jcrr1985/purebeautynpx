@@ -26,15 +26,17 @@ const ItemsInCheckout = ({ cart }) => {
             alt={item.name}
             style={{ maxWidth: "100px", marginRight: "1rem" }}
           />
-          <CardContent>
-            <Typography variant="body2">Name: {item.name}</Typography>
-            <Typography variant="body2">Qty: {item.quantity}</Typography>
-            <Typography variant="body2">Size: {item.size}</Typography>
-            <Typography variant="body2">Price: {item.price}</Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Remove</Button>
-          </CardActions>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <CardContent>
+              <Typography variant="body2">Name: {item.name}</Typography>
+              <Typography variant="body2">Qty: {item.quantity}</Typography>
+              <Typography variant="body2">Size: {item.size}</Typography>
+              <Typography variant="body2">Price: {item.price}</Typography>
+            </CardContent>
+            <CardActions>
+              <Button size="small">Remove</Button>
+            </CardActions>
+          </div>
         </Card>
       ))}
     </div>

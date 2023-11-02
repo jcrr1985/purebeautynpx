@@ -135,7 +135,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, addToCart }) => {
                 {loading ? (
                   <CircularProgress />
                 ) : (
-                  <button className="checkoutform-button">BUI</button>
+                  <button className="checkoutform-button">PLACE</button>
                 )}
               </span>
             </div>

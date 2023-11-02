@@ -17,10 +17,8 @@ const StripePayment = ({
     <>
       <CheckoutForm
         cartTotal={cartTotal}
-        setCongratulationOpen={setCongratulationOpen}
         setItemCounters={setItemCounters}
         cart={cart}
-        addToCart={addToCart}
         removeFromCart={removeFromCart}
       />
       {congratulationOpen && <CongratulationsMessage />}

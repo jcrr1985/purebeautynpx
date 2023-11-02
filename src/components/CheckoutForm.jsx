@@ -16,8 +16,6 @@ import axios from "axios";
 
 import Swal from "sweetalert2";
 import CongratulationMessage from "./CongratulationsMessage";
-import DealButton from "./DealButton";
-import ButtonsMoreLess from "./ButtonsMoreLess";
 import ItemsInCheckout from "./ItemsInCheckout";
 
 const showPaymentErrorAlert = () => {
@@ -37,6 +35,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const handleClose = () => setOpen(false);
   const [showPayment, setShowPayment] = useState(true);
   const [showSucces, setShowSucces] = useState(false);
+  const [isCardComplete, setIsCardComplete] = useState(false);
 
   const handleSubmitPayment = async (e) => {
     e.preventDefault();
@@ -80,15 +79,17 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
       {showPayment ? (
         <div className="form-and-items-wrapper">
           <form className="checkout-form--form" onSubmit={handleSubmitPayment}>
-            <div className="left">
+            <div className="checkout-form-left">
               {/* CARD INPUT */}
-              <CardElement />
+              <CardElement
+                onChange={(event) => setIsCardComplete(event.complete)}
+              />
 
               {/* address input */}
               <input
                 className="checkout-form--input"
                 type="text"
-                placeholder="Address"
+                placeholder="Address line 1"
               />
 
               {/* adresss 2 input  */}
@@ -96,31 +97,40 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
               <input
                 className="checkout-form--input"
                 type="text"
-                placeholder="Address 2"
+                placeholder="Address line 2"
               />
 
               {/* country input  */}
 
-              <input
-                className="checkout-form--input"
-                type="text"
-                placeholder="Country"
-              />
+              <div className="doble-input">
+                <input
+                  className="checkout-form--input"
+                  type="text"
+                  placeholder="Country"
+                />
+                {/* ZIP input  */}
+                <input
+                  className="checkout-form--input"
+                  type="text"
+                  placeholder="Code Postal"
+                />
+              </div>
 
-              {/* city input  */}
-              <input
-                className="checkout-form--input"
-                type="text"
-                placeholder="City"
-              />
-
-              {/* phone nuber input  */}
-
-              <input
-                className="checkout-form--input"
-                type="text"
-                placeholder="Phone Number"
-              />
+              <div className="doble-input">
+                {" "}
+                {/* city input  */}
+                <input
+                  className="checkout-form--input"
+                  type="text"
+                  placeholder="City"
+                />
+                {/* phone nuber input  */}
+                <input
+                  className="checkout-form--input"
+                  type="text"
+                  placeholder="Phone Number"
+                />
+              </div>
 
               {/* email input  */}
 
@@ -135,7 +145,14 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
                 {loading ? (
                   <CircularProgress />
                 ) : (
-                  <button className="checkoutform-button">PLACE</button>
+                  <button
+                    disabled={!isCardComplete}
+                    className={`checkoutform-button ${
+                      !isCardComplete ? "disabled" : ""
+                    }`}
+                  >
+                    PLACE
+                  </button>
                 )}
               </span>
             </div>

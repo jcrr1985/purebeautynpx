@@ -17,6 +17,7 @@ const ItemsInCheckout = ({ cart, removeFromCart }) => {
             alignItems: "center",
             minWidth: 500,
             margin: "1rem auto",
+            padding: "2rem",
           }}
           key={index}
           style={{ marginBottom: "1rem" }}

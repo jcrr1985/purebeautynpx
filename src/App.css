@@ -658,9 +658,8 @@ a {
 }
 
 
-.left{
-  width: 34%!important;
-
+.checkout-form-left{
+  width: 95%!important;
 }
 
 .items-in-checkout{
@@ -669,6 +668,7 @@ a {
 
 .StripeElement {
   background-color: rgb(214, 214, 214);
+  margin-bottom: 0.5rem;
 }
 
 .checkout-form--form{
@@ -700,4 +700,17 @@ gap:30rem;
   background-color:  rgb(214, 214, 214);
   border: none;
   margin: .5rem 0;
+}
+
+.doble-input{
+  display: flex;
+  gap: 2rem;
+}
+
+.disabled{
+
+  background-color: rgb(214, 214, 214);
+  cursor: not-allowed;
+  color: #333;
+  font-weight: bold;
 }

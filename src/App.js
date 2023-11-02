@@ -33,10 +33,6 @@ function AppComponent({ showComponent }) {
   const [cartTotal, setCartTotal] = useState(0);
   // Estado para rastrear los contadores de ítems
   const [itemCounters, setItemCounters] = useState({});
-  console.log(
-    "🚀 ~ file: App.js:36 ~ AppComponent ~ setItemCounters:",
-    setItemCounters
-  );
 
   //effect for catTotal
 

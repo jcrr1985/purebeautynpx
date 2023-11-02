@@ -8,7 +8,14 @@ import {
   Modal,
   Typography,
 } from "@mui/material";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import {
+  CardElement,
+  useStripe,
+  useElements,
+  CardNumberElement,
+  CardExpiryElement,
+  CardCvcElement,
+} from "@stripe/react-stripe-js";
 import { set } from "animejs";
 import { useState } from "react";
 
@@ -36,6 +43,10 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const [showPayment, setShowPayment] = useState(true);
   const [showSucces, setShowSucces] = useState(false);
   const [isCardComplete, setIsCardComplete] = useState(false);
+
+  const [isCardNumberComplete, setIsCardNumberComplete] = useState(false);
+  const [isCardExpiryComplete, setIsCardExpiryComplete] = useState(false);
+  const [isCardCvcComplete, setIsCardCvcComplete] = useState(false);
 
   const handleSubmitPayment = async (e) => {
     e.preventDefault();
@@ -86,9 +97,43 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
             >
               <div className="checkout-form-left">
                 {/* CARD INPUT */}
-                <CardElement
+                {/* <CardElement
                   onChange={(event) => setIsCardComplete(event.complete)}
-                />
+                /> */}
+
+                <div className="forcards">
+                  <CardNumberElement
+                    onChange={(event) =>
+                      setIsCardNumberComplete(event.complete)
+                    }
+                    options={{
+                      // Personaliza las opciones según tus necesidades
+                      showIcon: true,
+                      // Otros ajustes...
+                    }}
+                  />
+                  <CardExpiryElement
+                    onChange={(event) =>
+                      setIsCardExpiryComplete(event.complete)
+                    }
+                    options={
+                      {
+                        // Personaliza las opciones según tus necesidades
+                        // Otros ajustes...
+                      }
+                    }
+                  />
+                  <CardCvcElement
+                    onChange={(event) => setIsCardCvcComplete(event.complete)}
+                    options={
+                      {
+                        // Personaliza las opciones según tus necesidades
+                        // Otros ajustes...
+                      }
+                    }
+                  />
+                </div>
+
                 {/* address input */}
                 <input
                   className="checkout-form--input"

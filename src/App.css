@@ -709,8 +709,11 @@ gap:30rem;
 
 .disabled{
 
-  background-color: rgb(214, 214, 214);
   cursor: not-allowed;
-  color: #333;
-  font-weight: bold;
+
+}
+
+.forcards{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }

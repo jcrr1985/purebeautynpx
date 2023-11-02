@@ -27,7 +27,7 @@ const showPaymentErrorAlert = () => {
 const abortController = new AbortController();
 
 //create functional component
-const CheckoutForm = ({ cartTotal, setItemCounters, cart, addToCart }) => {
+const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   console.log("🚀 ~ file: CheckoutForm.jsx:20 ~ CheckoutForm ~ cart:", cart);
   const [showCongrats, setShowCongrats] = useState(false);
   const stripe = useStripe();
@@ -142,7 +142,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, addToCart }) => {
           </form>
 
           {/* ITEMS DE LA DERECHA EN CHECKOUT */}
-          <ItemsInCheckout cart={cart} />
+          <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
         </div>
       ) : (
         showSucces && (

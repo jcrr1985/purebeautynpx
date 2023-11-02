@@ -4,7 +4,13 @@ import CheckoutForm from "./CheckoutForm";
 import React, { useState } from "react";
 
 import CongratulationsMessage from "./CongratulationsMessage";
-const StripePayment = ({ cartTotal, setItemCounters, cart, addToCart }) => {
+const StripePayment = ({
+  cartTotal,
+  setItemCounters,
+  cart,
+  addToCart,
+  removeFromCart,
+}) => {
   const [congratulationOpen, setCongratulationOpen] = useState(false);
 
   return (
@@ -15,6 +21,7 @@ const StripePayment = ({ cartTotal, setItemCounters, cart, addToCart }) => {
         setItemCounters={setItemCounters}
         cart={cart}
         addToCart={addToCart}
+        removeFromCart={removeFromCart}
       />
       {congratulationOpen && <CongratulationsMessage />}
     </>

@@ -140,6 +140,7 @@ function AppComponent({ showComponent }) {
                   setItemCounters={setItemCounters}
                   cart={cart}
                   addToCart={addToCart}
+                  removeFromCart={removeFromCart}
                 />
               }
             />

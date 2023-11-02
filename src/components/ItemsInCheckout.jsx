@@ -7,7 +7,7 @@ import {
 } from "@mui/material";
 import React from "react";
 
-const ItemsInCheckout = ({ cart }) => {
+const ItemsInCheckout = ({ cart, removeFromCart }) => {
   return (
     <div className="items-in-checkout">
       {cart.map((item, index) => (
@@ -34,7 +34,9 @@ const ItemsInCheckout = ({ cart }) => {
               <Typography variant="body2">Price: {item.price}</Typography>
             </CardContent>
             <CardActions>
-              <Button size="small">Remove</Button>
+              <Button size="small" onClick={() => removeFromCart(item)}>
+                Remove
+              </Button>
             </CardActions>
           </div>
         </Card>

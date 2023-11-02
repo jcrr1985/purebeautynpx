@@ -44,16 +44,18 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const [showSucces, setShowSucces] = useState(false);
   const [isCardComplete, setIsCardComplete] = useState(false);
 
-  const [isCardNumberComplete, setIsCardNumberComplete] = useState(false);
-  const [isCardExpiryComplete, setIsCardExpiryComplete] = useState(false);
-  const [isCardCvcComplete, setIsCardCvcComplete] = useState(false);
-
   const handleSubmitPayment = async (e) => {
+    alert("hi");
     e.preventDefault();
 
     setLoading(true);
 
     try {
+      console.log(
+        "🚀 ~ f parseInt(cartTotal):",
+        parseInt(cartTotal),
+        typeof parseInt(cartTotal)
+      );
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: "card",
         card: elements.getElement(CardElement),
@@ -62,7 +64,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
         const { id } = paymentMethod;
         const data = await axios.post("http://localhost:3001/api/checkout", {
           id,
-          amount: cartTotal * 100,
+          amount: parseInt(cartTotal) * 100,
           signal: abortController.signal,
           timeout: 10000,
         });
@@ -97,67 +99,38 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
             >
               <div className="checkout-form-left">
                 {/* CARD INPUT */}
-                {/* <CardElement
+                <CardElement
                   onChange={(event) => setIsCardComplete(event.complete)}
-                /> */}
+                />
 
                 <div className="forcards">
-                  <CardNumberElement
-                    onChange={(event) =>
-                      setIsCardNumberComplete(event.complete)
-                    }
-                    options={{
-                      // Personaliza las opciones según tus necesidades
-                      showIcon: true,
-                      // Otros ajustes...
-                    }}
+                  {/* address input */}
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="Address line 1"
                   />
-                  <CardExpiryElement
-                    onChange={(event) =>
-                      setIsCardExpiryComplete(event.complete)
-                    }
-                    options={
-                      {
-                        // Personaliza las opciones según tus necesidades
-                        // Otros ajustes...
-                      }
-                    }
+                  {/* adresss 2 input  */}
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="Address line 2"
                   />
-                  <CardCvcElement
-                    onChange={(event) => setIsCardCvcComplete(event.complete)}
-                    options={
-                      {
-                        // Personaliza las opciones según tus necesidades
-                        // Otros ajustes...
-                      }
-                    }
+
+                  {/* ZIP input  */}
+                  <input
+                    className="checkout-form--input"
+                    type="text"
+                    placeholder="Code Postal"
                   />
                 </div>
 
-                {/* address input */}
-                <input
-                  className="checkout-form--input"
-                  type="text"
-                  placeholder="Address line 1"
-                />
-                {/* adresss 2 input  */}
-                <input
-                  className="checkout-form--input"
-                  type="text"
-                  placeholder="Address line 2"
-                />
                 {/* country input  */}
                 <div className="doble-input">
                   <input
                     className="checkout-form--input"
                     type="text"
                     placeholder="Country"
-                  />
-                  {/* ZIP input  */}
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="Code Postal"
                   />
                 </div>
                 <div className="doble-input">

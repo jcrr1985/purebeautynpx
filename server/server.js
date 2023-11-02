@@ -29,8 +29,4 @@ const privateKey = `${process.env.STRIPE_PRIVATE_API_KEY}`;
 
 app.listen(3001, () => console.log("Listening on port 3001"));
 
-console.log(
-  "🚀 ~ file: server.js:36 ~ process.env.STRIPE_PRIVATE_API_KEY:",
-  privateKey
-);
 const stripe = new Stripe(privateKey);

@@ -708,12 +708,15 @@ gap:30rem;
 }
 
 .disabled{
-
   cursor: not-allowed;
-
 }
 
 .forcards{
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  gap: 1.8rem;
+}
+
+.forcards div{
+border-radius: 5px;
 }

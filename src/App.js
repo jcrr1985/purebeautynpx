@@ -125,7 +125,7 @@ function AppComponent({ showComponent }) {
             {/* ITEMDETAILPAGE */}
             <Route
               path="/item/:itemId"
-              element={<ItemDetailPage addToCart={addToCart} />}
+              element={<ItemDetailPage addToCart={addToCart} cart={cart} />}
             />
             {/* STRIPEPAYMENT */}
             <Route

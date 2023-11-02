@@ -5,7 +5,8 @@ import ControlledAccordions from "./Accordion";
 import { Accordion } from "@mui/material";
 import ButtonsMoreLess from "./ButtonsMoreLess";
 
-const ItemDetailPage = ({ addToCart }) => {
+const ItemDetailPage = ({ addToCart, cart }) => {
+  console.log("🚀 ~ file: ItemDetailPage.jsx:9 ~ ItemDetailPage ~ cart:", cart);
   const { itemId } = useParams();
   const [foundItem, setFoundItem] = useState(null); // Estado para foundItem
   const [selectedSize, setSelectedSize] = useState(null); // Estado para el botón seleccionado
@@ -17,7 +18,6 @@ const ItemDetailPage = ({ addToCart }) => {
       foundItem
     );
     setSelectedSize(size);
-    foundItem.size = size;
     addToCart(foundItem, "add");
     setShowMoreLessButtons(true);
   };

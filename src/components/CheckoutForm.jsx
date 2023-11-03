@@ -71,7 +71,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
           <p className="text-italianno we-are-happy">
             {" "}
             <span>We are Happy with you purchase! </span>{" "}
-            <span>Lets do last steps</span>
+            <span>Let's do last steps</span>
           </p>
           <div className="form-and-items-wrapper">
             <form

@@ -32,11 +32,6 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const { handleSubmit, control } = useForm();
 
   const handleSubmitPayment = async (dataForm) => {
-    console.log(
-      "🚀 ~ file: CheckoutForm.jsx:35 ~ handleSubmitPayment ~ data:",
-      dataForm
-    );
-
     setLoading(true);
 
     try {

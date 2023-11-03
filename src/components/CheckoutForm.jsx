@@ -1,22 +1,7 @@
-import {
-  Button,
-  Card,
-  CardActions,
-  CardContent,
-  CircularProgress,
-  Grid,
-  Modal,
-  Typography,
-} from "@mui/material";
-import {
-  CardElement,
-  useStripe,
-  useElements,
-  CardNumberElement,
-  CardExpiryElement,
-  CardCvcElement,
-} from "@stripe/react-stripe-js";
-import { set } from "animejs";
+import { CircularProgress } from "@mui/material";
+import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
+import { useForm, Controller } from "react-hook-form";
+
 import { useState } from "react";
 
 import axios from "axios";
@@ -44,9 +29,13 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const [showSucces, setShowSucces] = useState(false);
   const [isCardComplete, setIsCardComplete] = useState(false);
 
-  const handleSubmitPayment = async (e) => {
-    alert("hi");
-    e.preventDefault();
+  const { handleSubmit, control } = useForm();
+
+  const handleSubmitPayment = async (dataForm) => {
+    console.log(
+      "🚀 ~ file: CheckoutForm.jsx:35 ~ handleSubmitPayment ~ data:",
+      dataForm
+    );
 
     setLoading(true);
 
@@ -67,6 +56,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
           amount: parseInt(cartTotal) * 100,
           signal: abortController.signal,
           timeout: 10000,
+          dataForm,
         });
 
         elements.getElement(CardElement).clear();
@@ -95,7 +85,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
           <div className="form-and-items-wrapper">
             <form
               className="checkout-form--form"
-              onSubmit={handleSubmitPayment}
+              onSubmit={handleSubmit(handleSubmitPayment)}
             >
               <div className="checkout-form-left">
                 {/* CARD INPUT */}
@@ -105,54 +95,108 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
 
                 <div className="forcards">
                   {/* address input */}
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="Address line 1"
+                  <Controller
+                    name="address1"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        className="checkout-form--input"
+                        type="text"
+                        placeholder="Address line 1"
+                        {...field}
+                      />
+                    )}
                   />
-                  {/* adresss 2 input  */}
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="Address line 2"
+                  <Controller
+                    name="address2"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        className="checkout-form--input"
+                        type="text"
+                        placeholder="Address line 2"
+                        {...field}
+                      />
+                    )}
                   />
 
-                  {/* ZIP input  */}
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="Code Postal"
+                  {/* ZIP input */}
+                  <Controller
+                    name="zipCode"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        className="checkout-form--input"
+                        type="text"
+                        placeholder="Code Postal"
+                        {...field}
+                      />
+                    )}
                   />
                 </div>
 
-                {/* country input  */}
+                {/* country input */}
                 <div className="doble-input">
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="Country"
+                  <Controller
+                    name="country"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        className="checkout-form--input"
+                        type="text"
+                        placeholder="Country"
+                        {...field}
+                      />
+                    )}
                   />
                 </div>
                 <div className="doble-input">
-                  {" "}
-                  {/* city input  */}
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="City"
+                  {/* city input */}
+                  <Controller
+                    name="city"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        className="checkout-form--input"
+                        type="text"
+                        placeholder="City"
+                        {...field}
+                      />
+                    )}
                   />
-                  {/* phone nuber input  */}
-                  <input
-                    className="checkout-form--input"
-                    type="text"
-                    placeholder="Phone Number"
+                  {/* phone number input */}
+                  <Controller
+                    name="phoneNumber"
+                    control={control}
+                    defaultValue=""
+                    render={({ field }) => (
+                      <input
+                        className="checkout-form--input"
+                        type="text"
+                        placeholder="Phone Number"
+                        {...field}
+                      />
+                    )}
                   />
                 </div>
-                {/* email input  */}
-                <input
-                  className="checkout-form--input"
-                  type="text"
-                  placeholder="Email"
+                {/* email input */}
+                <Controller
+                  name="email"
+                  control={control}
+                  defaultValue=""
+                  render={({ field }) => (
+                    <input
+                      className="checkout-form--input"
+                      type="text"
+                      placeholder="Email"
+                      {...field}
+                    />
+                  )}
                 />
                 {/* <!--BUY BUTTON--> */}
                 <span>
@@ -164,6 +208,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
                       className={`checkoutform-button ${
                         !isCardComplete ? "disabled" : ""
                       }`}
+                      type="submit"
                     >
                       PLACE
                     </button>

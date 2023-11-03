@@ -2,6 +2,7 @@ import { Snackbar } from "@mui/material";
 import { useEffect, useState } from "react";
 import Alert from "@mui/material/Alert";
 import DealButton from "./DealButton";
+import { Link } from "react-router-dom";
 
 const CongratulationMessage = ({ setItemCounters }) => {
   console.log(
@@ -18,7 +19,9 @@ const CongratulationMessage = ({ setItemCounters }) => {
   return (
     <div className="congratulationsMessage-content-wrapper">
       <p className="text-italianno">Tahnk you for purchase</p>
-      <DealButton message="Continue Shopping" />
+      <Link to="/">
+        <DealButton message="Continue Shopping" />
+      </Link>
     </div>
   );
 };

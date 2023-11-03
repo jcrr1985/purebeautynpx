@@ -9,7 +9,8 @@ app.use(express.json());
 app.use(cors());
 app.post("/api/checkout", async (req, res) => {
   try {
-    const { id, amount } = req.body;
+    const { id, amount, dataForm } = req.body;
+    console.log("🚀 ~ file: server.js:23 ~ app.post ~ data", dataForm);
     const payment = await stripe.paymentIntents.create({
       amount,
       currency: "USD",

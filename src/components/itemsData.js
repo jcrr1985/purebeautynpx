@@ -1,7 +1,4 @@
-import earrings from "./../assets/images/earrings.jpg";
-import rings from "./../assets/images/rings.png";
-import necklace from "./../assets/images/necklace.jpeg";
-import dress1 from "./../assets/images/dress-1.jpg";
+import dress1 from "../assets/images/dress-1.webp";
 
 export const categoriesList = [
   {
@@ -15,7 +12,7 @@ export const categoriesList = [
         name: "Golden Owl Earrings",
         category: "Earrings",
         price: 25,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Gold, Silver, Diamond.",
         size: "S",
 
@@ -90,7 +87,7 @@ export const categoriesList = [
         name: "Rings of the Destiny",
         category: "rings",
         price: 50,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Gold, Pink Gold, Silver",
         size: "S",
         deepDescription2: [
@@ -124,7 +121,7 @@ export const categoriesList = [
         name: "Ring of Queen  ",
         category: "rings",
         price: 55,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Silver, Diamonds from Cleopatra's tomb",
         size: "XL",
         deepDescription2: [
@@ -157,7 +154,7 @@ export const categoriesList = [
         name: "Rings of the Destiny",
         category: "rings",
         price: 50,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Gold, Pink Gold, Silver",
         size: "M",
         deepDescription2: [
@@ -190,7 +187,7 @@ export const categoriesList = [
         name: "Ring of Queen  ",
         category: "rings",
         price: 55,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Silver, Diamonds from Cleopatra's tomb",
         size: "M",
         deepDescription2: [
@@ -229,7 +226,7 @@ export const categoriesList = [
         name: "Luxury Titanium Steel Necklace",
         category: "necklaces",
         price: 50,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Titanium, Steel, blue Emerald",
         size: "M",
         deepDescription2: [
@@ -262,7 +259,7 @@ export const categoriesList = [
         name: "Butterfly Ancient Goddess Necklace",
         category: "necklaces",
         price: 45,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Black Titanium, Steel, Coal from the Moon ",
         size: "L",
 
@@ -337,7 +334,7 @@ export const categoriesList = [
         name: "Carmesin & Golden Rose Earrings",
         category: "Earrings 2",
         price: 30,
-        imageSrc: "/images/dress-1.jpg",
+        imageSrc: "/images/dress-1.webp",
         materials: "Pink Gold, Rubies, Silver",
         size: "XL",
         deepDescription2: [

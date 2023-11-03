@@ -35,16 +35,12 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
     setLoading(true);
 
     try {
-      console.log(
-        "🚀 ~ f parseInt(cartTotal):",
-        parseInt(cartTotal),
-        typeof parseInt(cartTotal)
-      );
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: "card",
         card: elements.getElement(CardElement),
       });
       if (!error) {
+        console.log("sin error");
         const { id } = paymentMethod;
         const data = await axios.post("http://localhost:3001/api/checkout", {
           id,

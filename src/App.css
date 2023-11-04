@@ -825,3 +825,8 @@ border-radius: 5px;
 }
 
 }
+
+.add-to-wishlist, .add-to-cart{
+  min-width: 10rem;
+  min-height: 5rem;
+}

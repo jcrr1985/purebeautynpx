@@ -16,6 +16,7 @@ import { Elements } from "@stripe/react-stripe-js";
 import StripePayment from "./components/StripePayment";
 import Success from "./components/Success";
 import CongratulationMessage from "./components/CongratulationsMessage";
+import Swal from "sweetalert2";
 
 const stripePromise = loadStripe(
   "pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ"
@@ -52,8 +53,10 @@ function AppComponent({ showComponent }) {
     if (existingItem) {
       if (operator === "add") {
         existingItem.quantity += 1;
+        showAutoClosingMessage("Item added to cart", 1500);
       } else if (operator === "substract" && existingItem.quantity > 0) {
         existingItem.quantity -= 1;
+        showAutoClosingMessage("Item removed from cart", 1500);
       }
       // Actualizar contador de ítem
       setItemCounters((prevCounters) => ({
@@ -159,3 +162,12 @@ function App() {
 }
 
 export default App;
+
+export const showAutoClosingMessage = (message, duration) => {
+  Swal.fire({
+    icon: "success",
+    title: message,
+    timer: duration,
+    showConfirmButton: false,
+  });
+};

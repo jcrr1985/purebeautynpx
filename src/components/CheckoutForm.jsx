@@ -34,7 +34,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true);
 
-    const apiUrl = "https://serverpp2.onrender.com";
+    const apiUrl = "https://serverpp2.onrender.com/api/checkout";
 
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({

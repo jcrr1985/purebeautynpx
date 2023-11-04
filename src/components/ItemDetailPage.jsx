@@ -2,22 +2,18 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { categoriesList } from "./itemsData";
 import ControlledAccordions from "./Accordion";
-import { Accordion } from "@mui/material";
-import ButtonsMoreLess from "./ButtonsMoreLess";
+import { showAutoClosingMessage } from "../App";
 
 const ItemDetailPage = ({ addToCart, cart }) => {
   console.log("🚀 ~ file: ItemDetailPage.jsx:9 ~ ItemDetailPage ~ cart:", cart);
   const { itemId } = useParams();
-  const [foundItem, setFoundItem] = useState(null); // Estado para foundItem
-  const [selectedSize, setSelectedSize] = useState(null); // Estado para el botón seleccionado
+  const [foundItem, setFoundItem] = useState(null);
+  const [selectedSize, setSelectedSize] = useState(null);
   const [showMoreLessButtons, setShowMoreLessButtons] = useState(false);
 
   const handleAddToCart = (size) => {
-    console.log(
-      "🚀 ~ file: ItemDetailPage.jsx:16 ~ handleAddToCart ~ foundItem:",
-      foundItem
-    );
     setSelectedSize(size);
+    showAutoClosingMessage("Item added to cart", 1500);
     addToCart(foundItem, "add");
     setShowMoreLessButtons(true);
   };

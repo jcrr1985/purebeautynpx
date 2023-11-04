@@ -52,11 +52,11 @@ function AppComponent({ showComponent }) {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
       if (operator === "add") {
-        existingItem.quantity += 1;
         showAutoClosingMessage("Item added to cart", 1500);
+        existingItem.quantity += 1;
       } else if (operator === "substract" && existingItem.quantity > 0) {
-        existingItem.quantity -= 1;
         showAutoClosingMessage("Item removed from cart", 1500);
+        existingItem.quantity -= 1;
       }
       // Actualizar contador de ítem
       setItemCounters((prevCounters) => ({

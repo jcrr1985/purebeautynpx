@@ -828,4 +828,9 @@ border-radius: 5px;
   min-width: 10rem;
   min-height: 5rem;
 }
+
+.idp--accordeon--container{
+  margin-left: 5%;
+
+}
 }

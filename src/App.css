@@ -447,7 +447,7 @@ input::placeholder {
 
 .item-detail-page {
   display: flex;
-  gap: 3%;
+  gap: 6%;
   justify-content: center;
   margin-top: 2rem;
 }
@@ -587,6 +587,11 @@ a {
 .left-cp{
   width: 20%;
   padding: .5px
+}
+
+.left{
+  width: 40%;
+
 }
 
 .cart-page-wrapper{
@@ -730,4 +735,11 @@ gap:30rem;
 
 .forcards div{
 border-radius: 5px;
+}
+
+.carousel-bezier {
+  transition-timing-function: cubic-bezier(0.42, 0, 0.58, 1);
+  transition-duration: 3s;
+
+
 }

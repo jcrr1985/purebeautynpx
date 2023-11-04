@@ -4,6 +4,12 @@ import { categoriesList } from "./itemsData";
 import ControlledAccordions from "./Accordion";
 import { showAutoClosingMessage } from "../App";
 
+import dress1 from "../assets/images/dress-1.webp";
+import earrings from "../assets/images/earrings.jpg";
+import flower from "../assets/images/flower.webp";
+
+import ImageCarousel from "./Carousel2";
+
 const ItemDetailPage = ({ addToCart, cart }) => {
   console.log("🚀 ~ file: ItemDetailPage.jsx:9 ~ ItemDetailPage ~ cart:", cart);
   const { itemId } = useParams();
@@ -34,7 +40,7 @@ const ItemDetailPage = ({ addToCart, cart }) => {
   return (
     <div className="item-detail-page">
       <div className="left">
-        <img src={foundItem?.imageSrc} alt={foundItem?.name} />
+        <ImageCarousel images={images} />
       </div>
       <div className="items-detail-page-container-right">
         <h2>{foundItem?.name}</h2>
@@ -109,3 +115,5 @@ const buttonSizes = [
   "x large",
   "xx large",
 ];
+
+const images = [dress1, earrings, flower];

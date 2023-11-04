@@ -14,9 +14,9 @@ const Main = () => {
     <div className="main">
       <div className="main-content">
         <h3 className="font-light">Special moment</h3>
-        <h1 className="font-light font-title">Time to create you own</h1>
+        <h1 className="font-light font-title">Time to create your </h1>
         <h1 className="font-light font-title" style={{ marginTop: "-30px" }}>
-          style
+          own style
         </h1>
         <p>
           <button className="button button-browse" onClick={scrollToCategories}>

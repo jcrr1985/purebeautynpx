@@ -4,8 +4,9 @@ import flower from "../assets/images/flower.webp";
 
 export const categoriesList = [
   {
-    name: "Earrings ",
-    src: earrings,
+
+    name: "Earrings ",
+    src: dress1,
     items: [
       {
         description:
@@ -78,8 +79,10 @@ export const categoriesList = [
     ],
   },
   {
+
     name: "flower",
     src: flower,
+
     items: [
       {
         description:

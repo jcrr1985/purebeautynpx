@@ -114,9 +114,10 @@ a {
 
 .categories {
   display: flex;
-  width: 103%;
-  margin: 0 -10px;
+justify-content: center;
   margin-top: 3rem;
+  display: flex;
+
 }
 
 .categories--description {

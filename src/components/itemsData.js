@@ -78,8 +78,8 @@ export const categoriesList = [
     ],
   },
   {
-    name: "flower",
-    src: flower,
+    name: "Earrings",
+    src: dress1,
 
     items: [
       {
@@ -219,7 +219,7 @@ export const categoriesList = [
     ],
   },
   {
-    name: "Necklaces",
+    name: "Earrings",
     src: dress1,
     items: [
       {

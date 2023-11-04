@@ -23,7 +23,11 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container categories">
-      <ChevronLeftIcon onClick={handlePrevClick} className="chevron-icon" />
+      <ChevronLeftIcon
+        onClick={handlePrevClick}
+        className="chevron-icon"
+        style={{ position: "relative", left: "10%" }}
+      />
       <div className="categories-carousel categories">
         {visibleImages.map((category, index) => (
           <Link
@@ -36,7 +40,11 @@ const Carousel = () => {
           </Link>
         ))}
       </div>
-      <ChevronRightIcon onClick={handleNextClick} className="chevron-icon" />
+      <ChevronRightIcon
+        onClick={handleNextClick}
+        className="chevron-icon"
+        style={{ position: "relative", right: "10%" }}
+      />
     </div>
   );
 };

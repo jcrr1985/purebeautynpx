@@ -344,11 +344,12 @@ display: flex;
 }
 
 .header-left-icon {
-  left: 5%;
+  left: 10%;
 }
 
 .header-right-icon {
-  right: 5%;
+  right: 10%;
+
 }
 
 .open {

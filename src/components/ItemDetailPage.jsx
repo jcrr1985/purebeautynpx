@@ -11,11 +11,12 @@ import flower from "../assets/images/flower.webp";
 import ImageCarousel from "./Carousel2";
 
 const ItemDetailPage = ({ addToCart, cart }) => {
-  console.log("🚀 ~ file: ItemDetailPage.jsx:9 ~ ItemDetailPage ~ cart:", cart);
   const { itemId } = useParams();
   const [foundItem, setFoundItem] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
   const [showMoreLessButtons, setShowMoreLessButtons] = useState(false);
+
+  const [category, setCategory] = useState(null);
 
   const handleAddToCart = (size) => {
     setSelectedSize(size);
@@ -32,10 +33,35 @@ const ItemDetailPage = ({ addToCart, cart }) => {
         (item) => item.id === parseInt(itemId)
       );
       if (foundItem) {
-        setFoundItem(foundItem); // Actualiza el estado con el item encontrado
+        setFoundItem(foundItem);
+        setCategory(category.name);
       }
     });
   }, [itemId]);
+
+  const [buttonSizes, setButtonsbuttonSizes] = useState(floweSizes);
+
+  //useeffect for logging category
+
+  useEffect(() => {
+    switch (category ? category.toLowerCase() : "") {
+      case "flower":
+        setButtonsbuttonSizes(floweSizes);
+        break;
+      case "earrings":
+        setButtonsbuttonSizes(earringsSizes);
+        break;
+      case "necklaces":
+        setButtonsbuttonSizes(necklacesSizes);
+        break;
+      default:
+        setButtonsbuttonSizes(defaultSizes);
+    }
+  }, [category, itemId]);
+
+  useEffect(() => {
+    console.log("🚀  buttonSizes:", buttonSizes);
+  }, [buttonSizes, category]);
 
   return (
     <div className="item-detail-page">
@@ -77,7 +103,6 @@ const ItemDetailPage = ({ addToCart, cart }) => {
                 }`}
                 onClick={() => {
                   addToCart(foundItem, "add");
-                  console.log("caartpage");
                 }}
               >
                 +
@@ -106,7 +131,7 @@ const ItemDetailPage = ({ addToCart, cart }) => {
 
 export default ItemDetailPage;
 
-const buttonSizes = [
+const floweSizes = [
   "xx small",
   "x small",
   "small",
@@ -115,5 +140,11 @@ const buttonSizes = [
   "x large",
   "xx large",
 ];
+
+const earringsSizes = ["small", "medium", "large"];
+
+const necklacesSizes = ["small", "medium", "large", "x large"];
+
+const defaultSizes = ["XS", "S", "M", "L", "XL"];
 
 const images = [dress1, earrings, flower];

@@ -16,6 +16,10 @@
   wrap: pre-wrap
 }
 
+body, html {
+  overflow-x: hidden;
+}
+
 
 html {
   font-size: 100%; 

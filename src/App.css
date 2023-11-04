@@ -94,6 +94,8 @@ a {
 .main-content {
   position: relative;
     top: 3%;
+    left: 2%;
+
 }
 
 .button {
@@ -742,4 +744,23 @@ border-radius: 5px;
   transition-duration: 3s;
 
 
+}
+
+.heart-list-container{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+@media screen and (max-width: 768px) {
+  .heart-list {
+      display: flex;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-title {
+      display: none;
+  }
+  
 }

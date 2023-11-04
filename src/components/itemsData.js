@@ -4,8 +4,7 @@ import flower from "../assets/images/flower.webp";
 
 export const categoriesList = [
   {
-
-    name: "Earrings ",
+    name: "Earrings",
     src: dress1,
     items: [
       {
@@ -79,7 +78,6 @@ export const categoriesList = [
     ],
   },
   {
-
     name: "flower",
     src: flower,
 
@@ -123,7 +121,7 @@ export const categoriesList = [
         description:
           "+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater",
         id: 6,
-        name: "Ring of Queen  ",
+        name: "Ring of Queen",
         category: "rings",
         price: 55,
         imageSrc: "/images/dress-1.webp",

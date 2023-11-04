@@ -34,6 +34,8 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true);
 
+    const apiUrl = "https://serverpp2.onrender.com";
+
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: "card",
@@ -42,7 +44,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
       if (!error) {
         console.log("sin error");
         const { id } = paymentMethod;
-        const data = await axios.post("http://localhost:3001/api/checkout", {
+        const data = await axios.post(apiUrl, {
           id,
           amount: parseInt(cartTotal) * 100,
           signal: abortController.signal,

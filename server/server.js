@@ -22,7 +22,7 @@ app.post("/api/checkout", async (req, res) => {
     console.log("🚀 ~ SUCCESSFUL PAYMENT", payment);
     res.send({ message: "Successful payment" });
   } catch (error) {
-    console.log("🚀 ~ file: server.js:33 ~ app.post ~ error:", error);
+    console.log("🚀 ~ app.post ~ error:", error);
   }
 });
 

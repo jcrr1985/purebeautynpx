@@ -752,15 +752,23 @@ border-radius: 5px;
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
-  .heart-list {
-      display: flex;
-  }
-}
+
 
 @media screen and (max-width: 768px) {
   .navbar-title {
       display: none;
   }
+
+  .right-cp {
+    display: flex;
+    /* margin-top: 15%; */
+  }
   
+  .heart-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}
 }

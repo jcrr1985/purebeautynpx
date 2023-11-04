@@ -785,4 +785,21 @@ border-radius: 5px;
   right: 26%;
   top: 24.5%;
 }
+
+.item-detail-page{
+  
+  flex-direction: column;
+  align-items: center;
+}
+
+.left{
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-left: 42%;
+
+
+}
+
+
 }

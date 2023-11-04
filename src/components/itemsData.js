@@ -2,7 +2,7 @@ import dress1 from "../assets/images/dress-1.webp";
 
 export const categoriesList = [
   {
-    name: "Earrings",
+    name: "Earrings ",
     src: dress1,
     items: [
       {
@@ -76,7 +76,7 @@ export const categoriesList = [
     ],
   },
   {
-    name: "Necklaces",
+    name: "rings    ",
     src: dress1,
     items: [
       {

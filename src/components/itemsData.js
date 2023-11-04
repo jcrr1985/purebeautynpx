@@ -1,9 +1,11 @@
 import dress1 from "../assets/images/dress-1.webp";
+import earrings from "../assets/images/earrings.jpg";
+import flower from "../assets/images/flower.webp";
 
 export const categoriesList = [
   {
     name: "Earrings ",
-    src: dress1,
+    src: earrings,
     items: [
       {
         description:
@@ -76,8 +78,8 @@ export const categoriesList = [
     ],
   },
   {
-    name: "rings    ",
-    src: dress1,
+    name: "flower",
+    src: flower,
     items: [
       {
         description:
@@ -86,9 +88,9 @@ export const categoriesList = [
         id: 5,
         name: "Rings of the Destiny",
         category: "rings",
-        price: 50,
-        imageSrc: "/images/dress-1.webp",
-        materials: "Gold, Pink Gold, Silver",
+        price: 102,
+        imageSrc: "/images/flower.webp",
+        materials: "So beautiful, you can't even imagine",
         size: "S",
         deepDescription2: [
           {

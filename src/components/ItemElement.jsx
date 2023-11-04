@@ -17,9 +17,9 @@ const ItemElement = ({ imageSrc, name, price, addToCart, materials, id }) => {
           <p>{materials}</p>
           <p>{price} $</p>
         </div>
-        <button className="button" onClick={handleAddToCart}>
+        {/* <button className="button" onClick={handleAddToCart}>
           Add to Cart
-        </button>
+        </button> */}
       </div>
     </Link>
   );

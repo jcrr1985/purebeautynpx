@@ -86,7 +86,7 @@ a {
   background-size: inherit;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 

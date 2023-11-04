@@ -101,51 +101,53 @@ function AppComponent({ showComponent }) {
     <Elements stripe={stripePromise}>
       <div className="god">
         <Header cart={cart} itemCounters={itemCounters} />
-        {showComponent && <Main />}
-        <div id="categories">
-          <Routes>
-            {/* HOME */}
-            <Route path="/" element={<Categories />} />
-            {/* <-CATEGORIES */}
-            <Route
-              path="/category/:category"
-              element={<CategoryPage addToCart={addToCart} />}
-            />
-            {/* CARTPAGE */}
-            <Route
-              path="/cart"
-              element={
-                <CartPage
-                  cart={cart}
-                  removeFromCart={removeFromCart}
-                  addToCart={addToCart}
-                  itemCounters={itemCounters}
-                  cartTotal={cartTotal}
-                  setItemCounters={setItemCounters}
-                />
-              }
-            />
-            {/* ITEMDETAILPAGE */}
-            <Route
-              path="/item/:itemId"
-              element={<ItemDetailPage addToCart={addToCart} cart={cart} />}
-            />
-            {/* STRIPEPAYMENT */}
-            <Route
-              path="/stripe-payment"
-              element={
-                <StripePayment
-                  cartTotal={cartTotal}
-                  setItemCounters={setItemCounters}
-                  cart={cart}
-                  addToCart={addToCart}
-                  removeFromCart={removeFromCart}
-                />
-              }
-            />
-            {/* sUCCESS */}
-            <Route path="/success" element={<Success />} />
-          </Routes>
+        <div className="under-header">
+          {showComponent && <Main />}
+          <div id="categories">
+            <Routes>
+              {/* HOME */}
+              <Route path="/" element={<Categories />} />
+              {/* <-CATEGORIES */}
+              <Route
+                path="/category/:category"
+                element={<CategoryPage addToCart={addToCart} />}
+              />
+              {/* CARTPAGE */}
+              <Route
+                path="/cart"
+                element={
+                  <CartPage
+                    cart={cart}
+                    removeFromCart={removeFromCart}
+                    addToCart={addToCart}
+                    itemCounters={itemCounters}
+                    cartTotal={cartTotal}
+                    setItemCounters={setItemCounters}
+                  />
+                }
+              />
+              {/* ITEMDETAILPAGE */}
+              <Route
+                path="/item/:itemId"
+                element={<ItemDetailPage addToCart={addToCart} cart={cart} />}
+              />
+              {/* STRIPEPAYMENT */}
+              <Route
+                path="/stripe-payment"
+                element={
+                  <StripePayment
+                    cartTotal={cartTotal}
+                    setItemCounters={setItemCounters}
+                    cart={cart}
+                    addToCart={addToCart}
+                    removeFromCart={removeFromCart}
+                  />
+                }
+              />
+              {/* sUCCESS */}
+              <Route path="/success" element={<Success />} />
+            </Routes>
+          </div>
         </div>
         {<Havealook />}
       </div>

@@ -46,7 +46,11 @@ const Header = ({ cart, itemCounters }) => {
           </div>
         </div>
         <div className="header-right">
-          {!searchBarInputOpen && <SearchIcon onClick={enableSearchBarInput} />}
+          <div className="lupa">
+            {!searchBarInputOpen && (
+              <SearchIcon onClick={enableSearchBarInput} />
+            )}
+          </div>
           <Link to="/cart">
             <div>
               <ShoppingCartIcon />

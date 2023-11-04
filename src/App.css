@@ -72,7 +72,7 @@ a {
 
   
   background-position: center;
-  background-size: 120%;
+  background-size: inherit;
   background-repeat: no-repeat;
   display: flex;
   justify-content: center;
@@ -151,7 +151,7 @@ a {
 }
 
 .font-title {
-  font-size: 40px;
+  font-size: 2.5rem;
 }
 
 .title--categories {

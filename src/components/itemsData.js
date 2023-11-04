@@ -76,7 +76,7 @@ export const categoriesList = [
     ],
   },
   {
-    name: "Rings",
+    name: "Necklaces",
     src: dress1,
     items: [
       {

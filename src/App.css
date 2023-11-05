@@ -477,6 +477,11 @@ input::placeholder {
   gap: 10px;
 }
 
+.idp-button-size:hover {
+  background-color: #322237;
+  color: #fff;
+}
+
 .items-detail-page-container-right button {
   border: 1px solid #322237;
   background-color: transparent;

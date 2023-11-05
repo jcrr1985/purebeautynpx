@@ -253,6 +253,9 @@ display: flex;
 
 .cart-legend {
   margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
 .cart-page-wrapper {
@@ -761,6 +764,16 @@ border-radius: 5px;
 
 
 @media screen and (max-width: 768px) {
+
+  .cart-item {
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background: #fff;
+  }
   .navbar-title {
       display: none;
   }
@@ -831,6 +844,14 @@ border-radius: 5px;
 
 .idp--accordeon--container{
   margin-left: 5%;
-
 }
+.grid-container{
+  gap: 10%;
+}
+
+.cart-item{
+  display: flex;
+    flex-direction: column;
+}
+
 }

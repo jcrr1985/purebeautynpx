@@ -32,8 +32,15 @@ const CartPage = ({
                 <div key={index} className="cart-item up">
                   <img src={item.imageSrc} alt={item.description} />
                   <div className="cart-legend">
-                    <p>{item.name}</p>
-                    <p>{item.materials}</p>
+                    <p>
+                      <strong>Item:</strong> {item.name}
+                    </p>
+                    <p>
+                      <strong>Materials:</strong> {item.materials}
+                    </p>
+                    <p>
+                      <strong>Size:</strong> {item.size}
+                    </p>
                     <div className="quantity-buttons">
                       <ButtonsMoreLess item={item} addToCart={addToCart} />
                       <CartCounter

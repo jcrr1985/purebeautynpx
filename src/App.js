@@ -45,6 +45,14 @@ function AppComponent({ showComponent }) {
     setCartTotal(total);
   });
 
+  //return selectedSizes for passing to cartPage
+
+  const [selectedSizes, setSelectedSizes] = useState([]);
+
+  const returnSelectedSizes = (selectedSize) => {
+    setSelectedSizes(selectedSize);
+  };
+
   //effecto for itemCounters
 
   // Función para agregar un artículo al carrito
@@ -54,9 +62,11 @@ function AppComponent({ showComponent }) {
       if (operator === "add") {
         showAutoClosingMessage("Item added to cart", 1500);
         existingItem.quantity += 1;
+        console.log(1);
       } else if (operator === "substract" && existingItem.quantity > 0) {
         showAutoClosingMessage("Item removed from cart", 1500);
         existingItem.quantity -= 1;
+        console.log(2);
       }
       // Actualizar contador de ítem
       setItemCounters((prevCounters) => ({
@@ -71,6 +81,7 @@ function AppComponent({ showComponent }) {
         const updatedCarro = [...cart];
         updatedCarro.splice(existingItemIndex, 1, existingItem);
         setCart(updatedCarro);
+        console.log(3);
       }
 
       setCartTotal(
@@ -85,8 +96,10 @@ function AppComponent({ showComponent }) {
         ...prevCounters,
         [item.id]: 1,
       }));
-      setCart((prevCart) => [...prevCart, item]);
+      const itemWithSelectedSizes = { ...item, selectedSizes };
+      setCart((prevCart) => [...prevCart, itemWithSelectedSizes]);
       setCartTotal((prevTotal) => prevTotal + item.price);
+      console.log("4");
     }
   };
 
@@ -134,6 +147,7 @@ function AppComponent({ showComponent }) {
                     addToCart={addToCart}
                     cart={cart}
                     removeFromCart={removeFromCart}
+                    returnSelectedSizes={returnSelectedSizes}
                   />
                 }
               />

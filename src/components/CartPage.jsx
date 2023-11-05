@@ -1,9 +1,10 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import ProceedToPay from "./ProceedToPay";
 import MoreSuggestions from "./MoreSuggestions";
 import BackButton from "./BackButton";
 import CartCounter from "./CartCounter";
 import ButtonsMoreLess from "./ButtonsMoreLess";
+
 const CartPage = ({
   cart,
   removeFromCart,
@@ -39,7 +40,7 @@ const CartPage = ({
                       <strong>Materials:</strong> {item.materials}
                     </p>
                     <p>
-                      <strong>Size:</strong> {item.size}
+                      <strong>Size:</strong> {item.selectedSizes.join(", ")}
                     </p>
                     <div className="quantity-buttons">
                       <ButtonsMoreLess item={item} addToCart={addToCart} />

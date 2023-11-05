@@ -10,11 +10,12 @@ import flower from "../assets/images/flower.webp";
 
 import ImageCarousel from "./Carousel2";
 
-const ItemDetailPage = ({ addToCart, cart, removeFromCart }) => {
-  console.log(
-    "🚀 ~ file: ItemDetailPage.jsx:14 ~ ItemDetailPage ~ cart:",
-    cart
-  );
+const ItemDetailPage = ({
+  addToCart,
+  cart,
+  removeFromCart,
+  returnSelectedSizes,
+}) => {
   const { itemId } = useParams();
   const [foundItem, setFoundItem] = useState(null);
   const [selectedSize, setSelectedSize] = useState([]);
@@ -33,11 +34,8 @@ const ItemDetailPage = ({ addToCart, cart, removeFromCart }) => {
   };
 
   useEffect(() => {
-    console.log(
-      "🚀 ~ file: ItemDetailPage.jsx:34 ~ setSize ~ SelectedSize:",
-      selectedSize
-    );
-  }, [selectedSize]);
+    returnSelectedSizes(selectedSize);
+  }, [returnSelectedSizes, selectedSize]);
 
   // Buscar el ítem en la lista de categorías
 

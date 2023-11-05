@@ -920,5 +920,10 @@ display: none;
   display: none;
 }
 
+.checkout-form--form{
+  width: 100%;
+
+}
+
 
 }

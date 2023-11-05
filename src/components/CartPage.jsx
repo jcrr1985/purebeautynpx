@@ -11,7 +11,7 @@ const CartPage = ({
   itemCounters,
   cartTotal,
 }) => {
-  console.log("🚀 ~ file: CartPage.jsx:14 ~ itemCounters:", itemCounters);
+  console.log("🚀 ~ cart", cart);
   return (
     <div className="cart-page-wrapper full-screen-cart">
       <div className="cart-page">

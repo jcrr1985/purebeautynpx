@@ -2,8 +2,6 @@ import Swal from "sweetalert2";
 
 const ButtonsMoreLess = ({ addToCart, item }) => {
   const showAutoClosingMessage = (message, duration) => {
-    console.log("showAutoClosingMessage called"); // Add this line
-
     Swal.fire({
       icon: "success",
       title: message,

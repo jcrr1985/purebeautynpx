@@ -17,26 +17,27 @@ const ItemDetailPage = ({ addToCart, cart, removeFromCart }) => {
   );
   const { itemId } = useParams();
   const [foundItem, setFoundItem] = useState(null);
-  const [selectedSize, setSelectedSize] = useState(null);
+  const [selectedSize, setSelectedSize] = useState([]);
   const [showMoreLessButtons, setShowMoreLessButtons] = useState(false);
 
   const [category, setCategory] = useState(null);
 
   const handleAddToCart = () => {
     showAutoClosingMessage("Item added to cart", 1500);
-    foundItem.size = selectedSize;
     addToCart(foundItem, "add");
     setShowMoreLessButtons(true);
   };
 
   const setSize = (size) => {
-    setSelectedSize(size);
-    cart.forEach((item) => {
-      if (item.id === foundItem.id) {
-        item.size = size;
-      }
-    });
+    setSelectedSize((prev) => [...prev, size]);
   };
+
+  useEffect(() => {
+    console.log(
+      "🚀 ~ file: ItemDetailPage.jsx:34 ~ setSize ~ SelectedSize:",
+      selectedSize
+    );
+  }, [selectedSize]);
 
   // Buscar el ítem en la lista de categorías
 

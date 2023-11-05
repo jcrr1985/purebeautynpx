@@ -16,7 +16,6 @@ export const categoriesList = [
         price: 25,
         imageSrc: "/images/dress-1.webp",
         materials: "Gold, Silver, Diamond.",
-        size: "S",
 
         deepDescription2: [
           {
@@ -51,7 +50,7 @@ export const categoriesList = [
         imageSrc:
           "https://m.media-amazon.com/images/I/81oS4t4TN8S._AC_UL400_.jpg",
         materials: "Pink Gold, Rubies, Silver",
-        size: "S",
+
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -92,7 +91,6 @@ export const categoriesList = [
         price: 102,
         imageSrc: "/images/flower.webp",
         materials: "So beautiful, you can't even imagine",
-        size: "S",
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -126,7 +124,6 @@ export const categoriesList = [
         price: 55,
         imageSrc: "/images/dress-1.webp",
         materials: "Silver, Diamonds from Cleopatra's tomb",
-        size: "XL",
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -159,7 +156,6 @@ export const categoriesList = [
         price: 50,
         imageSrc: "/images/dress-1.webp",
         materials: "Gold, Pink Gold, Silver",
-        size: "M",
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -192,7 +188,6 @@ export const categoriesList = [
         price: 55,
         imageSrc: "/images/dress-1.webp",
         materials: "Silver, Diamonds from Cleopatra's tomb",
-        size: "M",
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -231,7 +226,6 @@ export const categoriesList = [
         price: 50,
         imageSrc: "/images/dress-1.webp",
         materials: "Titanium, Steel, blue Emerald",
-        size: "M",
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -264,7 +258,6 @@ export const categoriesList = [
         price: 45,
         imageSrc: "/images/dress-1.webp",
         materials: "Black Titanium, Steel, Coal from the Moon ",
-        size: "L",
 
         deepDescription2: [
           {

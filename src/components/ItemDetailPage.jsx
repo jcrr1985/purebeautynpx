@@ -129,9 +129,7 @@ const ItemDetailPage = ({
               </button>
             </div>
           )}
-          <button className="add-to-wishlist" onClick={handleAddToCart}>
-            Add to Wish List
-          </button>
+          <button className="add-to-wishlist">Add to Wish List</button>
         </div>
       </div>
       {foundItem && (

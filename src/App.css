@@ -854,4 +854,9 @@ border-radius: 5px;
     flex-direction: column;
 }
 
+.cart-item.up {
+  width: 34%;
+  align-items: center;
+}
+
 }

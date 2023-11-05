@@ -1,6 +1,7 @@
 import React from "react";
 import CartCounter from "./CartCounter";
 import QuantityButton from "./QuantityButton";
+import necklace from "../assets/images/necklace.jpeg";
 
 const MoreSuggestions = ({ removeFromCart, addToCart }) => {
   return (
@@ -10,10 +11,7 @@ const MoreSuggestions = ({ removeFromCart, addToCart }) => {
       </h3>
       <div className="grid-container suggestions">
         {dummySuggestedItems.map((item, index) => (
-          <div
-            key={index}
-            className="cart-item suggestions cart-item-suggestions"
-          >
+          <div key={index} className="cart-item suggestions">
             <img src={item.imageSrc} />
             <div className="cart-legend">
               <p>{item.name}</p>
@@ -62,7 +60,7 @@ const dummySuggestedItems = [
     name: "Valkyrie soul",
     category: "Brooches",
     price: 50,
-    imageSrc: "https://m.media-amazon.com/images/I/8133cW16yhL._AC_UL400_.jpg",
+    imageSrc: necklace,
     materials: "Sapphires, Vanntzium",
   },
   {
@@ -70,7 +68,7 @@ const dummySuggestedItems = [
     name: "Silver Chainmail",
     category: "Brooches",
     price: 55,
-    imageSrc: "https://m.media-amazon.com/images/I/81cpzU+uRIL._AC_UL400_.jpg",
+    imageSrc: necklace,
     materials: "Lolita, Aquamarine, Zerdiviano",
   },
   {
@@ -78,7 +76,7 @@ const dummySuggestedItems = [
     name: "Sword of Vermilion",
     category: "Earrings",
     price: 25,
-    imageSrc: "https://m.media-amazon.com/images/I/717foItSdPL._AC_UL400_.jpg",
+    imageSrc: necklace,
     materials: "Gold, Silver, Diamond",
   },
 ];

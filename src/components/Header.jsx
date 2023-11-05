@@ -37,6 +37,7 @@ const Header = ({ cart, itemCounters }) => {
   return (
     <div>
       <header>
+        <div className="malinky-crab"> </div>
         <div className="logo">
           <BackButton />
           <div className="inner-logo">

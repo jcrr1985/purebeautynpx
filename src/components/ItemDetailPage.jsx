@@ -10,7 +10,11 @@ import flower from "../assets/images/flower.webp";
 
 import ImageCarousel from "./Carousel2";
 
-const ItemDetailPage = ({ addToCart, cart }) => {
+const ItemDetailPage = ({ addToCart, cart, removeFromCart }) => {
+  console.log(
+    "🚀 ~ file: ItemDetailPage.jsx:14 ~ ItemDetailPage ~ cart:",
+    cart
+  );
   const { itemId } = useParams();
   const [foundItem, setFoundItem] = useState(null);
   const [selectedSize, setSelectedSize] = useState(null);
@@ -18,11 +22,20 @@ const ItemDetailPage = ({ addToCart, cart }) => {
 
   const [category, setCategory] = useState(null);
 
-  const handleAddToCart = (size) => {
-    setSelectedSize(size);
+  const handleAddToCart = () => {
     showAutoClosingMessage("Item added to cart", 1500);
+    foundItem.size = selectedSize;
     addToCart(foundItem, "add");
     setShowMoreLessButtons(true);
+  };
+
+  const setSize = (size) => {
+    setSelectedSize(size);
+    cart.forEach((item) => {
+      if (item.id === foundItem.id) {
+        item.size = size;
+      }
+    });
   };
 
   // Buscar el ítem en la lista de categorías
@@ -79,7 +92,9 @@ const ItemDetailPage = ({ addToCart, cart }) => {
               className={`idp-button-size ${
                 selectedSize === size ? "selected" : ""
               }`}
-              onClick={() => handleAddToCart(size)}
+              onClick={() => {
+                setSize(size);
+              }}
             >
               {size}
             </button>

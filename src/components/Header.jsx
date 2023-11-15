@@ -1,16 +1,16 @@
-import React, { useEffect, useRef, useState } from "react";
-import SearchIcon from "@mui/icons-material/Search";
-import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
-import { Link } from "react-router-dom";
-import CloseIcon from "@mui/icons-material/Close";
-import BackButton from "./BackButton";
-import CartCounter from "./CartCounter";
+import React, { useEffect, useRef, useState } from 'react';
+import SearchIcon from '@mui/icons-material/Search';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import { Link } from 'react-router-dom';
+import CloseIcon from '@mui/icons-material/Close';
+import BackButton from './BackButton';
+import CartCounter from './CartCounter';
 
 const Header = ({ cart, itemCounters }) => {
   const [searchBarInputOpen, setSearchBarInputOpen] = useState(false);
 
   useEffect(() => {
-    console.log("itemCounters", itemCounters);
+    console.log('itemCounters', itemCounters);
   }, [itemCounters]);
 
   // Calcular el total de ítems en el carrito
@@ -31,7 +31,7 @@ const Header = ({ cart, itemCounters }) => {
   };
 
   useEffect(() => {
-    console.log("searchBarInputOpen", searchBarInputOpen);
+    console.log('searchBarInputOpen', searchBarInputOpen);
   }, [searchBarInputOpen]);
 
   return (
@@ -40,7 +40,8 @@ const Header = ({ cart, itemCounters }) => {
         <div className="malinky-crab"> </div>
         <div className="logo">
           <BackButton />
-          <div className="inner-logo">
+          <div
+            className={`inner-logo ${searchBarInputOpen ? 'no-border' : ''}`}>
             <Link to="/">
               {!searchBarInputOpen && <span>Precious Palettes</span>}
             </Link>
@@ -61,14 +62,14 @@ const Header = ({ cart, itemCounters }) => {
         </div>
       </header>
       <div
-        className={`search-input-container ${searchBarInputOpen ? "open" : ""}`}
-      >
+        className={`search-input-container ${
+          searchBarInputOpen ? 'open' : ''
+        }`}>
         {searchBarInputOpen && (
           <div
             className="header-icons header-left-icon"
-            onClick={closeSearchBarInput}
-          >
-            <CloseIcon sx={{ color: "#444" }} />
+            onClick={closeSearchBarInput}>
+            <CloseIcon sx={{ color: '#444' }} />
           </div>
         )}
         <input
@@ -80,9 +81,8 @@ const Header = ({ cart, itemCounters }) => {
 
         <div
           className="header-icons header-right-icon"
-          onClick={enableSearchBarInput}
-        >
-          <SearchIcon sx={{ color: "#444" }} />
+          onClick={enableSearchBarInput}>
+          <SearchIcon sx={{ color: '#444' }} />
         </div>
       </div>
     </div>

@@ -1,30 +1,30 @@
-import "./App.css";
-import Header from "./components/Header";
-import Main from "./components/Main";
-import Categories from "./components/Categories";
-import CategoryPage from "./components/CategoryPage";
+import './App.css';
+import Header from './components/Header';
+import Main from './components/Main';
+import Categories from './components/Categories';
+import CategoryPage from './components/CategoryPage';
 
-import Havealook from "./components/Havealook";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
-import CartPage from "./components/CartPage";
-import ItemDetailPage from "./components/ItemDetailPage";
-import { useLocation } from "react-router-dom";
+import Havealook from './components/Havealook';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { useEffect, useState } from 'react';
+import CartPage from './components/CartPage';
+import ItemDetailPage from './components/ItemDetailPage';
+import { useLocation } from 'react-router-dom';
 
-import { loadStripe } from "@stripe/stripe-js";
-import { Elements } from "@stripe/react-stripe-js";
-import StripePayment from "./components/StripePayment";
-import Success from "./components/Success";
-import CongratulationMessage from "./components/CongratulationsMessage";
-import Swal from "sweetalert2";
+import { loadStripe } from '@stripe/stripe-js';
+import { Elements } from '@stripe/react-stripe-js';
+import StripePayment from './components/StripePayment';
+import Success from './components/Success';
+import CongratulationMessage from './components/CongratulationsMessage';
+import Swal from 'sweetalert2';
 
 const stripePromise = loadStripe(
-  "pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ"
+  'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
 );
 
 function AppWrapper() {
   const location = useLocation();
-  const showComponent = location.pathname === "/";
+  const showComponent = location.pathname === '/';
   return <AppComponent showComponent={showComponent} />;
 }
 
@@ -59,12 +59,12 @@ function AppComponent({ showComponent }) {
   const addToCart = (item, operator) => {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id);
     if (existingItem) {
-      if (operator === "add") {
-        showAutoClosingMessage("Item added to cart", 1500);
+      if (operator === 'add') {
+        showAutoClosingMessage('Item added to cart', 1500);
         existingItem.quantity += 1;
         console.log(1);
-      } else if (operator === "substract" && existingItem.quantity > 0) {
-        showAutoClosingMessage("Item removed from cart", 1500);
+      } else if (operator === 'substract' && existingItem.quantity > 1) {
+        showAutoClosingMessage('Item removed from cart', 1500);
         existingItem.quantity -= 1;
         console.log(2);
       }
@@ -86,7 +86,7 @@ function AppComponent({ showComponent }) {
 
       setCartTotal(
         (prevTotal) =>
-          prevTotal + (operator === "add" ? item.price : -item.price)
+          prevTotal + (operator === 'add' ? item.price : -item.price)
       );
     } else {
       item.quantity = 1;
@@ -99,7 +99,7 @@ function AppComponent({ showComponent }) {
       const itemWithSelectedSizes = { ...item, selectedSizes };
       setCart((prevCart) => [...prevCart, itemWithSelectedSizes]);
       setCartTotal((prevTotal) => prevTotal + item.price);
-      console.log("4");
+      console.log('4');
     }
   };
 
@@ -113,13 +113,19 @@ function AppComponent({ showComponent }) {
   return (
     <Elements stripe={stripePromise}>
       <div className="god">
-        <Header cart={cart} itemCounters={itemCounters} />
+        <Header
+          cart={cart}
+          itemCounters={itemCounters}
+        />
         <div className="under-header">
           {showComponent && <Main />}
           <div id="categories">
             <Routes>
               {/* HOME */}
-              <Route path="/" element={<Categories />} />
+              <Route
+                path="/"
+                element={<Categories />}
+              />
               {/* <-CATEGORIES */}
               <Route
                 path="/category/:category"
@@ -165,7 +171,10 @@ function AppComponent({ showComponent }) {
                 }
               />
               {/* sUCCESS */}
-              <Route path="/success" element={<Success />} />
+              <Route
+                path="/success"
+                element={<Success />}
+              />
             </Routes>
           </div>
         </div>
@@ -187,7 +196,7 @@ export default App;
 
 export const showAutoClosingMessage = (message, duration) => {
   Swal.fire({
-    icon: "success",
+    icon: 'success',
     title: message,
     timer: duration,
     showConfirmButton: false,

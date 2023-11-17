@@ -805,6 +805,11 @@ a {
   display: inline-block;
 }
 
+.have-a-look {
+  margin-top: 8%;
+  text-align: center;
+}
+
 /** MEDIA QUERIES **/
 
 @media screen and (max-width: 768px) {
@@ -981,6 +986,12 @@ a {
 
   .heart-list {
     display: flex !important;
+  }
+
+
+  .have-a-look {
+    margin-top: 18%;
+    text-align: center;
   }
 
 

@@ -674,9 +674,16 @@ a {
   font-family: 'Italianno', cursive;
   font-weight: 400;
   font-size: 48px;
-
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.sad-basket-empty {
+  margin-top: 0;
+}
+
+
 
 .congratulationsMessage-content-wrapper {
   display: flex;

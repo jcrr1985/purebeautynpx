@@ -26,7 +26,9 @@ const CartPage = ({
         </div>
         {cart.length === 0 ? (
           <div className="cat-page-cart-empty text-italianno">
-            <p>Sad you basket are empty! Lets start shopping!</p>
+            <p className="sad-basket-empty">
+              Sad you basket are empty! Lets start shopping!
+            </p>
           </div>
         ) : (
           <>

@@ -362,6 +362,19 @@ a {
   left: 5%;
 }
 
+.cat-page-cart-empty {
+  text-align: center;
+  margin-top: 2%;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: Italianno-Regular;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 3%;
+}
+
+
 .header-right-icon {
   right: 5%;
 

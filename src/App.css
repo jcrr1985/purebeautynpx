@@ -744,15 +744,18 @@ a {
 .we-are-happy {
   margin-top: 2rem;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
 
 }
 
 .form-and-items-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: center;
+  align-items: center;
   margin-top: 2rem;
-  /* padding: 0 8rem; */
+  flex-direction: column;
+  align-items: center;
 }
 
 .checkout-form--input {
@@ -860,10 +863,7 @@ a {
 
   }
 
-  .form-and-items-wrapper {
-    flex-direction: column;
-    align-items: center;
-  }
+
 
   .items-in-checkout {
     width: -webkit-fill-available;

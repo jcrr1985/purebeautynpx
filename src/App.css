@@ -561,6 +561,8 @@ a {
   display: grid;
   gap: 7px;
   font-size: 18px;
+  gap: 10%;
+
 
 }
 
@@ -799,7 +801,11 @@ a {
   justify-content: center;
 }
 
+.all-cp {
+  display: inline-block;
+}
 
+/** MEDIA QUERIES **/
 
 @media screen and (max-width: 768px) {
 
@@ -823,8 +829,7 @@ a {
   }
 
   .heart-list {
-    display: flex;
-    flex-direction: column;
+
     align-items: center;
     justify-content: center;
     margin-right: 2%
@@ -962,6 +967,20 @@ a {
 
   .items-detail-page-container-right {
     text-align: justify;
+  }
+
+  .all-cp {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar {
+    width: -webkit-fill-available;
+  }
+
+  .heart-list {
+    display: flex !important;
   }
 
 

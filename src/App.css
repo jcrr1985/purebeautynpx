@@ -956,5 +956,13 @@ a {
 
   }
 
+  .items-detail-page-container-right {
+    width: 80%;
+  }
+
+  .items-detail-page-container-right {
+    text-align: justify;
+  }
+
 
 }

@@ -4,6 +4,7 @@ import MoreSuggestions from './MoreSuggestions';
 import BackButton from './BackButton';
 import CartCounter from './CartCounter';
 import ButtonsMoreLess from './ButtonsMoreLess';
+import { Link } from 'react-router-dom';
 
 const CartPage = ({
   cart,
@@ -37,7 +38,9 @@ const CartPage = ({
               className="sad-basket-empty centered-text"
               style={{}}>
               Sad your basket is empty! <br />
-              <button className="button">Let's start shopping!</button>
+              <Link to="/category/all-items">
+                <button className="button">Let's start shopping!</button>
+              </Link>
             </p>
           </div>
         ) : (

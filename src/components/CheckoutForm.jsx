@@ -1,24 +1,24 @@
-import { CircularProgress } from "@mui/material";
-import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
-import { useForm, Controller } from "react-hook-form";
+import { CircularProgress } from '@mui/material';
+import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js';
+import { useForm, Controller } from 'react-hook-form';
 
-import { useState } from "react";
+import { useState } from 'react';
 
-import axios from "axios";
+import axios from 'axios';
 
-import Swal from "sweetalert2";
-import CongratulationMessage from "./CongratulationsMessage";
-import ItemsInCheckout from "./ItemsInCheckout";
+import Swal from 'sweetalert2';
+import CongratulationMessage from './CongratulationsMessage';
+import ItemsInCheckout from './ItemsInCheckout';
 
 const showPaymentErrorAlert = () => {
-  Swal.fire("Oops!", "Payment unsuccessful", "warning");
+  Swal.fire('Oops!', 'Payment unsuccessful', 'warning');
 };
 
 const abortController = new AbortController();
 
 //create functional component
 const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
-  console.log("🚀 ~ file: CheckoutForm.jsx:20 ~ CheckoutForm ~ cart:", cart);
+  console.log('🚀 ~ file: CheckoutForm.jsx:20 ~ CheckoutForm ~ cart:', cart);
   const [showCongrats, setShowCongrats] = useState(false);
   const stripe = useStripe();
   const elements = useElements();
@@ -34,15 +34,15 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true);
 
-    const apiUrl = "https://serverpp2.onrender.com/api/checkout";
+    const apiUrl = 'https://serverpp2.onrender.com/api/checkout';
 
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
-        type: "card",
+        type: 'card',
         card: elements.getElement(CardElement),
       });
       if (!error) {
-        console.log("sin error");
+        console.log('sin error');
         const { id } = paymentMethod;
         const data = await axios.post(apiUrl, {
           id,
@@ -71,15 +71,15 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
       {showPayment ? (
         <div>
           <p className="text-italianno we-are-happy">
-            {" "}
-            <span>We are Happy with you purchase! </span>{" "}
-            <span>Let's do last steps</span>
+            {' '}
+            <span>
+              We are Happy with you purchase! &nbsp; Let's do last steps!
+            </span>
           </p>
           <div className="form-and-items-wrapper">
             <form
               className="checkout-form--form"
-              onSubmit={handleSubmit(handleSubmitPayment)}
-            >
+              onSubmit={handleSubmit(handleSubmitPayment)}>
               <div className="checkout-form-left">
                 {/* CARD INPUT */}
                 <CardElement
@@ -199,10 +199,9 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
                     <button
                       disabled={!isCardComplete}
                       className={`checkoutform-button ${
-                        !isCardComplete ? "disabled" : ""
+                        !isCardComplete ? 'disabled' : ''
                       }`}
-                      type="submit"
-                    >
+                      type="submit">
                       PLACE
                     </button>
                   )}
@@ -210,7 +209,10 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
               </div>
             </form>
             {/* ITEMS DE LA DERECHA EN CHECKOUT */}
-            <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
+            <ItemsInCheckout
+              cart={cart}
+              removeFromCart={removeFromCart}
+            />
           </div>
         </div>
       ) : (

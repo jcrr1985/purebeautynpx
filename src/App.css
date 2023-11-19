@@ -764,6 +764,7 @@ a {
   margin-bottom: 5px;
   display: flex;
   justify-content: center;
+  text-align: center;
 
 }
 
@@ -1013,6 +1014,10 @@ a {
   .have-a-look {
     margin-top: 18%;
     text-align: center;
+  }
+
+  .we-are-happy {
+    font-size: 35px;
   }
 
 

@@ -279,6 +279,15 @@ a {
   box-shadow: 0 0 10px rgba(48, 47, 92, 0.1);
   background-color: #f6f6f7;
   overflow: hidden;
+
+
+}
+
+.centered-text {
+  position: absolute;
+  top: calc(50% - 1px);
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .proceed-wrapper {

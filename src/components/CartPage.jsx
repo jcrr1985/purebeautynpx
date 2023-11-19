@@ -13,6 +13,13 @@ const CartPage = ({
   cartTotal,
 }) => {
   console.log('🚀 ~ cart', cart);
+
+  // Helper function to calculate the top position for the empty cart message
+  const calculateEmptyCartMessageTop = () => {
+    const titleContainerHeight =
+      document.getElementById('cart-title-container')?.offsetHeight || 0;
+    return `calc(50% - ${titleContainerHeight}px)`;
+  };
   return (
     <div className="cart-page-wrapper full-screen-cart">
       <div className="cart-page">
@@ -26,8 +33,10 @@ const CartPage = ({
         </div>
         {cart.length === 0 ? (
           <div className="cat-page-cart-empty text-italianno">
-            <p className="sad-basket-empty">
-              Sad you basket are empty! Lets start shopping!
+            <p
+              className="sad-basket-empty centered-text"
+              style={{}}>
+              Sad your basket is empty! Let's start shopping!
             </p>
           </div>
         ) : (

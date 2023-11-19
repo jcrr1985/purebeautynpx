@@ -44,11 +44,11 @@ export const categoriesList = [
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
         id: 4,
-        name: '/images/dress-1.webp',
+        name: 'Golden Owl Necklace',
         category: 'Earrings',
         price: 30,
-        imageSrc:
-          'https://m.media-amazon.com/images/I/81oS4t4TN8S._AC_UL400_.jpg',
+        imageSrc: '/images/dress-1.webp',
+
         materials: 'Pink Gold, Rubies, Silver',
 
         deepDescription2: [

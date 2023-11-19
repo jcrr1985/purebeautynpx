@@ -10,7 +10,7 @@ const CongratulationMessage = ({ setItemCounters }) => {
     setItemCounters
   );
   const [open, setOpen] = useState(false);
-  console.log(setItemCounters); // Log to check if setItemCounters is passed correctly
+  console.log(setItemCounters);
 
   useEffect(() => {
     setItemCounters({});

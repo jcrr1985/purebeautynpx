@@ -818,6 +818,10 @@ a {
   text-align: center;
 }
 
+.cat-page-cart-empty {
+  overflow: hidden;
+}
+
 /** MEDIA QUERIES **/
 
 @media screen and (max-width: 768px) {

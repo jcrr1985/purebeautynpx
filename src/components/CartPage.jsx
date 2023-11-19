@@ -36,10 +36,8 @@ const CartPage = ({
             <p
               className="sad-basket-empty centered-text"
               style={{}}>
-              Sad your basket is empty!{' '}
-              <button className="button text-italianno">
-                Let's start shopping!
-              </button>
+              Sad your basket is empty! <br />
+              <button className="button">Let's start shopping!</button>
             </p>
           </div>
         ) : (

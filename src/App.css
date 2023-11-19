@@ -809,7 +809,8 @@ a {
 }
 
 .all-cp {
-  display: inline-block;
+  display: flex;
+  justify-content: center;
 }
 
 .have-a-look {

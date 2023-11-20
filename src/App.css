@@ -610,6 +610,12 @@ a {
   white-space: pre-wrap;
 }
 
+.clicked {
+  background: #000 !important;
+  color: #fff;
+
+}
+
 
 
 .InputElement {

@@ -1,5 +1,7 @@
-import React from "react";
-import Carousel from "./Carousel";
+import React from 'react';
+import Carousel from './Carousel';
+import dress1 from '../assets/images/dress-1.webp';
+import ImageCarousel from './Carousel2';
 
 const Categories = () => {
   return (
@@ -15,8 +17,14 @@ const Categories = () => {
         </p>
       </div>
       <Carousel />
+
+      <div className="catpage-imgcont-wrapper">
+        <ImageCarousel images={images} />
+      </div>
     </>
   );
 };
 
 export default Categories;
+
+const images = [dress1, dress1, dress1];

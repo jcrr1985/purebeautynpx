@@ -23,19 +23,28 @@ const ItemDetailPage = ({
 
   const [category, setCategory] = useState(null);
 
+  const [beBlack, setBeBlack] = useState(false);
+
   const handleAddToCart = () => {
     showAutoClosingMessage('Item added to cart', 1500);
     addToCart(foundItem, 'add');
     setShowMoreLessButtons(true);
   };
 
-  const setSize = (size) => {
-    setSelectedSize((prev) => [...prev, size]);
+  const setSize = (size, index) => {
+    setSelectedSizeIndex(index);
   };
 
   useEffect(() => {
     returnSelectedSizes(selectedSize);
   }, [returnSelectedSizes, selectedSize]);
+
+  const [isClicked, setIsClicked] = useState(false);
+
+  const handleClick = () => {
+    setIsClicked(true);
+    // Perform other click-related actions if needed
+  };
 
   // Buscar el ítem en la lista de categorías
 
@@ -75,6 +84,8 @@ const ItemDetailPage = ({
     console.log('🚀  buttonSizes:', buttonSizes);
   }, [buttonSizes, category]);
 
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
+
   return (
     <div className="item-detail-page">
       <div className="left">
@@ -86,13 +97,14 @@ const ItemDetailPage = ({
         <p>Materials: {foundItem?.materials}</p>
         <p>Price: {foundItem?.price} $</p>
         <div className="idp-buttons--container">
-          {buttonSizes.map((size) => (
+          {buttonSizes.map((size, index) => (
             <button
+              key={size}
               className={`idp-button-size ${
-                selectedSize === size ? 'selected' : ''
+                selectedSizeIndex === index ? 'clicked' : ''
               }`}
               onClick={() => {
-                setSize(size);
+                setSize(size, index);
               }}>
               {size}
             </button>

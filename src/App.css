@@ -150,7 +150,7 @@ a {
 
 .category img {
   object-fit: contain;
-  width: 70%;
+  width: 100%;
 }
 
 .category p {

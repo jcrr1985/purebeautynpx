@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import CloseIcon from '@mui/icons-material/Close';
 import BackButton from './BackButton';
 import CartCounter from './CartCounter';
+import itemsData from './itemsData';
+import SearchBar from './SearchBar';
 
 const Header = ({ cart, itemCounters }) => {
   const [searchBarInputOpen, setSearchBarInputOpen] = useState(false);
@@ -72,12 +74,8 @@ const Header = ({ cart, itemCounters }) => {
             <CloseIcon sx={{ color: '#444' }} />
           </div>
         )}
-        <input
-          ref={inputRef}
-          type="text"
-          className={`search-input`}
-          placeholder="Search"
-        />
+
+        <SearchBar />
 
         <div
           className="header-icons header-right-icon"

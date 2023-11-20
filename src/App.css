@@ -401,6 +401,8 @@ a {
   border-radius: 6px;
   position: relative;
   text-indent: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .search-input:focus {

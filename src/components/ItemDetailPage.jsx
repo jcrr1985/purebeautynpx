@@ -37,6 +37,7 @@ const ItemDetailPage = ({
 
   useEffect(() => {
     returnSelectedSizes(selectedSize);
+    setSelectedSize(selectedSize);
   }, [returnSelectedSizes, selectedSize]);
 
   const [isClicked, setIsClicked] = useState(false);
@@ -117,9 +118,9 @@ const ItemDetailPage = ({
           {' '}
           {!showMoreLessButtons ? (
             <button
-              title={selectedSize.length === 0 ? 'Select a size' : ''}
+              title={selectedSizeIndex === 0 ? 'Select a size' : ''}
               className={`add-to-cart${
-                selectedSize.length === 0 ? ' disabled' : ''
+                selectedSizeIndex === 0 ? ' disabled' : ''
               }`}
               onClick={handleAddToCart}>
               Add To Cart

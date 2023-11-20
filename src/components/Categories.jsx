@@ -17,10 +17,6 @@ const Categories = () => {
         </p>
       </div>
       <Carousel />
-
-      <div className="catpage-imgcont-wrapper">
-        <ImageCarousel images={images} />
-      </div>
     </>
   );
 };

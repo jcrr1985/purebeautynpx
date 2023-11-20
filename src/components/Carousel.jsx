@@ -27,11 +27,11 @@ const Carousel = () => {
 
   return (
     <div className="carousel-container categories">
-      <ChevronLeftIcon
+      {/* <ChevronLeftIcon
         onClick={handlePrevClick}
         className="chevron-icon"
         style={{ position: 'relative', left: '10%' }}
-      />
+      /> */}
       <div className="categories-carousel categories">
         {categoriesList.map((category, index) => (
           <Link
@@ -46,11 +46,11 @@ const Carousel = () => {
           </Link>
         ))}
       </div>
-      <ChevronRightIcon
+      {/* <ChevronRightIcon
         onClick={handleNextClick}
         className="chevron-icon"
         style={{ position: 'relative', right: '10%' }}
-      />
+      /> */}
     </div>
   );
 };

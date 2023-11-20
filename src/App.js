@@ -15,12 +15,11 @@ import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import StripePayment from './components/StripePayment';
 import Success from './components/Success';
-import CongratulationMessage from './components/CongratulationsMessage';
 import Swal from 'sweetalert2';
 
-const stripePromise = loadStripe(
-  'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
-);
+const apiKey = `${process.env.STRIPE_PUBLIC_API_KEY}`;
+
+const stripePromise = loadStripe(apiKey);
 
 function AppWrapper() {
   const location = useLocation();

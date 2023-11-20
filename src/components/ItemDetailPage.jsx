@@ -85,7 +85,7 @@ const ItemDetailPage = ({
     console.log('🚀  buttonSizes:', buttonSizes);
   }, [buttonSizes, category]);
 
-  const [selectedSizeIndex, setSelectedSizeIndex] = useState(0);
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(-1);
 
   return (
     <div className="item-detail-page">
@@ -120,7 +120,7 @@ const ItemDetailPage = ({
             <button
               title={selectedSizeIndex === 0 ? 'Select a size' : ''}
               className={`add-to-cart${
-                selectedSizeIndex === 0 ? ' disabled' : ''
+                selectedSizeIndex < 0 ? ' disabled' : ''
               }`}
               onClick={handleAddToCart}>
               Add To Cart

@@ -13,7 +13,7 @@ export const categoriesList = [
         id: 3,
         name: 'Golden Owl Earrings',
         category: 'Carpets',
-        price: 25,
+        price: 500,
         imageSrc: '/images/dress-1.webp',
         materials: 'Gold, Silver, Diamond.',
 
@@ -88,7 +88,7 @@ export const categoriesList = [
         id: 5,
         name: 'Rings of the Destiny',
         category: 'Dresses',
-        price: 102,
+        price: 1000,
         imageSrc: '/images/dress-1.webp',
         materials: "So beautiful, you can't even imagine",
         deepDescription2: [

@@ -17,7 +17,8 @@ import StripePayment from './components/StripePayment';
 import Success from './components/Success';
 import Swal from 'sweetalert2';
 
-const apiKey = `${process.env.STRIPE_PUBLIC_API_KEY}`;
+const apiKey =
+  'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU';
 
 const stripePromise = loadStripe(apiKey);
 

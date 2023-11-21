@@ -49,6 +49,10 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
           timeout: 10000,
           dataForm,
         })
+        console.log(
+          '🚀 ~ file: CheckoutForm.jsx:52 ~ handleSubmitPayment ~ const data:',
+          data,
+        )
 
         elements.getElement(CardElement).clear()
         setLoading(false)

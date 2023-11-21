@@ -27,7 +27,7 @@ app.post('/api/checkout', async (req, res) => {
 });
 
 const privateKey =
-  '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';
+  'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ';
 
 app.listen(3001, () => console.log('Listening on port 3001'));
 

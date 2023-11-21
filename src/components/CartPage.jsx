@@ -15,12 +15,6 @@ const CartPage = ({
 }) => {
   console.log('🚀 ~ cart', cart);
 
-  // Helper function to calculate the top position for the empty cart message
-  const calculateEmptyCartMessageTop = () => {
-    const titleContainerHeight =
-      document.getElementById('cart-title-container')?.offsetHeight || 0;
-    return `calc(50% - ${titleContainerHeight}px)`;
-  };
   return (
     <div className="cart-page-wrapper full-screen-cart">
       <div className="cart-page">

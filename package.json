@@ -6,7 +6,7 @@
     "@babel/eslint-parser": "^7.5.4",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
-    "@mui/icons-material": "^5.14.3",
+    "@mui/icons-material": "^5.14.18",
     "@mui/material": "^5.14.3",
     "@stripe/react-stripe-js": "^2.3.1",
     "@stripe/stripe-js": "^2.1.7",
@@ -55,6 +55,7 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "eslint": "^8.54.0",
     "nodemon": "^3.0.1"
   }
 }

@@ -1,6 +1,4 @@
-import dress1 from '../assets/images/dress-1.webp';
-import earrings from '../assets/images/earrings.jpg';
-import flower from '../assets/images/flower.webp';
+import dress1 from '../assets/images/dress-1.webp'
 
 export const categoriesList = [
   {
@@ -13,7 +11,7 @@ export const categoriesList = [
         id: 3,
         name: 'Golden Owl Earrings',
         category: 'Carpets',
-        price: 500,
+        price: 1,
         imageSrc: '/images/dress-1.webp',
         materials: 'Gold, Silver, Diamond.',
 
@@ -284,6 +282,6 @@ export const categoriesList = [
       },
     ],
   },
-];
+]
 
-export default categoriesList;
+export default categoriesList

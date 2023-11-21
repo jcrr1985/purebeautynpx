@@ -50,17 +50,11 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
         const { id } = paymentMethod
         const data = await axios.post(apiUrl, {
           id,
-          // amount: parseInt(cartTotal) * 100,
-          amount: parseInt(cartTotal),
-          dataForm,
-
+          amount: parseInt(cartTotal) * 100,
           signal: abortController.signal,
           timeout: 10000,
+          dataForm,
         })
-        console.log(
-          '🚀 ~ file: CheckoutForm.jsx:60 ~ handleSubmitPayment ~ data:',
-          data,
-        )
 
         elements.getElement(CardElement).clear()
         setLoading(false)

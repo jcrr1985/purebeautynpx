@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from 'react';
-import { useParams } from 'react-router-dom';
-import { categoriesList } from './itemsData';
-import ControlledAccordions from './Accordion';
-import { showAutoClosingMessage } from '../App';
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { categoriesList } from './itemsData'
+import ControlledAccordions from './Accordion'
+import { showAutoClosingMessage } from '../App'
 
-import dress1 from '../assets/images/dress-1.webp';
-import earrings from '../assets/images/earrings.jpg';
-import flower from '../assets/images/flower.webp';
+import dress1 from '../assets/images/dress-1.webp'
+import earrings from '../assets/images/earrings.jpg'
+import flower from '../assets/images/flower.webp'
 
-import ImageCarousel from './Carousel2';
+import ImageCarousel from './Carousel2'
 
 const ItemDetailPage = ({
   addToCart,
@@ -16,88 +16,88 @@ const ItemDetailPage = ({
   removeFromCart,
   returnSelectedSizes,
 }) => {
-  const { itemId } = useParams();
-  const [foundItem, setFoundItem] = useState(null);
-  const [selectedSize, setSelectedSize] = useState([]);
-  const [showMoreLessButtons, setShowMoreLessButtons] = useState(false);
+  const { itemId } = useParams()
+  const [foundItem, setFoundItem] = useState(null)
+  const [selectedSize, setSelectedSize] = useState([])
+  const [showMoreLessButtons, setShowMoreLessButtons] = useState(false)
 
-  const [category, setCategory] = useState(null);
+  const [category, setCategory] = useState(null)
 
-  const [beBlack, setBeBlack] = useState(false);
+  const [beBlack, setBeBlack] = useState(false)
 
   const handleAddToCart = () => {
-    showAutoClosingMessage('Item added to cart', 1500);
-    addToCart(foundItem, 'add');
-    setShowMoreLessButtons(true);
-  };
+    showAutoClosingMessage('Item added to cart', 1500)
+    addToCart(foundItem, 'add')
+    setShowMoreLessButtons(true)
+  }
 
   const setSize = (size, index) => {
-    setSelectedSizeIndex(index);
-  };
+    setSelectedSizeIndex(index)
+  }
 
   useEffect(() => {
-    returnSelectedSizes(selectedSize);
-    setSelectedSize(selectedSize);
-  }, [returnSelectedSizes, selectedSize]);
+    returnSelectedSizes(selectedSize)
+    setSelectedSize(selectedSize)
+  }, [returnSelectedSizes, selectedSize])
 
-  const [isClicked, setIsClicked] = useState(false);
+  const [isClicked, setIsClicked] = useState(false)
 
   const handleClick = () => {
-    setIsClicked(true);
+    setIsClicked(true)
     // Perform other click-related actions if needed
-  };
+  }
 
   // Buscar el ítem en la lista de categorías
 
   useEffect(() => {
     categoriesList.forEach((category) => {
       const foundItem = category.items.find(
-        (item) => item.id === parseInt(itemId)
-      );
+        (item) => item.id === parseInt(itemId),
+      )
       if (foundItem) {
-        setFoundItem(foundItem);
-        setCategory(category.name);
+        setFoundItem(foundItem)
+        setCategory(category.name)
       }
-    });
-  }, [itemId]);
+    })
+  }, [itemId])
 
-  const [buttonSizes, setButtonsbuttonSizes] = useState(floweSizes);
+  const [buttonSizes, setButtonsbuttonSizes] = useState(floweSizes)
 
   //useeffect for logging category
 
   useEffect(() => {
     switch (category ? category.toLowerCase() : '') {
       case 'flower':
-        setButtonsbuttonSizes(floweSizes);
-        break;
+        setButtonsbuttonSizes(floweSizes)
+        break
       case 'earrings':
-        setButtonsbuttonSizes(earringsSizes);
-        break;
+        setButtonsbuttonSizes(earringsSizes)
+        break
       case 'necklaces':
-        setButtonsbuttonSizes(necklacesSizes);
-        break;
+        setButtonsbuttonSizes(necklacesSizes)
+        break
       default:
-        setButtonsbuttonSizes(defaultSizes);
+        setButtonsbuttonSizes(defaultSizes)
     }
-  }, [category, itemId]);
+  }, [category, itemId])
 
   useEffect(() => {
-    console.log('🚀  buttonSizes:', buttonSizes);
-  }, [buttonSizes, category]);
+    console.log('🚀  buttonSizes:', buttonSizes)
+  }, [buttonSizes, category])
 
-  const [selectedSizeIndex, setSelectedSizeIndex] = useState(-1);
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(-1)
 
   return (
-    <div className="item-detail-page">
-      <div className="left">
+    <div className='item-detail-page'>
+      <div className='left'>
         <ImageCarousel images={images} />
       </div>
-      <div className="items-detail-page-container-right">
+      <div className='items-detail-page-container-right'>
         <h2>{foundItem?.name}</h2>
         <p>{foundItem?.description}</p>
         <p>Materials: {foundItem?.materials}</p>
         <p>Price: {foundItem?.price} $</p>
-        <div className="idp-buttons--container">
+        <div className='idp-buttons--container'>
           {buttonSizes.map((size, index) => (
             <button
               key={size}
@@ -105,8 +105,9 @@ const ItemDetailPage = ({
                 selectedSizeIndex === index ? 'clicked' : ''
               }`}
               onClick={() => {
-                setSize(size, index);
-              }}>
+                setSize(size, index)
+              }}
+            >
               {size}
             </button>
           ))}
@@ -114,48 +115,53 @@ const ItemDetailPage = ({
         <div
           className={`idp--add-to-cart--buttons--container ${
             showMoreLessButtons ? 'flex-column' : ''
-          }`}>
+          }`}
+        >
           {' '}
           {!showMoreLessButtons ? (
             <button
+              disabled={selectedSizeIndex < 0}
               title={selectedSizeIndex === 0 ? 'Select a size' : ''}
               className={`add-to-cart${
                 selectedSizeIndex < 0 ? ' disabled' : ''
               }`}
-              onClick={handleAddToCart}>
+              onClick={handleAddToCart}
+            >
               Add To Cart
             </button>
           ) : (
-            <div className="cart-page--buttons--container">
+            <div className='cart-page--buttons--container'>
               <button
                 className={`btn-more-less ${
                   showMoreLessButtons ? 'custom-width' : ''
                 }`}
                 onClick={() => {
-                  addToCart(foundItem, 'add');
-                }}>
+                  addToCart(foundItem, 'add')
+                }}
+              >
                 +
               </button>
               <button
-                className="btn-more-less"
-                onClick={() => addToCart(foundItem, 'substract')}>
+                className='btn-more-less'
+                onClick={() => addToCart(foundItem, 'substract')}
+              >
                 -
               </button>
             </div>
           )}
-          <button className="add-to-wishlist">Add to Wish List</button>
+          <button className='add-to-wishlist'>Add to Wish List</button>
         </div>
       </div>
       {foundItem && (
-        <div className="idp--accordeon--container">
+        <div className='idp--accordeon--container'>
           <ControlledAccordions foundItem={foundItem} />
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default ItemDetailPage;
+export default ItemDetailPage
 
 const floweSizes = [
   'xx small',
@@ -165,12 +171,12 @@ const floweSizes = [
   'large',
   'x large',
   'xx large',
-];
+]
 
-const earringsSizes = ['small', 'medium', 'large'];
+const earringsSizes = ['small', 'medium', 'large']
 
-const necklacesSizes = ['small', 'medium', 'large', 'x large'];
+const necklacesSizes = ['small', 'medium', 'large', 'x large']
 
-const defaultSizes = ['XS', 'S', 'M', 'L', 'XL'];
+const defaultSizes = ['XS', 'S', 'M', 'L', 'XL']
 
-const images = [dress1, earrings, flower];
+const images = [dress1, earrings, flower]

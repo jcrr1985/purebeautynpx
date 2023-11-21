@@ -32,14 +32,8 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const { handleSubmit, control } = useForm()
 
   const handleSubmitPayment = async (dataForm) => {
-    console.log(
-      '🚀 ~ file: CheckoutForm.jsx:35 ~ handleSubmitPayment ~ dataForm:',
-      dataForm,
-    )
     setLoading(true)
-
     const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
-
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',

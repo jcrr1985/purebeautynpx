@@ -57,6 +57,10 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
           signal: abortController.signal,
           timeout: 10000,
         })
+        console.log(
+          '🚀 ~ file: CheckoutForm.jsx:60 ~ handleSubmitPayment ~ data:',
+          data,
+        )
 
         elements.getElement(CardElement).clear()
         setLoading(false)

@@ -1,58 +1,50 @@
-import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
-import { categoriesList } from './itemsData';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import { categoriesList } from './itemsData'
 
-import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
-import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
+import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 
 const Carousel = () => {
-  const [startIndex, setStartIndex] = useState(0);
+  const [startIndex, setStartIndex] = useState(0)
 
-  const handlePrevClick = () => {
-    if (startIndex > 0) {
-      setStartIndex(startIndex - 1);
-    }
-  };
+  const handleScroll = (direction) => {
+    const step = 1 // Número de elementos a desplazar por cada clic
+    const newStartIndex =
+      direction === 'left'
+        ? Math.max(startIndex - step, 0)
+        : Math.min(startIndex + step, categoriesList.length - 3) // Muestra 3 elementos a la vez
 
-  const handleNextClick = () => {
-    if (startIndex < categoriesList.length - 1) {
-      setStartIndex(startIndex + 1);
-      categoriesList[startIndex] = categoriesList[startIndex + 1];
-    }
-  };
-
-  useEffect(() => {
-    console.log('startIndex', startIndex);
-  }, [startIndex]);
+    setStartIndex(newStartIndex)
+  }
 
   return (
-    <div className="carousel-container categories">
-      {/* <ChevronLeftIcon
-        onClick={handlePrevClick}
-        className="chevron-icon"
+    <div className='carousel-container categories'>
+      <ChevronLeftIcon
+        className='chevron-icon'
         style={{ position: 'relative', left: '10%' }}
-      /> */}
-      <div className="categories-carousel categories">
-        {categoriesList.map((category, index) => (
-          <Link
-            to={`/category/${category.name.toLowerCase()}`}
-            key={index}
-            className="category">
-            <img
-              src={category.src}
-              alt={category.name}
-            />
-            <h4 className="categories-carousel--caption">{category.name}</h4>
-          </Link>
-        ))}
+        onClick={() => handleScroll('left')}
+      />
+      <div className='categories-carousel categories'>
+        {categoriesList
+          .slice(startIndex, startIndex + 3)
+          .map((category, index) => (
+            <Link
+              to={`/category/${category.name.toLowerCase()}`}
+              key={index + startIndex}
+            >
+              <img src={category.src} alt={category.name} />
+              <h4 className='categories-carousel--caption'>{category.name}</h4>
+            </Link>
+          ))}
       </div>
-      {/* <ChevronRightIcon
-        onClick={handleNextClick}
-        className="chevron-icon"
+      <ChevronRightIcon
+        className='chevron-icon'
         style={{ position: 'relative', right: '10%' }}
-      /> */}
+        onClick={() => handleScroll('right')}
+      />
     </div>
-  );
-};
+  )
+}
 
-export default Carousel;
+export default Carousel

@@ -111,6 +111,11 @@ function AppComponent({ showComponent }) {
     const updatedCart = cart.filter((cartItem) => cartItem !== item)
     setCart(updatedCart)
     setCartTotal(cartTotal - item.price)
+
+    const updatedCounters = { ...itemCounters }
+    delete updatedCounters[item.id]
+    setItemCounters(updatedCounters)
+    setCartTotal(cartTotal - item.price)
   }
 
   return (

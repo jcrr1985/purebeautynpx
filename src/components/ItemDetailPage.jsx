@@ -40,13 +40,6 @@ const ItemDetailPage = ({
     setSelectedSize(selectedSize)
   }, [returnSelectedSizes, selectedSize])
 
-  const [isClicked, setIsClicked] = useState(false)
-
-  const handleClick = () => {
-    setIsClicked(true)
-    // Perform other click-related actions if needed
-  }
-
   // Buscar el ítem en la lista de categorías
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { CircularProgress } from '@mui/material'
+import { CardContent, CircularProgress, Typography } from '@mui/material'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useForm, Controller } from 'react-hook-form'
 
@@ -79,6 +79,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
             </span>
           </p>
           <div className='form-and-items-wrapper'>
+            {/* FORMULARIO DE LA IZQUIERDA EN CHECKOUT */}
             <form
               className='checkout-form--form'
               onSubmit={handleSubmit(handleSubmitPayment)}
@@ -89,21 +90,21 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
                   onChange={(event) => setIsCardComplete(event.complete)}
                 />
 
+                <Controller
+                  name='address1'
+                  control={control}
+                  defaultValue=''
+                  render={({ field }) => (
+                    <input
+                      className='checkout-form--input'
+                      type='text'
+                      placeholder='Address line 1'
+                      {...field}
+                    />
+                  )}
+                />
                 <div className='forcards'>
                   {/* address input */}
-                  <Controller
-                    name='address1'
-                    control={control}
-                    defaultValue=''
-                    render={({ field }) => (
-                      <input
-                        className='checkout-form--input'
-                        type='text'
-                        placeholder='Address line 1'
-                        {...field}
-                      />
-                    )}
-                  />
                   <Controller
                     name='address2'
                     control={control}
@@ -214,6 +215,22 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
             </form>
             {/* ITEMS DE LA DERECHA EN CHECKOUT */}
             <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
+            {/* TOTAL, COMISIONES */}
+            <div className='total-comisiones'>
+              <CardContent>
+                <div className='total'>
+                  <Typography className='total-text'>Total</Typography>
+                  <Typography className='total-price'>${cartTotal}</Typography>
+                </div>
+                <hr />
+                <div className='comisiones'>
+                  <Typography className='envios-text'>
+                    Shipping Costs
+                  </Typography>
+                  <Typography className='envios-price'>$0</Typography>
+                </div>
+              </CardContent>
+            </div>
           </div>
         </div>
       ) : (

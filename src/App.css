@@ -1041,5 +1041,14 @@ a {
     font-size: 35px;
   }
 
+  .form-and-items-wrapper {
+    flex-direction: column;
+    font-size: 1.5rem !important;
+  }
+
+  .form-and-items-wrapper * {
+    font-size: 1.5rem !important;
+  }
+
 
 }

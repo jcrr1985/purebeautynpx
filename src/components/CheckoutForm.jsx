@@ -31,12 +31,25 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
 
   const { handleSubmit, control } = useForm()
 
+  // API KEY STRIPE DEVELOPMENT
+  // const apiKeyStripe =
+  //   'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
+
+  // API KEY STRIPE PRODUCTION
+
   const apiKeyStripe =
-    'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
+    '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'
+
+  //_______________________________________________________________________________________
+
+  // API URL PRODUCTION
+  const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
+
+  // API URL DEVELOPMENT
+  // const apiUrl = 'http://localhost:3001/api/checkout'
 
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true)
-    const apiUrl = 'http://localhost:3001/api/checkout'
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',

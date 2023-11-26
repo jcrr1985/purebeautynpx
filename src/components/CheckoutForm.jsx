@@ -38,7 +38,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   // API KEY STRIPE PRODUCTION
 
   const apiKeyStripe =
-    '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'
+    'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
 
   //_______________________________________________________________________________________
 

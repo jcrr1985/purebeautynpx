@@ -36,7 +36,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
 
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true)
-    const apiUrl = 'http://localhost/api/checkout'
+    const apiUrl = 'http://localhost:3000/api/checkout'
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',

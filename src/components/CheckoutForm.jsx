@@ -31,6 +31,9 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
 
   const { handleSubmit, control } = useForm()
 
+  const apiKeyStripe =
+    'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
+
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true)
     const apiUrl = 'http://localhost/api/checkout'
@@ -42,13 +45,21 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
       if (!error) {
         console.log('sin error')
         const { id } = paymentMethod
-        const data = await axios.post(apiUrl, {
-          id,
-          amount: parseInt(cartTotal) * 100,
-          signal: abortController.signal,
-          timeout: 10000,
-          dataForm,
-        })
+        const data = await axios.post(
+          apiUrl,
+          {
+            id,
+            amount: parseInt(cartTotal) * 100,
+            signal: abortController.signal,
+            timeout: 10000,
+            dataForm,
+          },
+          {
+            headers: {
+              Authorization: `Bearer ${apiKeyStripe}`,
+            },
+          },
+        )
         console.log(
           '🚀 ~ file: CheckoutForm.jsx:52 ~ handleSubmitPayment ~ const data:',
           data,

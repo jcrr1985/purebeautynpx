@@ -581,10 +581,20 @@ a {
   font-size: 14px;
 }
 
+
+
 .categories-carousel {
-  transition: transform 0.3s ease;
   display: flex;
+  overflow: hidden;
   gap: 2%;
+}
+
+
+
+.categories-carousel img {
+  width: 100%;
+  height: auto;
+
 }
 
 .chevron-icon {

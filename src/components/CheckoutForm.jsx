@@ -33,7 +33,7 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
 
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true)
-    const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
+    const apiUrl = 'http://localhost:3001/api/checkout'
     try {
       const { error, paymentMethod } = await stripe.createPaymentMethod({
         type: 'card',
@@ -49,16 +49,13 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
           timeout: 10000,
           dataForm,
         })
-        console.log(
-          '🚀 ~ file: CheckoutForm.jsx:52 ~ handleSubmitPayment ~ const data:',
-          data,
-        )
 
         elements.getElement(CardElement).clear()
         setLoading(false)
         handleClose()
         setShowPayment(false)
         setShowSucces(true)
+        axios.post('http://localhost:3001/api/ship', {})
       }
     } catch (error) {
       console.log(error.message)

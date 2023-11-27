@@ -133,11 +133,11 @@ a {
 .button {
   background-color: black;
   color: #f0f0f0;
-  padding: 10px 10px;
   border: none;
-  border-radius: 10px;
+  border-radius: 4px;
   cursor: pointer;
   margin-right: 10px;
+  padding: 1rem;
 }
 
 .categories {
@@ -490,9 +490,8 @@ input::placeholder {
   justify-content: center;
   gap: 20px;
   margin: 0 auto;
-  /* Centrar el contenedor horizontalmente */
   max-width: 80%;
-  /* Limitar el ancho del contenedor al 80% de la pantalla */
+  margin-bottom: 1rem;
 }
 
 .cart-item.suggestions {
@@ -512,6 +511,16 @@ input::placeholder {
   color: white;
   font-size: 0.8rem;
   border-radius: 50%;
+}
+
+button {
+  font-family: 'Italiana', sans-serif;
+  padding: 1.5rem 9rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  background: #000;
 }
 
 .idp--accordeon--container {
@@ -579,7 +588,7 @@ input::placeholder {
 }
 
 .idp--add-to-cart--buttons--container button.add-to-cart {
-  background-color: #333;
+  background-color: #000;
   color: #fff;
 }
 

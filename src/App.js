@@ -67,11 +67,9 @@ function AppComponent({ showComponent }) {
       if (operator === 'add') {
         showAutoClosingMessage('Item added to cart', 1500)
         existingItem.quantity += 1
-        console.log(1)
       } else if (operator === 'substract' && existingItem.quantity > 1) {
         showAutoClosingMessage('Item removed from cart', 1500)
         existingItem.quantity -= 1
-        console.log(2)
       }
       // Actualizar contador de ítem
       setItemCounters((prevCounters) => ({
@@ -104,7 +102,6 @@ function AppComponent({ showComponent }) {
       const itemWithSelectedSizes = { ...item, selectedSizes }
       setCart((prevCart) => [...prevCart, itemWithSelectedSizes])
       setCartTotal((prevTotal) => prevTotal + item.price)
-      console.log('4')
     }
   }
 

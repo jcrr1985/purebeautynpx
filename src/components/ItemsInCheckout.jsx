@@ -52,7 +52,11 @@ const ItemsInCheckout = ({ cart, removeFromCart }) => {
               <Typography variant='body2'>Price: {item.price}</Typography>
             </CardContent>
             <CardActions>
-              <Button size='small' onClick={() => removeFromCart(item)}>
+              <Button
+                size='small'
+                onClick={() => removeFromCart(item)}
+                xs={{ color: 'black' }}
+              >
                 Remove
               </Button>
             </CardActions>

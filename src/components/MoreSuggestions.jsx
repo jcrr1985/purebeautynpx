@@ -6,6 +6,7 @@ import necklace from '../assets/images/necklace.jpeg'
 const MoreSuggestions = ({ removeFromCart, addToCart }) => {
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem', marginTop: '4%' }}>
+      <hr className='more-suggestions-divider' />
       <h3 style={{ textAlign: 'center', marginBottom: '3rem' }}>
         More suggestion for you
       </h3>

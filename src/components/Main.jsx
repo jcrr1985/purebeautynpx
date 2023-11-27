@@ -13,11 +13,10 @@ const Main = () => {
   return (
     <div className='main'>
       <div className='main-content'>
-        <h3 className='font-light'>Special moment</h3>
-        <h1 className='font-light font-title'>Time to create your </h1>
-        <h1 className='font-light font-title' style={{ marginTop: '-30px' }}>
-          own style
-        </h1>
+        <h1 className='font-light title'>We are happy that you are here! </h1>
+        <h3 className='font-light sub-title' style={{ marginTop: '-30px' }}>
+          Here you will find something special for you.
+        </h3>
         <p>
           <button className='button button-browse' onClick={scrollToCategories}>
             Browse

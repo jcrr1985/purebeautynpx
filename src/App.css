@@ -192,8 +192,17 @@ a {
   /* margin-right: 20px; */
 }
 
-.font-light {
-  font-weight: normal;
+
+
+.font-light.title {
+  font-family: Italianno;
+  font-size: 64px;
+}
+
+.font-light.sub-title {
+  font-weight: semi-bold;
+  font-family: Italiana;
+  font-family: 24px;
 }
 
 .font-title {
@@ -816,14 +825,17 @@ a {
   display: flex;
   justify-content: center;
   text-align: center;
+}
 
+.more-suggestions-divider {
+  width: 35%;
 }
 
 .form-and-items-wrapper {
   display: flex;
   margin-top: 2rem;
   justify-content: space-between;
-  margin-top: 2rem;
+  margin-top: 5rem;
   align-items: flex-start;
 }
 
@@ -857,6 +869,7 @@ a {
 
 .total-comisiones * {
   font-size: 0.875rem !important;
+  text-align: right;
 }
 
 .carousel-bezier {

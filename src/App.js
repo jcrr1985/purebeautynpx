@@ -50,6 +50,10 @@ function AppComponent({ showComponent }) {
     setCartTotal(total)
   })
 
+  useEffect(() => {
+    console.log('itemCounters', itemCounters)
+  }, [itemCounters])
+
   //return selectedSizes for passing to cartPage
 
   const [selectedSizes, setSelectedSizes] = useState([])

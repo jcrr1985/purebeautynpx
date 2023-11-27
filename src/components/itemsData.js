@@ -227,7 +227,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 3,
+        id: 9,
         name: 'Golden Owl Earrings',
         category: 'Carpets',
         price: 1,
@@ -260,7 +260,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 4,
+        id: 10,
         name: 'Golden Owl Necklace',
         category: 'Earrings',
         price: 30,
@@ -302,7 +302,7 @@ export const categoriesList = [
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
 
-        id: 5,
+        id: 11,
         name: 'Rings of the Destiny',
         category: 'Dresses',
         price: 1000,
@@ -335,7 +335,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 6,
+        id: 12,
         name: 'Ring of Queen',
         category: 'Dresses',
         price: 55,
@@ -367,7 +367,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 7,
+        id: 13,
         name: 'Rings of the Destiny',
         category: 'rings',
         price: 50,
@@ -399,7 +399,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 8,
+        id: 14,
         name: 'Ring of Queen  ',
         category: 'rings',
         price: 55,
@@ -437,7 +437,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 3,
+        id: 15,
         name: 'Golden Owl Earrings',
         category: 'Carpets',
         price: 1,
@@ -470,7 +470,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 4,
+        id: 16,
         name: 'Golden Owl Necklace',
         category: 'Earrings',
         price: 30,
@@ -512,7 +512,7 @@ export const categoriesList = [
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
 
-        id: 5,
+        id: 17,
         name: 'Rings of the Destiny',
         category: 'Dresses',
         price: 1000,
@@ -545,7 +545,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 6,
+        id: 18,
         name: 'Ring of Queen',
         category: 'Dresses',
         price: 55,
@@ -577,7 +577,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 7,
+        id: 19,
         name: 'Rings of the Destiny',
         category: 'rings',
         price: 50,
@@ -609,7 +609,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 8,
+        id: 20,
         name: 'Ring of Queen  ',
         category: 'rings',
         price: 55,
@@ -649,7 +649,7 @@ export const categoriesList = [
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
 
-        id: 5,
+        id: 21,
         name: 'Rings of the Destiny',
         category: 'Dresses',
         price: 1000,
@@ -682,7 +682,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 6,
+        id: 22,
         name: 'Ring of Queen',
         category: 'Dresses',
         price: 55,
@@ -714,7 +714,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 7,
+        id: 23,
         name: 'Rings of the Destiny',
         category: 'rings',
         price: 50,
@@ -746,7 +746,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 8,
+        id: 24,
         name: 'Ring of Queen  ',
         category: 'rings',
         price: 55,
@@ -784,7 +784,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 3,
+        id: 25,
         name: 'Golden Owl Earrings',
         category: 'Carpets',
         price: 1,
@@ -817,7 +817,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 4,
+        id: 26,
         name: 'Golden Owl Necklace',
         category: 'Earrings',
         price: 30,
@@ -857,7 +857,7 @@ export const categoriesList = [
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
 
-        id: 5,
+        id: 27,
         name: 'Rings of the Destiny',
         category: 'Dresses',
         price: 1000,
@@ -890,7 +890,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 6,
+        id: 28,
         name: 'Ring of Queen',
         category: 'Dresses',
         price: 55,
@@ -922,7 +922,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 7,
+        id: 29,
         name: 'Rings of the Destiny',
         category: 'rings',
         price: 50,
@@ -954,7 +954,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 8,
+        id: 30,
         name: 'Ring of Queen  ',
         category: 'rings',
         price: 55,
@@ -992,7 +992,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 3,
+        id: 31,
         name: 'Golden Owl Earrings',
         category: 'Carpets',
         price: 1,
@@ -1025,7 +1025,7 @@ export const categoriesList = [
       {
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 4,
+        id: 32,
         name: 'Golden Owl Necklace',
         category: 'Earrings',
         price: 30,

@@ -4,6 +4,10 @@ import QuantityButton from './QuantityButton'
 import necklace from '../assets/images/necklace.jpeg'
 
 const MoreSuggestions = ({ removeFromCart, addToCart }) => {
+  const handleAddToCart = (item, operator) => {
+    addToCart(item, 'add')
+  }
+
   return (
     <div style={{ textAlign: 'center', marginTop: '2rem', marginTop: '4%' }}>
       <hr className='more-suggestions-divider' />
@@ -22,7 +26,7 @@ const MoreSuggestions = ({ removeFromCart, addToCart }) => {
                 <div className='cart-page--buttons--container'>
                   <button
                     className='add-to-cart'
-                    onClick={() => addToCart(item, 'add')}
+                    onClick={() => handleAddToCart(item, 'add')}
                   >
                     Add To Cart
                   </button>

@@ -10,6 +10,7 @@ import Swal from 'sweetalert2'
 import CongratulationMessage from './CongratulationsMessage'
 import ItemsInCheckout from './ItemsInCheckout'
 import handleShippoSuccessfulPayment from '../utils/shippo'
+import { useNavigate } from 'react-router-dom'
 
 const showPaymentErrorAlert = () => {
   Swal.fire('Oops!', 'Payment unsuccessful', 'warning')
@@ -31,6 +32,8 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const [isCardComplete, setIsCardComplete] = useState(false)
 
   const { handleSubmit, control } = useForm()
+
+  const navigate = useNavigate()
 
   // API KEY STRIPE DEVELOPMENT
   const apiKeyStripe =
@@ -87,6 +90,13 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
       showPaymentErrorAlert()
       setOpen(false)
     }
+  }
+
+  if (cart.length === 0) {
+    // navigate programmatically to 'cart-empty' route
+
+    navigate('/cart-empty')
+    return
   }
 
   return (

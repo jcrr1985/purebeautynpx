@@ -16,6 +16,7 @@ import { Elements } from '@stripe/react-stripe-js'
 import StripePayment from './components/StripePayment'
 import Success from './components/Success'
 import Swal from 'sweetalert2'
+import CartEmpty from './components/CartEmpty'
 
 // PROD
 // const apiKey =
@@ -177,6 +178,7 @@ function AppComponent({ showComponent }) {
               />
               {/* sUCCESS */}
               <Route path='/success' element={<Success />} />
+              <Route path='cart-empty' element={<CartEmpty />} />
             </Routes>
           </div>
         </div>

@@ -5,6 +5,7 @@ import BackButton from './BackButton'
 import CartCounter from './CartCounter'
 import ButtonsMoreLess from './ButtonsMoreLess'
 import { Link } from 'react-router-dom'
+import CartEmpty from './CartEmpty'
 
 const CartPage = ({
   cart,
@@ -33,14 +34,7 @@ const CartPage = ({
           </h2>
         </div>
         {cart.length === 0 ? (
-          <div className='cat-page-cart-empty text-italianno'>
-            <p className='sad-basket-empty centered-text' style={{}}>
-              Sad your basket is empty! <br />
-              <Link to='/category/all-items'>
-                <button className='button'>Let's start shopping!</button>
-              </Link>
-            </p>
-          </div>
+          <CartEmpty />
         ) : (
           <>
             <div className='grid-container'>
@@ -78,11 +72,7 @@ const CartPage = ({
             {cart.length && (
               <ProceedToPay cartTotal={cartTotal} itemCounters={itemCounters} />
             )}
-            <MoreSuggestions
-              cart={cart}
-              removeFromCart={removeFromCart}
-              addToCart={addToCart}
-            />
+            <MoreSuggestions />
           </>
         )}
       </div>

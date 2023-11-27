@@ -127,7 +127,7 @@ export const categoriesList = [
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
         id: 6,
         name: 'Ring of Queen',
-        category: 'Dresses',
+        category: 'Carpets',
         price: 55,
         imageSrc: dress10,
         materials: "Silver, Diamonds from Cleopatra's tomb",

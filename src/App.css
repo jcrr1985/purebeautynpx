@@ -96,7 +96,7 @@ a {
 
 /* Handle (the draggable part of the scrollbar) */
 ::-webkit-scrollbar-thumb {
-  background-color: #541caf;
+  background-color: #000;
   /* Set the color of the thumb */
   border-radius: 6px;
   /* Set the border radius of the thumb */

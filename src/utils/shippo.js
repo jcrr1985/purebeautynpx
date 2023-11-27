@@ -18,7 +18,7 @@ const handleShippoSuccessfulPayment = async () => {
 
     // Retrieve the shipping label URL from the response
     const shippingLabelURL = shipmentResponse.data.shippingLabelURL
-    console.log('shippingLabelURL', shippingLabelURL)
+    // console.log('shippingLabelURL', shippingLabelURL)
 
     // Open the shipping label URL in a new window or redirect the user to it
     window.open(shippingLabelURL, '_blank')

@@ -1,12 +1,16 @@
-import React from 'react';
+import React from 'react'
+import MoreSuggestions from './MoreSuggestions'
 
-const Havealook = () => {
+const Havealook = ({ cart, removeFromCart, addToCart }) => {
   return (
-    <div className="have-a-look">
-      <h1 className="font-light font-title">Have a look!</h1>
-      <p>Here you can create something as unique as yourself!</p>
+    <div className='have-a-look'>
+      <MoreSuggestions
+        cart={cart}
+        removeFromCart={removeFromCart}
+        addToCart={addToCart}
+      />
     </div>
-  );
-};
+  )
+}
 
-export default Havealook;
+export default Havealook

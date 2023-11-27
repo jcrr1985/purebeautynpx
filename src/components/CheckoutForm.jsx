@@ -9,6 +9,7 @@ import axios from 'axios'
 import Swal from 'sweetalert2'
 import CongratulationMessage from './CongratulationsMessage'
 import ItemsInCheckout from './ItemsInCheckout'
+import handleShippoSuccessfulPayment from '../utils/shippo'
 
 const showPaymentErrorAlert = () => {
   Swal.fire('Oops!', 'Payment unsuccessful', 'warning')
@@ -32,21 +33,20 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const { handleSubmit, control } = useForm()
 
   // API KEY STRIPE DEVELOPMENT
-  // const apiKeyStripe =
-  //   'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
+  const apiKeyStripe =
+    'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
 
   // API KEY STRIPE PRODUCTION
-
-  const apiKeyStripe =
-    'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
+  // const apiKeyStripe =
+  //   'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
 
   //_______________________________________________________________________________________
 
   // API URL PRODUCTION
-  const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
+  // const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
 
   // API URL DEVELOPMENT
-  // const apiUrl = 'http://localhost:3001/api/checkout'
+  const apiUrl = 'http://localhost:3001/api/checkout'
 
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true)
@@ -73,16 +73,13 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
             },
           },
         )
-        console.log(
-          '🚀 ~ file: CheckoutForm.jsx:52 ~ handleSubmitPayment ~ const data:',
-          data,
-        )
 
         elements.getElement(CardElement).clear()
         setLoading(false)
         handleClose()
         setShowPayment(false)
         setShowSucces(true)
+        handleShippoSuccessfulPayment()
       }
     } catch (error) {
       console.log(error.message)
@@ -238,22 +235,29 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
               </div>
             </form>
             {/* ITEMS DE LA DERECHA EN CHECKOUT */}
-            <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
-            {/* TOTAL, COMISIONES */}
-            <div className='total-comisiones'>
-              <CardContent>
-                <div className='total'>
-                  <Typography className='total-text'>Total</Typography>
-                  <Typography className='total-price'>${cartTotal}</Typography>
-                </div>
-                <hr />
-                <div className='comisiones'>
-                  <Typography className='envios-text'>
-                    Shipping Costs
-                  </Typography>
-                  <Typography className='envios-price'>$0</Typography>
-                </div>
-              </CardContent>
+            <div
+              className='category-page--div--right'
+              style={{ display: 'flex', flexDirection: 'column' }}
+            >
+              <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
+              {/* TOTAL, COMISIONES */}
+              <div className='total-comisiones'>
+                <CardContent>
+                  <div className='total'>
+                    <Typography className='total-text'>Total</Typography>
+                    <Typography className='total-price'>
+                      ${cartTotal}
+                    </Typography>
+                  </div>
+                  <hr />
+                  <div className='comisiones'>
+                    <Typography className='envios-text'>
+                      Shipping Costs
+                    </Typography>
+                    <Typography className='envios-price'>$0</Typography>
+                  </div>
+                </CardContent>
+              </div>
             </div>
           </div>
         </div>

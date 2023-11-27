@@ -20,28 +20,13 @@ const MoreSuggestions = ({ removeFromCart, addToCart }) => {
 
               <div className='quantity-buttons'>
                 <div className='cart-page--buttons--container'>
-                  <QuantityButton
-                    item={item}
-                    operator='add'
-                    addToCart={addToCart}
-                  />
-
-                  <QuantityButton
-                    item={item}
-                    operator='substract'
-                    addToCart={addToCart}
-                  />
+                  <button
+                    className='add-to-cart'
+                    onClick={() => addToCart(item, 'add')}
+                  >
+                    Add To Cart
+                  </button>
                 </div>
-              </div>
-
-              <div
-                style={{
-                  width: '100%',
-                  display: 'flex',
-                  justifyContent: 'center',
-                }}
-              >
-                <CartCounter cartItemQuantity={item.quantity} />
               </div>
             </div>
           </div>

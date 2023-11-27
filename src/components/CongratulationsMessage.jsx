@@ -9,6 +9,11 @@ const CongratulationMessage = ({ setItemCounters }) => {
     setItemCounters({})
   }, [setItemCounters])
 
+  useEffect(() => {
+    // Scroll down to the bottom of the page
+    window.scrollTo(0, document.body.scrollHeight)
+  }, [])
+
   return (
     <div className='congratulationsMessage-content-wrapper'>
       <p className='text-italianno'>Thank you for purchase</p>

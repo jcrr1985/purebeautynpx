@@ -44,7 +44,7 @@ const Header = ({ cart, itemCounters }) => {
       <header>
         <div className='malinky-crab'> </div>
         <div className='logo'>
-          <BackButton />
+          {!isStripePaymentPage && <BackButton />}{' '}
           <div
             className={`inner-logo ${searchBarInputOpen ? 'no-border' : ''}`}
           >

@@ -1,9 +1,9 @@
 //create functional component
 
-import CheckoutForm from "./CheckoutForm";
-import React, { useState } from "react";
+import CheckoutForm from './CheckoutForm'
+import React, { useState } from 'react'
 
-import CongratulationsMessage from "./CongratulationsMessage";
+import CongratulationsMessage from './CongratulationsMessage'
 const StripePayment = ({
   cartTotal,
   setItemCounters,
@@ -11,7 +11,7 @@ const StripePayment = ({
   addToCart,
   removeFromCart,
 }) => {
-  const [congratulationOpen, setCongratulationOpen] = useState(false);
+  const [congratulationOpen, setCongratulationOpen] = useState(false)
 
   return (
     <>
@@ -23,7 +23,7 @@ const StripePayment = ({
       />
       {congratulationOpen && <CongratulationsMessage />}
     </>
-  );
-};
+  )
+}
 
-export default StripePayment;
+export default StripePayment

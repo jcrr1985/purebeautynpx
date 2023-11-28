@@ -217,7 +217,7 @@ export default App
 export const showAutoClosingMessage = (message, duration) => {
   const Toast = Swal.mixin({
     toast: true,
-    position: 'top-end',
+    position: 'bottom-start',
     showConfirmButton: false,
     timer: duration,
     timerProgressBar: true,

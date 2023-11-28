@@ -16,6 +16,7 @@ import { Elements } from '@stripe/react-stripe-js'
 import StripePayment from './components/StripePayment'
 import Success from './components/Success'
 import Swal from 'sweetalert2'
+
 import CartEmpty from './components/CartEmpty'
 
 // PROD
@@ -70,10 +71,10 @@ function AppComponent({ showComponent }) {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id)
     if (existingItem) {
       if (operator === 'add') {
-        showAutoClosingMessage('Item added to cart', 1500)
+        showAutoClosingMessage('Item added to cart', 1800)
         existingItem.quantity += 1
       } else if (operator === 'substract' && existingItem.quantity > 1) {
-        showAutoClosingMessage('Item removed from cart', 1500)
+        showAutoClosingMessage('Item removed from cart', 1800)
         existingItem.quantity -= 1
       }
       // Actualizar contador de ítem
@@ -98,7 +99,7 @@ function AppComponent({ showComponent }) {
       )
     } else {
       item.quantity = 1
-
+      showAutoClosingMessage('Item added to cart', 1800)
       // Inicializar contador de ítem
       setItemCounters((prevCounters) => ({
         ...prevCounters,
@@ -204,11 +205,30 @@ function App() {
 
 export default App
 
+// export const showAutoClosingMessage = (message, duration) => {
+//   Swal.fire({
+//     icon: 'success',
+//     title: message,
+//     timer: duration,
+//     showConfirmButton: false,
+//   })
+// }
+
 export const showAutoClosingMessage = (message, duration) => {
-  Swal.fire({
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'top-end',
+    showConfirmButton: false,
+    timer: duration,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+  })
+
+  Toast.fire({
     icon: 'success',
     title: message,
-    timer: duration,
-    showConfirmButton: false,
   })
 }

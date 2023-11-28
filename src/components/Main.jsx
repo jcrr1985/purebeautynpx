@@ -13,7 +13,7 @@ const Main = () => {
   return (
     <div className='main'>
       <div className='main-content'>
-        <h1 className='font-light title'>We are happy that you are here! </h1>
+        <p className='font-light title'>We are happy that you are here! </p>
         <h3 className='font-light sub-title' style={{ marginTop: '-30px' }}>
           Here you will find something special for you.
         </h3>
@@ -21,7 +21,6 @@ const Main = () => {
           <button className='button button-browse' onClick={scrollToCategories}>
             Browse
           </button>
-          <button className='button button-customize'>Customize</button>
         </p>
       </div>
     </div>

@@ -19,7 +19,7 @@ const Main = () => {
         </h3>
         <p>
           <button className='button button-browse' onClick={scrollToCategories}>
-            Browse
+            Let's start
           </button>
         </p>
       </div>

@@ -174,6 +174,7 @@ function AppComponent({ showComponent }) {
                     cart={cart}
                     addToCart={addToCart}
                     removeFromCart={removeFromCart}
+                    setCart={setCart}
                   />
                 }
               />

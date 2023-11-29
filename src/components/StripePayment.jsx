@@ -8,8 +8,8 @@ const StripePayment = ({
   cartTotal,
   setItemCounters,
   cart,
-  addToCart,
   removeFromCart,
+  setCart,
 }) => {
   const [congratulationOpen, setCongratulationOpen] = useState(false)
 
@@ -20,6 +20,7 @@ const StripePayment = ({
         setItemCounters={setItemCounters}
         cart={cart}
         removeFromCart={removeFromCart}
+        setCart={setCart}
       />
       {congratulationOpen && <CongratulationsMessage />}
     </>

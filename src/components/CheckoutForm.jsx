@@ -2,7 +2,7 @@ import { CardContent, CircularProgress, Typography } from '@mui/material'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useForm, Controller } from 'react-hook-form'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import axios from 'axios'
 
@@ -35,7 +35,16 @@ const CheckoutForm = ({
   const handleClose = () => setOpen(false)
   const [showPayment, setShowPayment] = useState(true)
   const [showSucces, setShowSucces] = useState(false)
+  const [displayCongrats, setDisplayCongrats] = useState(false)
   const [isCardComplete, setIsCardComplete] = useState(false)
+
+  useEffect(() => {
+    console.log('showSucces', showSucces)
+    if (showSucces) {
+      setDisplayCongrats(true)
+      console.log('displayCongrats', displayCongrats)
+    }
+  }, [showSucces])
 
   const { handleSubmit, control } = useForm()
 
@@ -88,6 +97,7 @@ const CheckoutForm = ({
         handleClose()
         setShowPayment(false)
         setShowSucces(true)
+
         handleShippoSuccessfulPayment()
         setItemCounters({})
         setCart([])
@@ -280,7 +290,7 @@ const CheckoutForm = ({
           </div>
         </div>
       ) : (
-        showSucces && (
+        (showSucces || displayCongrats) && (
           <CongratulationMessage setItemCounters={setItemCounters} />
         )
       )}

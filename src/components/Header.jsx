@@ -7,16 +7,36 @@ import BackButton from './BackButton'
 import CartCounter from './CartCounter'
 import { useLocation } from 'react-router-dom'
 import SearchBar from './SearchBar'
+import { AccountCircle } from '@mui/icons-material'
+import { Tooltip } from '@mui/material'
+import TooltipComponent from './Tooltip'
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  TextField,
+  Button,
+} from '@mui/material'
+import DialogComponent from './Dialog'
+import axios from 'axios'
+import { showAutoClosingMessage } from '../App'
 
 const Header = ({ cart, itemCounters }) => {
   const [searchBarInputOpen, setSearchBarInputOpen] = useState(false)
   const location = useLocation()
   const isStripePaymentPage = location.pathname === '/stripe-payment'
-  console.log('isStripePaymentPage', isStripePaymentPage)
 
-  useEffect(() => {
-    console.log('itemCounters', itemCounters)
-  }, [itemCounters])
+  const [isLoginModalOpen, setLoginModalOpen] = useState(false)
+  const [username, setUsername] = useState('')
+  const [password, setPassword] = useState('')
+
+  const openLoginModal = () => {
+    setLoginModalOpen(true)
+  }
+
+  const closeLoginModal = () => {
+    setLoginModalOpen(false)
+  }
 
   // Calcular el total de ítems en el carrito
   const totalItemsInCart = Object.values(itemCounters).reduce(
@@ -35,25 +55,116 @@ const Header = ({ cart, itemCounters }) => {
     setSearchBarInputOpen(false)
   }
 
-  useEffect(() => {
-    console.log('searchBarInputOpen', searchBarInputOpen)
-  }, [searchBarInputOpen])
+  const apiUrl = 'http://localhost:3001/api/login'
+  const [token, setToken] = useState('')
+
+  const handleLogin = async (username, password) => {
+    try {
+      console.log('Logging in')
+      const response = await axios.post(apiUrl, {
+        username,
+        password,
+      })
+      console.log('response', response)
+
+      if (response.status === 200) {
+        localStorage.setItem('token', JSON.stringify(response.data.token))
+        setToken(response.data.token)
+        setIsLogged(true)
+        setUsername(response.data.user.username)
+        closeLoginModal()
+      }
+    } catch (error) {
+      console.error('Error during login:', error)
+      showAutoClosingMessage('invalid credentials', 2000, 'error')
+    }
+  }
+
+  const [isLogged, setIsLogged] = useState(false)
+
+  let tooltipContent
+
+  const tooltipWelcome = (
+    <ul>
+      <li>
+        <a>Welcome, {username}!</a>
+      </li>
+      <hr />
+      <li>
+        <a>Settings</a>
+      </li>
+      <li>
+        <a>My orders</a>
+      </li>
+      <li>
+        <a>My favourites</a>
+      </li>
+      <li>
+        <a onClick={() => setIsLogged(false)}>Log out</a>
+      </li>
+    </ul>
+  )
+
+  const tooltipAuthContent = (
+    <ul>
+      <li>
+        <a onClick={openLoginModal}>Log in</a>{' '}
+      </li>
+      <br />
+      <li>
+        <a>Sign up</a>
+      </li>
+    </ul>
+  )
+
+  if (isLogged) {
+    tooltipContent = tooltipWelcome
+  } else {
+    tooltipContent = tooltipAuthContent
+  }
+
+  const dialogInputs = [
+    {
+      label: 'Username!',
+      type: 'text',
+      onChange: (e) => {
+        console.log('e', e)
+        setUsername(e)
+      },
+    },
+    {
+      label: 'Password',
+      type: 'password',
+      onChange: (e) => {
+        console.log('e', e)
+        setPassword(e)
+      },
+    },
+  ]
 
   return (
     <div>
       <header>
         <div className='malinky-crab'> </div>
         <div className='logo'>
+          {/* BACKBUTTON */}
           {!isStripePaymentPage && <BackButton />}{' '}
           <div
             className={`inner-logo ${searchBarInputOpen ? 'no-border' : ''}`}
           >
+            {/* LOGO */}
             <Link to='/'>
               {!searchBarInputOpen && <span>Precious Palettes</span>}
             </Link>
           </div>
         </div>
         <div className='header-right'>
+          {/* TOOLTIP */}
+          <div className='login-Ccomponent'>
+            <TooltipComponent tooltipContent={tooltipContent} />
+          </div>
+
+          {/* SEARCH ICON */}
           {!isStripePaymentPage && (
             <div className='lupa'>
               {!searchBarInputOpen && (
@@ -61,11 +172,11 @@ const Header = ({ cart, itemCounters }) => {
               )}
             </div>
           )}
+
+          {/* CART_ICON */}
           <Link to='/cart'>
-            <div>
-              <ShoppingCartIcon />
-              <CartCounter cartItemQuantity={totalItemsInCart} />
-            </div>
+            <ShoppingCartIcon />
+            <CartCounter cartItemQuantity={totalItemsInCart} />
           </Link>
         </div>
       </header>
@@ -90,6 +201,17 @@ const Header = ({ cart, itemCounters }) => {
           <SearchIcon sx={{ color: '#444' }} />
         </div>
       </div>
+
+      {/* DIALOG COMPONENT */}
+
+      <DialogComponent
+        isLoginModalOpen={isLoginModalOpen}
+        closeLoginModal={closeLoginModal}
+        handleLogin={handleLogin}
+        username={username}
+        password={password}
+        inputs={dialogInputs}
+      />
     </div>
   )
 }

@@ -71,10 +71,10 @@ function AppComponent({ showComponent }) {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id)
     if (existingItem) {
       if (operator === 'add') {
-        showAutoClosingMessage('Item added to cart', 1800)
+        showAutoClosingMessage('Item added to cart', 1800, 'success')
         existingItem.quantity += 1
       } else if (operator === 'substract' && existingItem.quantity > 1) {
-        showAutoClosingMessage('Item removed from cart', 1800)
+        showAutoClosingMessage('Item removed from cart', 1800, 'success')
         existingItem.quantity -= 1
       }
       // Actualizar contador de ítem
@@ -99,7 +99,7 @@ function AppComponent({ showComponent }) {
       )
     } else {
       item.quantity = 1
-      showAutoClosingMessage('Item added to cart', 1800)
+      showAutoClosingMessage('Item added to cart', 1800, 'success')
       // Inicializar contador de ítem
       setItemCounters((prevCounters) => ({
         ...prevCounters,
@@ -206,16 +206,7 @@ function App() {
 
 export default App
 
-// export const showAutoClosingMessage = (message, duration) => {
-//   Swal.fire({
-//     icon: 'success',
-//     title: message,
-//     timer: duration,
-//     showConfirmButton: false,
-//   })
-// }
-
-export const showAutoClosingMessage = (message, duration) => {
+export const showAutoClosingMessage = (message, duration, status) => {
   const Toast = Swal.mixin({
     toast: true,
     position: 'bottom-start',
@@ -229,7 +220,7 @@ export const showAutoClosingMessage = (message, duration) => {
   })
 
   Toast.fire({
-    icon: 'success',
+    icon: status,
     title: message,
   })
 }

@@ -2,13 +2,15 @@ import { CardContent, CircularProgress, Typography } from '@mui/material'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import { useForm, Controller } from 'react-hook-form'
 
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 import axios from 'axios'
 
 import Swal from 'sweetalert2'
 import CongratulationMessage from './CongratulationsMessage'
 import ItemsInCheckout from './ItemsInCheckout'
+import handleShippoSuccessfulPayment from '../utils/shippo'
+import { useNavigate } from 'react-router-dom'
 
 const showPaymentErrorAlert = () => {
   Swal.fire('Oops!', 'Payment unsuccessful', 'warning')
@@ -17,7 +19,13 @@ const showPaymentErrorAlert = () => {
 const abortController = new AbortController()
 
 //create functional component
-const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
+const CheckoutForm = ({
+  cartTotal,
+  setItemCounters,
+  cart,
+  removeFromCart,
+  setCart,
+}) => {
   console.log('🚀 ~ file: CheckoutForm.jsx:20 ~ CheckoutForm ~ cart:', cart)
   const [showCongrats, setShowCongrats] = useState(false)
   const stripe = useStripe()
@@ -27,26 +35,36 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
   const handleClose = () => setOpen(false)
   const [showPayment, setShowPayment] = useState(true)
   const [showSucces, setShowSucces] = useState(false)
+  const [displayCongrats, setDisplayCongrats] = useState(false)
   const [isCardComplete, setIsCardComplete] = useState(false)
+
+  useEffect(() => {
+    console.log('showSucces', showSucces)
+    if (showSucces) {
+      setDisplayCongrats(true)
+      console.log('displayCongrats', displayCongrats)
+    }
+  }, [showSucces])
 
   const { handleSubmit, control } = useForm()
 
+  const navigate = useNavigate()
+
   // API KEY STRIPE DEVELOPMENT
-  // const apiKeyStripe =
-  //   'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
+  const apiKeyStripe =
+    'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
 
   // API KEY STRIPE PRODUCTION
-
-  const apiKeyStripe =
-    'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
+  // const apiKeyStripe =
+  //   'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
 
   //_______________________________________________________________________________________
 
   // API URL PRODUCTION
-  const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
+  // const apiUrl = 'https://serverpp2.onrender.com/api/checkout'
 
   // API URL DEVELOPMENT
-  // const apiUrl = 'http://localhost:3001/api/checkout'
+  const apiUrl = 'http://localhost:3001/api/checkout'
 
   const handleSubmitPayment = async (dataForm) => {
     setLoading(true)
@@ -73,16 +91,16 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
             },
           },
         )
-        console.log(
-          '🚀 ~ file: CheckoutForm.jsx:52 ~ handleSubmitPayment ~ const data:',
-          data,
-        )
 
         elements.getElement(CardElement).clear()
         setLoading(false)
         handleClose()
         setShowPayment(false)
         setShowSucces(true)
+
+        handleShippoSuccessfulPayment()
+        setItemCounters({})
+        setCart([])
       }
     } catch (error) {
       console.log(error.message)
@@ -90,6 +108,13 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
       showPaymentErrorAlert()
       setOpen(false)
     }
+  }
+
+  if (cart.length === 0) {
+    // navigate programmatically to 'cart-empty' route
+
+    navigate('/cart-empty')
+    return
   }
 
   return (
@@ -238,27 +263,34 @@ const CheckoutForm = ({ cartTotal, setItemCounters, cart, removeFromCart }) => {
               </div>
             </form>
             {/* ITEMS DE LA DERECHA EN CHECKOUT */}
-            <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
-            {/* TOTAL, COMISIONES */}
-            <div className='total-comisiones'>
-              <CardContent>
-                <div className='total'>
-                  <Typography className='total-text'>Total</Typography>
-                  <Typography className='total-price'>${cartTotal}</Typography>
-                </div>
-                <hr />
-                <div className='comisiones'>
-                  <Typography className='envios-text'>
-                    Shipping Costs
-                  </Typography>
-                  <Typography className='envios-price'>$0</Typography>
-                </div>
-              </CardContent>
+            <div
+              className='category-page--div--right'
+              style={{ display: 'flex', flexDirection: 'column' }}
+            >
+              <ItemsInCheckout cart={cart} removeFromCart={removeFromCart} />
+              {/* TOTAL, COMISIONES */}
+              <div className='total-comisiones'>
+                <CardContent>
+                  <div className='total'>
+                    <Typography className='total-text'>Total</Typography>
+                    <Typography className='total-price'>
+                      ${cartTotal}
+                    </Typography>
+                  </div>
+                  <hr />
+                  <div className='comisiones'>
+                    <Typography className='envios-text'>
+                      Shipping Costs
+                    </Typography>
+                    <Typography className='envios-price'>$0</Typography>
+                  </div>
+                </CardContent>
+              </div>
             </div>
           </div>
         </div>
       ) : (
-        showSucces && (
+        (showSucces || displayCongrats) && (
           <CongratulationMessage setItemCounters={setItemCounters} />
         )
       )}

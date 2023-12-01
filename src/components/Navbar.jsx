@@ -1,30 +1,31 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import categoriesList from './itemsData';
+import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
+import categoriesList from './itemsData'
 
 const Navbar = ({ selectedCategoria }) => {
-  const [selectedCategory, setSelectedCategory] = useState('All Items');
+  const [selectedCategory, setSelectedCategory] = useState('All Items')
 
   const handleCategoryClick = (category) => {
-    setSelectedCategory(category);
-  };
+    setSelectedCategory(category)
+  }
 
   return (
-    <div className="navbar">
+    <div className='navbar'>
       <div style={{ width: 'max-content' }}>
-        <h4 className="navbar-title">Browse by Categories</h4>
+        <h4 className='navbar-title'>Browse by Categories</h4>
       </div>{' '}
-      <div className="heart-list-container">
-        <ul className="heart-list">
+      <div className='heart-list-container'>
+        <ul className='heart-list'>
           <li
             onClick={() => handleCategoryClick('all-items')}
             className={
               selectedCategoria === 'all-items' ? 'active-categorie' : ''
-            }>
-            <Link to="/category/all-items">All &nbsp;Items</Link>
+            }
+          >
+            <Link to='/category/all-items'>All &nbsp;Items</Link>
           </li>
           {categoriesList &&
-            categoriesList.map((category) => (
+            [...categoriesList].splice(0, 2).map((category) => (
               <li
                 key={category.name}
                 onClick={() => handleCategoryClick('all-items')}
@@ -32,7 +33,8 @@ const Navbar = ({ selectedCategoria }) => {
                   selectedCategoria === category.name.toLowerCase()
                     ? 'active-categorie'
                     : ''
-                }>
+                }
+              >
                 <Link to={`/category/${category.name.toLowerCase()}`}>
                   {category.name}
                 </Link>
@@ -41,7 +43,7 @@ const Navbar = ({ selectedCategoria }) => {
         </ul>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar

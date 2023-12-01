@@ -17,13 +17,15 @@ import StripePayment from './components/StripePayment'
 import Success from './components/Success'
 import Swal from 'sweetalert2'
 
+import CartEmpty from './components/CartEmpty'
+
 // PROD
-const apiKey =
-  'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
+// const apiKey =
+//   'pk_live_51NmKBUIyGuUAStfN4rAplznF6ujE3m1HNSvJIly1f7QQ5NcHeyja8ZWZDVk5Om5nkgF5khWOtNv8Cmv6tBA6Rrcs00rADPAwuU'
 
 // //DEV
-// const apiKey =
-//   'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
+const apiKey =
+  'pk_test_51NmKBUIyGuUAStfNoHpVSC7wjVBwuo8dMuGBe4c4H6z52EdTfdD2XBypC6B3naKeL01K0hVJ3bs45zADZNHSBaZM00UWQtptaZ'
 
 const stripePromise = loadStripe(apiKey)
 
@@ -50,6 +52,10 @@ function AppComponent({ showComponent }) {
     setCartTotal(total)
   })
 
+  useEffect(() => {
+    console.log('itemCounters', itemCounters)
+  }, [itemCounters])
+
   //return selectedSizes for passing to cartPage
 
   const [selectedSizes, setSelectedSizes] = useState([])
@@ -65,13 +71,11 @@ function AppComponent({ showComponent }) {
     const existingItem = cart.find((cartItem) => cartItem.id === item.id)
     if (existingItem) {
       if (operator === 'add') {
-        showAutoClosingMessage('Item added to cart', 1500)
+        showAutoClosingMessage('Item added to cart', 1800, 'success')
         existingItem.quantity += 1
-        console.log(1)
       } else if (operator === 'substract' && existingItem.quantity > 1) {
-        showAutoClosingMessage('Item removed from cart', 1500)
+        showAutoClosingMessage('Item removed from cart', 1800, 'success')
         existingItem.quantity -= 1
-        console.log(2)
       }
       // Actualizar contador de ítem
       setItemCounters((prevCounters) => ({
@@ -95,7 +99,7 @@ function AppComponent({ showComponent }) {
       )
     } else {
       item.quantity = 1
-
+      showAutoClosingMessage('Item added to cart', 1800, 'success')
       // Inicializar contador de ítem
       setItemCounters((prevCounters) => ({
         ...prevCounters,
@@ -104,7 +108,6 @@ function AppComponent({ showComponent }) {
       const itemWithSelectedSizes = { ...item, selectedSizes }
       setCart((prevCart) => [...prevCart, itemWithSelectedSizes])
       setCartTotal((prevTotal) => prevTotal + item.price)
-      console.log('4')
     }
   }
 
@@ -171,15 +174,23 @@ function AppComponent({ showComponent }) {
                     cart={cart}
                     addToCart={addToCart}
                     removeFromCart={removeFromCart}
+                    setCart={setCart}
                   />
                 }
               />
               {/* sUCCESS */}
               <Route path='/success' element={<Success />} />
+              <Route path='cart-empty' element={<CartEmpty />} />
             </Routes>
           </div>
         </div>
-        {<Havealook />}
+        {
+          <Havealook
+            cart={cart}
+            removeFromCart={removeFromCart}
+            addToCart={addToCart}
+          />
+        }
       </div>
     </Elements>
   )
@@ -195,11 +206,21 @@ function App() {
 
 export default App
 
-export const showAutoClosingMessage = (message, duration) => {
-  Swal.fire({
-    icon: 'success',
-    title: message,
-    timer: duration,
+export const showAutoClosingMessage = (message, duration, status) => {
+  const Toast = Swal.mixin({
+    toast: true,
+    position: 'bottom-start',
     showConfirmButton: false,
+    timer: duration,
+    timerProgressBar: true,
+    didOpen: (toast) => {
+      toast.addEventListener('mouseenter', Swal.stopTimer)
+      toast.addEventListener('mouseleave', Swal.resumeTimer)
+    },
+  })
+
+  Toast.fire({
+    icon: status,
+    title: message,
   })
 }

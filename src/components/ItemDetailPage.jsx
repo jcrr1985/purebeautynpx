@@ -26,7 +26,7 @@ const ItemDetailPage = ({
   const [beBlack, setBeBlack] = useState(false)
 
   const handleAddToCart = () => {
-    showAutoClosingMessage('Item added to cart', 1500)
+    showAutoClosingMessage('Item added to cart', 1500, 'success')
     addToCart(foundItem, 'add')
     setShowMoreLessButtons(true)
   }

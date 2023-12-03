@@ -180,7 +180,7 @@ function AppComponent({ showComponent }) {
                 }
               />
               {/* sUCCESS */}
-              <Route path='/success' element={<Success />} />
+              <Route path='/success' element={<Success setCart={setCart} />} />
               <Route path='cart-empty' element={<CartEmpty />} />
             </Routes>
           </div>

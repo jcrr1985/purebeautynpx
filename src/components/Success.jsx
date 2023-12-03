@@ -1,8 +1,9 @@
 import React, { useEffect } from 'react'
 
-function Success({ setCartTotal }) {
+function Success({ setCartTotal, setCart }) {
   useEffect(() => {
     setCartTotal(0)
+    setCart([])
   }, [setCartTotal])
 
   return (

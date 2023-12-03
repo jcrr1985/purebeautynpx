@@ -1,5 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
+import mainRightImage from './../assets/images/main-right-img.png'
 
 const Main = () => {
   const navigate = useNavigate()
@@ -22,6 +23,13 @@ const Main = () => {
             Let's start
           </button>
         </p>
+      </div>
+      <div className='main-right-div'>
+        <p className='rotated-text'>
+          Here you may find something special for you. Crafts from around the
+          world{' '}
+        </p>
+        <img src={mainRightImage} alt='second logo' />
       </div>
     </div>
   )

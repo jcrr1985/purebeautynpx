@@ -100,7 +100,6 @@ const CheckoutForm = ({
 
         handleShippoSuccessfulPayment()
         setItemCounters({})
-        setCart([])
       }
     } catch (error) {
       console.log(error.message)

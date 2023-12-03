@@ -127,6 +127,7 @@ function AppComponent({ showComponent }) {
     <Elements stripe={stripePromise}>
       <div className='god'>
         <Header cart={cart} itemCounters={itemCounters} />
+
         <div className='under-header'>
           {showComponent && <Main />}
           <div id='categories'>
@@ -179,7 +180,7 @@ function AppComponent({ showComponent }) {
                 }
               />
               {/* sUCCESS */}
-              <Route path='/success' element={<Success />} />
+              <Route path='/success' element={<Success setCart={setCart} />} />
               <Route path='cart-empty' element={<CartEmpty />} />
             </Routes>
           </div>

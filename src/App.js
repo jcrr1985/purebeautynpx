@@ -127,6 +127,7 @@ function AppComponent({ showComponent }) {
     <Elements stripe={stripePromise}>
       <div className='god'>
         <Header cart={cart} itemCounters={itemCounters} />
+
         <div className='under-header'>
           {showComponent && <Main />}
           <div id='categories'>

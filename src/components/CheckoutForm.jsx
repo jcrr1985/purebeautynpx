@@ -123,7 +123,7 @@ const CheckoutForm = ({
           <p className='text-italianno we-are-happy'>
             {' '}
             <span>
-              We are Happy with you purchase! &nbsp; Let's do last steps!
+              We are Happy with you purchase! <br /> Let's do last steps!
             </span>
           </p>
           <div className='form-and-items-wrapper'>

@@ -10,7 +10,7 @@ const TooltipComponent = ({ tooltipContent }) => {
       placement='bottom'
       className='tooltip-login'
     >
-      <Link to='/login'>
+      <Link to='/login' style={{ color: 'black' }}>
         <AccountCircle />
       </Link>
     </Tooltip>

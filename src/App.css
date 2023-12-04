@@ -918,7 +918,7 @@ a {
   margin-bottom: 5px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
 .more-suggestions-divider {

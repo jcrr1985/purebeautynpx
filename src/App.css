@@ -42,7 +42,7 @@ body {
 }
 
 header {
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 90% 10%;
   display: grid;
   align-items: center;
   padding: 10px 20px;
@@ -133,8 +133,7 @@ a {
 
 .main {
   width: 100%;
-  height: 80vh;
-  background-image: url("./assets/images/flower.svg");
+  height: 90vh;
   /* background-image: url("./assets/images/background2.jpg"); */
 
 
@@ -146,10 +145,37 @@ a {
   align-items: center;
 }
 
+.main-right-div {
+
+  display: flex;
+}
+
+.main-right-div img {
+  transform: scale(1.2);
+  position: absolute;
+  top: 22%;
+  right: 14%;
+}
+
+.rotated-text {
+  transform: rotate(-90deg);
+  transform-origin: left bottom;
+  white-space: nowrap;
+  left: 11.5rem;
+  bottom: -23rem;
+  position: relative;
+  font-family: 'Italiana', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+}
+
 .main-content {
   position: relative;
   top: 3%;
-  left: 2%;
+  left: 9%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
 }
 
 .main-content p {
@@ -168,9 +194,20 @@ a {
 }
 
 .button-browse {
-  padding: 1.2rem 4.8rem;
   font-size: 24px;
-  ;
+  padding: 1.3rem 3.2rem;
+  font-size: 24px;
+}
+
+.place-order {
+  display: flex;
+  justify-content: center;
+}
+
+.anchor-continue {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
 }
 
 .categories {
@@ -230,6 +267,7 @@ a {
 .font-light.title {
   font-family: Italianno;
   font-size: 64px;
+  margin-bottom: 0px;
 }
 
 .font-light.sub-title {
@@ -287,6 +325,7 @@ a {
   width: 8rem;
   align-items: center;
   position: absolute;
+  top: 3rem;
   right: 100px;
 }
 
@@ -435,8 +474,10 @@ a {
   will-change: transform;
 }
 
-.header-left-icon {
-  left: 5%;
+.header-left {
+  border-bottom: 2px solid black;
+  padding-top: 3rem;
+
 }
 
 .cat-page-cart-empty {
@@ -556,14 +597,29 @@ input::placeholder {
   border-radius: 50%;
 }
 
+.divider {
+  width: 70%;
+  height: 1px;
+  background-color: #ccc;
+  margin: 1rem 0;
+
+}
+
 button {
   font-family: 'Italiana', sans-serif;
-  padding: 1.5rem 9rem;
   border-radius: 4px;
   cursor: pointer;
   font-size: 16px;
   font-weight: bold;
   background: #000;
+  width: fit-content;
+}
+
+.mrc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 8rem;
 }
 
 .idp--accordeon--container {
@@ -637,6 +693,10 @@ button {
 
 button {
   cursor: pointer;
+  height: 38px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 a {
@@ -783,12 +843,12 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .sad-basket-empty {
   margin-top: 0;
 }
-
 
 
 .congratulationsMessage-content-wrapper {
@@ -801,14 +861,13 @@ a {
 }
 
 .continue-shopping-btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 4px;
   background: #000;
   border: none;
   cursor: pointer;
   color: #fff;
-  padding: 1.5rem 9rem;
   font-size: 24px;
   font-family: 'Italiana', sans-serif;
 
@@ -859,7 +918,7 @@ a {
   margin-bottom: 5px;
   display: flex;
   justify-content: center;
-  text-align: center;
+  text-align: left;
 }
 
 .more-suggestions-divider {
@@ -1067,7 +1126,8 @@ a {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: inherit;
+    position: relative;
+    top: 1rem;
 
   }
 

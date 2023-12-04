@@ -18,7 +18,7 @@ const CongratulationMessage = ({ setItemCounters }) => {
     <div className='congratulationsMessage-content-wrapper'>
       <p className='text-italianno'>Thank you for purchase</p>
       <Link to='/'>
-        <DealButton message='Continue Shopping' />
+        <DealButton message='Continue' />
       </Link>
     </div>
   )

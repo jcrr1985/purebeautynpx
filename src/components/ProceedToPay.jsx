@@ -6,7 +6,7 @@ const ProceedToPay = ({ cartTotal }) => {
   return (
     <div className='proceed-wrapper'>
       <p>Total: {cartTotal} $</p>
-      <Link to='/stripe-payment'>
+      <Link to='/stripe-payment' className='place-order'>
         <DealButton message='Place Order' />
       </Link>{' '}
     </div>

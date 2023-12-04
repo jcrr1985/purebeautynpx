@@ -145,19 +145,9 @@ const Header = ({ cart, itemCounters }) => {
   return (
     <div>
       <header>
-        <div className='malinky-crab'> </div>
-        <div className='logo'>
-          {/* BACKBUTTON */}
-          {!isStripePaymentPage && <BackButton />}{' '}
-          <div
-            className={`inner-logo ${searchBarInputOpen ? 'no-border' : ''}`}
-          >
-            {/* LOGO */}
-            <Link to='/'>
-              {!searchBarInputOpen && <span>Precious Palettes</span>}
-            </Link>
-          </div>
-        </div>
+        <BackButton />
+        <div className='header-left'></div>
+
         <div className='header-right'>
           {/* TOOLTIP */}
           <div className='login-Ccomponent'>
@@ -180,6 +170,7 @@ const Header = ({ cart, itemCounters }) => {
           </Link>
         </div>
       </header>
+
       <div
         className={`search-input-container ${searchBarInputOpen ? 'open' : ''}`}
       >

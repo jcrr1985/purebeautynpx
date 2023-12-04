@@ -23,15 +23,17 @@ const CartPage = ({
           <div className='cart-page--back-arrow--container'>
             <BackButton />
           </div>
-          <h2
-            style={{
-              textAlign: 'center',
-              marginTop: '40px',
-              marginBottom: '40px',
-            }}
-          >
-            Review your order
-          </h2>
+          {cart.length !== 0 && (
+            <h2
+              style={{
+                textAlign: 'center',
+                marginTop: '40px',
+                marginBottom: '40px',
+              }}
+            >
+              Review your order
+            </h2>
+          )}
         </div>
         {cart.length === 0 ? (
           <CartEmpty />

@@ -8,6 +8,7 @@
 @font-face {
   font-family: 'Italianno';
   src: local('Italianno'), url("./assets/fonts/Italianno-Regular.ttf") format('truetype');
+
 }
 
 * {
@@ -39,6 +40,9 @@ body {
 .god {
   width: 85%;
   margin: auto;
+
+
+
 }
 
 header {
@@ -153,7 +157,7 @@ a {
 .main-right-div img {
   transform: scale(1.2);
   position: absolute;
-  top: 22%;
+  top: 20%;
   right: 14%;
 }
 
@@ -162,7 +166,7 @@ a {
   transform-origin: left bottom;
   white-space: nowrap;
   left: 11.5rem;
-  bottom: -23rem;
+  bottom: -22rem;
   position: relative;
   font-family: 'Italiana', sans-serif;
   font-size: 24px;

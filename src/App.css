@@ -147,6 +147,13 @@ a {
 
 .main-right-div {}
 
+.main-right-div img {
+  transform: scale(1.3);
+  position: relative;
+  top: -3rem;
+  left: 5rem;
+}
+
 .rotated-text {
   transform: rotate(-90deg);
   transform-origin: left bottom;
@@ -162,8 +169,8 @@ a {
 .main-content {
   position: relative;
   top: 3%;
-  left: 2%;
-  width: 60%;
+  left: 9%;
+  width: 50%;
   display: flex;
   flex-direction: column;
 }

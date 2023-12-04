@@ -843,6 +843,7 @@ a {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 0;
 }
 
 .sad-basket-empty {
@@ -861,7 +862,7 @@ a {
 }
 
 .continue-shopping-btn {
-  margin-top: 2rem;
+  margin-top: 1rem;
   padding: 1rem;
   border-radius: 4px;
   background: #000;

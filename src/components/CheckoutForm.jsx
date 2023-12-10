@@ -27,12 +27,9 @@ const CheckoutForm = ({
   setCart,
 }) => {
   console.log('🚀 ~ file: CheckoutForm.jsx:20 ~ CheckoutForm ~ cart:', cart)
-  const [showCongrats, setShowCongrats] = useState(false)
   const stripe = useStripe()
   const elements = useElements()
   const [loading, setLoading] = useState(false)
-  const [open, setOpen] = useState(true)
-  const handleClose = () => setOpen(false)
   const [showPayment, setShowPayment] = useState(true)
   const [showSucces, setShowSucces] = useState(false)
   const [displayCongrats, setDisplayCongrats] = useState(false)
@@ -94,7 +91,6 @@ const CheckoutForm = ({
 
         elements.getElement(CardElement).clear()
         setLoading(false)
-        handleClose()
         setShowPayment(false)
         setShowSucces(true)
 
@@ -105,7 +101,6 @@ const CheckoutForm = ({
       console.log(error.message)
       setLoading(false)
       showPaymentErrorAlert()
-      setOpen(false)
     }
   }
 

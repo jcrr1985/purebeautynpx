@@ -3,12 +3,6 @@ import { Link } from 'react-router-dom'
 import categoriesList from './itemsData'
 
 const Navbar = ({ selectedCategoria }) => {
-  const [selectedCategory, setSelectedCategory] = useState('All Items')
-
-  const handleCategoryClick = (category) => {
-    setSelectedCategory(category)
-  }
-
   return (
     <div className='navbar'>
       <div style={{ width: 'max-content' }}>
@@ -17,7 +11,6 @@ const Navbar = ({ selectedCategoria }) => {
       <div className='heart-list-container'>
         <ul className='heart-list'>
           <li
-            onClick={() => handleCategoryClick('all-items')}
             className={
               selectedCategoria === 'all-items' ? 'active-categorie' : ''
             }
@@ -28,7 +21,6 @@ const Navbar = ({ selectedCategoria }) => {
             [...categoriesList].splice(0, 2).map((category) => (
               <li
                 key={category.name}
-                onClick={() => handleCategoryClick('all-items')}
                 className={
                   selectedCategoria === category.name.toLowerCase()
                     ? 'active-categorie'

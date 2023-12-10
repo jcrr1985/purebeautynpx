@@ -1,6 +1,4 @@
 import React from 'react'
-import CartCounter from './CartCounter'
-import QuantityButton from './QuantityButton'
 import necklace from '../assets/images/necklace.jpeg'
 
 const MoreSuggestions = ({ removeFromCart, addToCart }) => {

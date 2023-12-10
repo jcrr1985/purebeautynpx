@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import ItemElement from './ItemElement'
 import itemsData from './itemsData'
-import { Grid, Paper } from '@mui/material'
+import { Grid } from '@mui/material'
 
 const CategoryPage = ({ addToCart }) => {
   const { category } = useParams()

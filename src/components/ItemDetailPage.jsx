@@ -10,12 +10,7 @@ import flower from '../assets/images/flower.webp'
 
 import ImageCarousel from './Carousel2'
 
-const ItemDetailPage = ({
-  addToCart,
-  cart,
-  removeFromCart,
-  returnSelectedSizes,
-}) => {
+const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
   const { itemId } = useParams()
   const [foundItem, setFoundItem] = useState(null)
   const [selectedSize, setSelectedSize] = useState([])

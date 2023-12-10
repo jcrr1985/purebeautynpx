@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from 'react'
 import ProceedToPay from './ProceedToPay'
 import MoreSuggestions from './MoreSuggestions'
 import BackButton from './BackButton'
 import CartCounter from './CartCounter'
 import ButtonsMoreLess from './ButtonsMoreLess'
-import { Link } from 'react-router-dom'
 import CartEmpty from './CartEmpty'
 
 const CartPage = ({

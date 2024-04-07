@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const ItemElement = ({ imageSrc, name, price, addToCart, materials, id }) => {
+const ItemElement = ({ imageSrc, name, price, materials, id }) => {
   return (
     <Link to={`/item/${id}`} className='item-link'>
       <div className='item category'>
@@ -9,7 +9,7 @@ const ItemElement = ({ imageSrc, name, price, addToCart, materials, id }) => {
         <h5 className='item-title'>{name}</h5>
         <div className='description-container'>
           <p>{materials}</p>
-          <p>{price} $</p>
+          <p>{price} €</p>
         </div>
       </div>
     </Link>

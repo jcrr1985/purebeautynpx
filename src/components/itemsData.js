@@ -17,13 +17,13 @@ export const categoriesList = [
     items: [
       {
         description:
-          '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
+          'Pattern: blue pomegranate. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue',
         id: 3,
-        name: 'Golden Owl Earrings',
-        category: 'Carpets',
-        price: 1,
+        name: 'Abaya',
+        category: 'Outerwear',
+        price: 126,
         imageSrc: dress6,
-        materials: 'Gold, Silver, Diamond.',
+        materials: 'Cashmere',
 
         deepDescription2: [
           {
@@ -52,12 +52,12 @@ export const categoriesList = [
         description:
           '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
         id: 4,
-        name: 'Golden Owl Necklace',
-        category: 'Earrings',
-        price: 30,
+        name: 'Overcoat',
+        category: 'Outerwear',
+        price: 50,
         imageSrc: dress2,
 
-        materials: 'Pink Gold, Rubies, Silver',
+        materials: 'Leon. Adras Pattern',
 
         deepDescription2: [
           {

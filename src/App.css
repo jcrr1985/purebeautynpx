@@ -219,7 +219,7 @@ a {
 }
 
 .categories--description {
-  margin: 0 auto;
+  margin: 5% auto;
 }
 
 .category {
@@ -266,6 +266,8 @@ a {
   font-family: Italianno;
   font-size: 88px;
   margin-bottom: 0px;
+  font-size: 5vw; /* Ajusta el valor según sea necesario */
+  white-space: nowrap;
 }
 
 .font-light.sub-title {

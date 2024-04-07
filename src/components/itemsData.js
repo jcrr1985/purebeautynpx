@@ -12,9 +12,13 @@ import suit from '../assets/images/suit.jpg'
 
 // inner images
 
-import inner_1_1 from '../assets/images/outwear-item_1-1.jpg'
-import inner_1_2 from '../assets/images/outwear-item_1-2.jpg'
-import inner_1_3 from '../assets/images/outwear-item_1-3.jpg'
+import inner_1_1 from '../assets/images/id1_1.jpg'
+import inner_1_2 from '../assets/images/id1_2.jpg'
+import inner_1_3 from '../assets/images/id1_3.jpg'
+
+import inner_id2_1 from '../assets/images/id2_1.jpg'
+import inner_id2_2 from '../assets/images/id2_2.jpg'
+import inner_id2_3 from '../assets/images/id2_3.jpg'
 
 export const categoriesList = [
   {
@@ -28,7 +32,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 126,
-        imageSrc: dress6,
+        imageSrc: inner_1_1,
         materials: 'Cashmere',
 
         deepDescription2: [
@@ -61,7 +65,7 @@ export const categoriesList = [
         name: 'Overcoat',
         category: 'Outerwear',
         price: 50,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Leon.',
 
@@ -87,7 +91,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
-        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
+        carouselImages: [inner_id2_1, inner_id2_2, inner_id2_3],
       },
       {
         description:
@@ -97,7 +101,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 130,
-        imageSrc: dress2,
+        imageSrc: inner_1_1,
 
         materials: 'Cashmere',
 
@@ -131,7 +135,7 @@ export const categoriesList = [
         name: 'Overcoat',
         category: 'Outerwear',
         price: 50,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Leon.',
 
@@ -166,7 +170,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 130,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Cashmere',
 
@@ -200,7 +204,7 @@ export const categoriesList = [
         name: 'Overcoat',
         category: 'Outerwear',
         price: 103,
-        imageSrc: dress2,
+        imageSrc: inner_1_1,
 
         materials: 'Cotton, pattern on both sides',
 
@@ -234,7 +238,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 89,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Camel wool',
 
@@ -269,7 +273,7 @@ export const categoriesList = [
         name: 'Chapan',
         category: 'Outerwear',
         price: 112,
-        imageSrc: dress2,
+        imageSrc: inner_1_1,
 
         materials: 'Silk on the outside, cotton on the inside, reversible',
 
@@ -304,7 +308,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 133,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Cashmere',
 
@@ -339,7 +343,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 133,
-        imageSrc: dress2,
+        imageSrc: inner_1_1,
 
         materials: 'Cashmere',
 
@@ -374,7 +378,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 133,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Cashmere',
 
@@ -409,7 +413,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 133,
-        imageSrc: dress2,
+        imageSrc: inner_1_1,
 
         materials: 'Cashmere',
 
@@ -443,7 +447,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 36,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Silk',
 
@@ -477,7 +481,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 36,
-        imageSrc: dress2,
+        imageSrc: inner_1_1,
 
         materials: 'Silk',
 
@@ -512,7 +516,7 @@ export const categoriesList = [
         name: 'Abaya',
         category: 'Outerwear',
         price: 36,
-        imageSrc: dress2,
+        imageSrc: inner_id2_1,
 
         materials: 'Silk',
 

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import mainRightImage from './../assets/images/main-right-img.png'
+import mainRightImage from './../assets/images/brooch.jpg'
 
 const Main = () => {
   const navigate = useNavigate()
@@ -10,6 +10,8 @@ const Main = () => {
     const categoriesElement = document.getElementById('categories')
     categoriesElement.scrollIntoView({ behavior: 'smooth' })
   }
+
+  console.log('mainRightImage', mainRightImage)
 
   return (
     <div className='main'>
@@ -23,12 +25,21 @@ const Main = () => {
           </button>
         </div>
       </div>
-      <div className='main-right-div'>
+      <div
+        className='main-right-div'
+        style={{
+          backgroundImage: `url(${mainRightImage})`,
+          backgroundPosition: 'center',
+          backgroundSize: 'cover',
+          backgroundRepeat: 'no-repeat',
+          height: '100%',
+        }}
+      >
         <p className='rotated-text'>
           Here you may find something special for you. Crafts from around the
           world{' '}
         </p>
-        <img src={mainRightImage} alt='second logo' />
+        {/* <img src={mainRightImage} alt='second logo' /> */}
       </div>
     </div>
   )

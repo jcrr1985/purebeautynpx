@@ -16,8 +16,6 @@ const Carousel = () => {
 
     if (newWidth < 750) {
       setNumOfPicsAtTime(1)
-
-      console.log('Mostrando 1 imagen en tamaño mobile')
     } else {
       setNumOfPicsAtTime(3)
     }

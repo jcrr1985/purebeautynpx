@@ -13,7 +13,6 @@ const CategoryPage = ({ addToCart }) => {
       : itemsData.filter((item) => item.name.toLowerCase() === category)
 
   const entityItems = filteredEntities.map((entity) => entity.items)
-  console.log('entityItems', entityItems)
 
   return (
     <div className='cart-page-wrapper'>

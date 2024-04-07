@@ -17,21 +17,20 @@ const Navbar = ({ selectedCategoria }) => {
           >
             <Link to='/category/all-items'>All &nbsp;Items</Link>
           </li>
-          {categoriesList &&
-            [...categoriesList].splice(0, 2).map((category) => (
-              <li
-                key={category.name}
-                className={
-                  selectedCategoria === category.name.toLowerCase()
-                    ? 'active-categorie'
-                    : ''
-                }
-              >
-                <Link to={`/category/${category.name.toLowerCase()}`}>
-                  {category.name}
-                </Link>
-              </li>
-            ))}
+          {categoriesList.map((category) => (
+            <li
+              key={category.name}
+              className={
+                selectedCategoria === category.name.toLowerCase()
+                  ? 'active-categorie'
+                  : ''
+              }
+            >
+              <Link to={`/category/${category.name.toLowerCase()}`}>
+                {category.name}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </div>

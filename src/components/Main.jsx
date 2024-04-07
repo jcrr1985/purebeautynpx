@@ -1,6 +1,6 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import mainRightImage from './../assets/images/brooch.jpg'
+import mainRightImage from './../assets/images/brooch-main.png'
 
 const Main = () => {
   const navigate = useNavigate()
@@ -32,15 +32,9 @@ const Main = () => {
           backgroundPosition: 'center',
           backgroundSize: 'cover',
           backgroundRepeat: 'no-repeat',
-          height: '100%',
+          height: '105%',
         }}
-      >
-        <p className='rotated-text'>
-          Here you may find something special for you. Crafts from around the
-          world{' '}
-        </p>
-        {/* <img src={mainRightImage} alt='second logo' /> */}
-      </div>
+      ></div>
     </div>
   )
 }

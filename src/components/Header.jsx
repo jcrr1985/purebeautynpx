@@ -125,7 +125,7 @@ const Header = ({ cart, itemCounters }) => {
 
   const dialogInputs = [
     {
-      label: 'Username!',
+      label: 'Username',
       type: 'text',
       onChange: (e) => {
         console.log('e', e)
@@ -143,7 +143,7 @@ const Header = ({ cart, itemCounters }) => {
   ]
 
   return (
-    <div>
+    <div style={{ marginBottom: '2%' }}>
       <header>
         <BackButton />
         <div className='header-left'></div>

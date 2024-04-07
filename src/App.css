@@ -994,6 +994,15 @@ a {
   overflow: hidden;
 }
 
+.control-prev.control-arrow {
+  background: #ccc;
+}
+
+/* Customizando el botón de flecha derecha */
+.control-arrow {
+  background: #ccc !important;
+}
+
 /** MEDIA QUERIES **/
 
 @media screen and (max-width: 768px) {

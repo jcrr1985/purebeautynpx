@@ -10,6 +10,12 @@ import dress9 from '../assets/images/model8.jpg'
 import dress10 from '../assets/images/model9.jpg'
 import suit from '../assets/images/suit.jpg'
 
+// inner images
+
+import inner_1_1 from '../assets/images/outwear-item_1-1.jpg'
+import inner_1_2 from '../assets/images/outwear-item_1-2.jpg'
+import inner_1_3 from '../assets/images/outwear-item_1-3.jpg'
+
 export const categoriesList = [
   {
     name: 'Outerwear',
@@ -47,10 +53,10 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
-        description:
-          'Adras Pattern',
+        description: 'Adras Pattern',
         id: 2,
         name: 'Overcoat',
         category: 'Outerwear',
@@ -81,17 +87,19 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
-          'Adras Pattern',
+          '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
+
         id: 3,
-        name: 'Overcoat',
+        name: 'Abaya',
         category: 'Outerwear',
-        price: 50,
+        price: 130,
         imageSrc: dress2,
 
-        materials: 'Leon.',
+        materials: 'Cashmere',
 
         deepDescription2: [
           {
@@ -115,10 +123,10 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
-        description:
-          'Adras Pattern',
+        description: 'Adras Pattern',
         id: 4,
         name: 'Overcoat',
         category: 'Outerwear',
@@ -149,6 +157,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
@@ -183,10 +192,10 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
-        description:
-          'Pattern: Adras, Uzbek ornament',
+        description: 'Pattern: Adras, Uzbek ornament',
         id: 6,
         name: 'Overcoat',
         category: 'Outerwear',
@@ -217,10 +226,10 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
-        description:
-          'Pattern: Samarkand drape',
+        description: 'Pattern: Samarkand drape',
         id: 7,
         name: 'Abaya',
         category: 'Outerwear',
@@ -251,6 +260,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
@@ -285,6 +295,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
@@ -319,6 +330,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
@@ -353,6 +365,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
@@ -387,6 +400,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
@@ -421,10 +435,10 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
-        description:
-          'Pattern: Adras, Uzbek ornament',
+        description: 'Pattern: Adras, Uzbek ornament',
         id: 13,
         name: 'Abaya',
         category: 'Outerwear',
@@ -455,10 +469,10 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
-        description:
-          'Pattern: red pomegranate',
+        description: 'Pattern: red pomegranate',
         id: 14,
         name: 'Abaya',
         category: 'Outerwear',
@@ -489,10 +503,86 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
       {
         description:
-          'Pattern: blue pomegranate',
+          '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
+        id: 13,
+        name: 'Abaya',
+        category: 'Outerwear',
+        price: 36,
+        imageSrc: dress2,
+
+        materials: 'Silk',
+
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: 'Size & Fit',
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: 'Details & Care',
+            description:
+              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
+          },
+          {
+            title: 'Delivery & Free Returns',
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
+      },
+    ],
+  },
+  {
+    name: 'Accesories',
+    src: acces,
+    items: [
+      {
+        description:
+          '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
+        id: 14,
+        name: 'Abaya',
+        category: 'Outerwear',
+        price: 36,
+        imageSrc: dress2,
+
+        materials: 'Silk',
+
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: 'Size & Fit',
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: 'Details & Care',
+            description:
+              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
+          },
+          {
+            title: 'Delivery & Free Returns',
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
+      },
+      {
+        description: 'Pattern: blue pomegranate',
         id: 15,
         name: 'Abaya',
         category: 'Outerwear',
@@ -523,6 +613,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
     ],
   },
@@ -532,15 +623,14 @@ export const categoriesList = [
 
     items: [
       {
-        description:
-          'Pattern: Adras, Uzbek ornament',
+        description: 'Pattern: Adras, Uzbek ornament',
 
         id: 18,
         name: 'Dress',
         category: 'Dresses',
         price: 40,
         imageSrc: dress9,
-        materials: "Silk",
+        materials: 'Silk',
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -563,6 +653,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
     ],
   },
@@ -571,8 +662,7 @@ export const categoriesList = [
     src: acces,
     items: [
       {
-        description:
-          'Pattern: red pomegranate',
+        description: 'Pattern: red pomegranate',
         id: 17,
         name: 'Scarf',
         category: 'Accessory',
@@ -602,6 +692,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
     ],
   },
@@ -611,15 +702,14 @@ export const categoriesList = [
 
     items: [
       {
-        description:
-          'Pattern: Adras, Uzbek ornament',
+        description: 'Pattern: Adras, Uzbek ornament',
 
         id: 16,
         name: 'Silk Suit',
         category: 'Suits',
         price: 41,
         imageSrc: dress3,
-        materials: "Silk",
+        materials: 'Silk',
         deepDescription2: [
           {
             title: "Editor's Notes",
@@ -642,11 +732,50 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
       },
     ],
   },
+  {
+    name: 'Suits',
+    src: suit,
 
-  
+    items: [
+      {
+        description: 'Pattern: Adras, Uzbek ornament',
+
+        id: 16,
+        name: 'Silk Suit',
+        category: 'Suits',
+        price: 41,
+        imageSrc: dress3,
+        materials: 'Silk',
+        deepDescription2: [
+          {
+            title: "Editor's Notes",
+            description:
+              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
+          },
+          {
+            title: 'Size & Fit',
+            description:
+              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
+          },
+          {
+            title: 'Details & Care',
+            description:
+              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
+          },
+          {
+            title: 'Delivery & Free Returns',
+            description:
+              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
+          },
+        ],
+        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
+      },
+    ],
+  },
 ]
 
 export default categoriesList

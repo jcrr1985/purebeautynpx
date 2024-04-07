@@ -18,8 +18,6 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
 
   const [category, setCategory] = useState(null)
 
-  const [beBlack, setBeBlack] = useState(false)
-
   const handleAddToCart = () => {
     showAutoClosingMessage('Item added to cart', 1500, 'success')
     addToCart(foundItem, 'add')
@@ -47,7 +45,8 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
         setCategory(category.name)
       }
     })
-  }, [itemId])
+    console.log('foundItem', foundItem)
+  }, [itemId, foundItem])
 
   const [buttonSizes, setButtonsbuttonSizes] = useState(floweSizes)
 
@@ -69,16 +68,14 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
     }
   }, [category, itemId])
 
-  useEffect(() => {
-    console.log('🚀  buttonSizes:', buttonSizes)
-  }, [buttonSizes, category])
-
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(-1)
 
   return (
     <div className='item-detail-page'>
       <div className='left'>
-        <ImageCarousel images={images} />
+        {foundItem && foundItem.carouselImages && (
+          <ImageCarousel images={foundItem.carouselImages} />
+        )}
       </div>
       <div className='items-detail-page-container-right'>
         <h2>{foundItem?.name}</h2>

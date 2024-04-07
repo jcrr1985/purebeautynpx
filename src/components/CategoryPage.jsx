@@ -40,6 +40,28 @@ const CategoryPage = ({ addToCart }) => {
                     />
                   </Grid>
                 ))}
+                {entityItems.flat().length < 3 &&
+                  ['', '', ''].map((item, index) => (
+                    <Grid
+                      item
+                      key={index}
+                      xs={12}
+                      sm={6}
+                      md={4}
+                      lg={3}
+                      style={{ visibility: 'hidden' }}
+                    >
+                      <ItemElement
+                        key=''
+                        imageSrc=''
+                        name={'\u00A0'.repeat(100)}
+                        price=''
+                        materials=''
+                        id=''
+                        item=''
+                      />
+                    </Grid>
+                  ))}
               </Grid>
             </Grid>
           </div>

@@ -652,7 +652,7 @@ export const categoriesList = [
     ],
   },
   {
-    name: 'Accesories',
+    name: 'Accessories',
     src: acces,
     items: [
       {

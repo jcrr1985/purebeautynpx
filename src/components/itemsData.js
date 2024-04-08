@@ -85,6 +85,11 @@ import inner_id16_2 from '../assets/images/id16_2.jpg'
 import inner_id18_1 from '../assets/images/id18_1.jpg'
 import inner_id18_2 from '../assets/images/id18_2.jpg'
 
+import suit_1 from '../assets/images/suit_1.jpg'
+import suit_2 from '../assets/images/suit_2.jpg'
+
+import accesories_1 from '../assets/images/accesories_1.jpg'
+
 export const categoriesList = [
   {
     name: 'Outerwear',
@@ -661,7 +666,7 @@ export const categoriesList = [
         name: 'Scarf',
         category: 'Accessory',
         price: 27,
-        imageSrc: dress1,
+        imageSrc: accesories_1,
         materials: 'Cashmere',
 
         deepDescription2: [
@@ -686,81 +691,13 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
-        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
-      },
-      {
-        description:
-          '+ NET SUSTAIN cape-effect ribbed recycled cashmere and wool-blend turtleneck sweater',
-        id: 16,
-        name: 'Abaya',
-        category: 'Outerwear',
-        price: 36,
-        imageSrc: dress2,
-
-        materials: 'Silk',
-
-        deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
-            title: 'Size & Fit',
-            description:
-              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
-          },
-          {
-            title: 'Details & Care',
-            description:
-              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
-          },
-          {
-            title: 'Delivery & Free Returns',
-            description:
-              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
-          },
-        ],
-        carouselImages: [inner_id16_1, inner_id16_2],
-      },
-      {
-        description: 'Pattern: red pomegranate',
-        id: 19,
-        name: 'Scarf',
-        category: 'Accessory',
-        price: 27,
-        imageSrc: dress1,
-        materials: 'Cashmere',
-
-        deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
-            title: 'Size & Fit',
-            description:
-              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
-          },
-          {
-            title: 'Details & Care',
-            description:
-              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
-          },
-          {
-            title: 'Delivery & Free Returns',
-            description:
-              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
-          },
-        ],
-        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
+        carouselImages: [accesories_1],
       },
     ],
   },
   {
     name: 'Suits',
-    src: suit,
+    src: suit_1,
     items: [
       {
         description: 'Pattern: Adras, Uzbek ornament',
@@ -769,7 +706,7 @@ export const categoriesList = [
         name: 'Silk Suit',
         category: 'Suits',
         price: 41,
-        imageSrc: dress3,
+        imageSrc: suit_1,
         materials: 'Silk',
         deepDescription2: [
           {
@@ -793,73 +730,7 @@ export const categoriesList = [
               "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
           },
         ],
-        carouselImages: [suit],
-      },
-      {
-        description: 'Pattern: Adras, Uzbek ornament',
-
-        id: 16,
-        name: 'Silk Suit',
-        category: 'Suits',
-        price: 41,
-        imageSrc: dress3,
-        materials: 'Silk',
-        deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
-            title: 'Size & Fit',
-            description:
-              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
-          },
-          {
-            title: 'Details & Care',
-            description:
-              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
-          },
-          {
-            title: 'Delivery & Free Returns',
-            description:
-              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
-          },
-        ],
-        carouselImages: [inner_1_1, inner_1_2, inner_1_3],
-      },
-      {
-        description: 'Pattern: Adras, Uzbek ornament',
-
-        id: 20,
-        name: 'Silk Suit',
-        category: 'Suits',
-        price: 41,
-        imageSrc: dress3,
-        materials: 'Silk',
-        deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
-            title: 'Size & Fit',
-            description:
-              "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
-          },
-          {
-            title: 'Details & Care',
-            description:
-              'This product Reduces Waste. Find out more about NET SUSTAIN here. \n Slips on \n 95% recycled cashmere, 5% wool \n Hand wash or dry clean \n Made in Italy',
-          },
-          {
-            title: 'Delivery & Free Returns',
-            description:
-              "Find out more about our delivery options. \n Try items in the comfort of your own home. If they're not quite right, you've got 28 days to request an exchange or return and send them back to us. We'll collect them from your home or office for free.",
-          },
-        ],
-        carouselImages: [suit],
+        carouselImages: [suit_1, suit_2],
       },
     ],
   },

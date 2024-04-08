@@ -185,13 +185,13 @@ function AppComponent({ showComponent }) {
             </Routes>
           </div>
         </div>
-        {
+        {/* {
           <Havealook
             cart={cart}
             removeFromCart={removeFromCart}
             addToCart={addToCart}
           />
-        }
+        } */}
       </div>
     </Elements>
   )

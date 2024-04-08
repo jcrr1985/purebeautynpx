@@ -72,7 +72,7 @@ const CartPage = ({
             {cart.length && (
               <ProceedToPay cartTotal={cartTotal} itemCounters={itemCounters} />
             )}
-            <MoreSuggestions addToCart={addToCart} />
+            {/* <MoreSuggestions addToCart={addToCart} /> */}
           </>
         )}
       </div>

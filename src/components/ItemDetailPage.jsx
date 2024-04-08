@@ -28,9 +28,9 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
     setShowMoreLessButtons(true)
   }
 
-  const setSize = (size) => {
-    console.log('size', size)
+  const setSize = (size, index) => {
     setSelectedSize(size)
+    setSelectedSizeIndex(index)
   }
 
   useEffect(() => {
@@ -52,6 +52,8 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
     console.log('foundItem', foundItem)
   }, [itemId, foundItem])
 
+  const [selectedSizeIndex, setSelectedSizeIndex] = useState(null)
+
   return (
     <div className='item-detail-page'>
       <div className='left'>
@@ -70,7 +72,9 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
             foundItem.buttonSizes.map((size, index) => (
               <button
                 key={size}
-                className={'idp-button-size'}
+                className={`idp-button-size ${
+                  selectedSizeIndex === index ? 'clicked' : ''
+                }`}
                 onClick={() => {
                   setSize(size, index)
                 }}

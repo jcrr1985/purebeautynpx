@@ -128,6 +128,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_1_1, inner_1_2, inner_1_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description: 'Adras Pattern',
@@ -162,6 +163,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id2_1, inner_id2_2, inner_id2_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -198,6 +200,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id3_1, inner_id3_2, inner_id3_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description: 'Adras Pattern',
@@ -232,6 +235,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id4_1, inner_id4_2, inner_id4_3, inner_id4_4],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -267,6 +271,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id5_1, inner_id5_2, inner_id5_3, inner_id5_4],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description: 'Pattern: Adras, Uzbek ornament',
@@ -301,6 +306,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id6_1, inner_id6_2, inner_id6_3, inner_id6_4],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description: 'Pattern: Samarkand drape',
@@ -335,6 +341,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id7_1, inner_id7_2, inner_id7_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -370,6 +377,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id8_1, inner_id8_2, inner_id8_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -405,6 +413,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id9_1, inner_id9_2, inner_id9_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -440,6 +449,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id10_1, inner_id10_2, inner_id10_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -475,6 +485,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id11_1, inner_id11_2, inner_id11_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -510,6 +521,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id12_1, inner_id12_2, inner_id12_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description: 'Pattern: Adras, Uzbek ornament',
@@ -544,6 +556,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id13_1, inner_id13_2, inner_id13_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description: 'Pattern: red pomegranate',
@@ -578,6 +591,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id14_1, inner_id14_2, inner_id14_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
         description:
@@ -613,6 +627,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [inner_id15_1, inner_id15_2, inner_id15_3],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
     ],
   },
@@ -653,6 +668,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [dress],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
     ],
   },
@@ -692,6 +708,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [accesories_1],
+        buttonSizes: ['One size'],
       },
     ],
   },
@@ -731,6 +748,7 @@ export const categoriesList = [
           },
         ],
         carouselImages: [suit_1, suit_2],
+        buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
     ],
   },

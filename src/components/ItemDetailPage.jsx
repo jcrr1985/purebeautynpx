@@ -83,19 +83,21 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
         <p>Materials: {foundItem?.materials}</p>
         <p>Price: {foundItem?.price} $</p>
         <div className='idp-buttons--container'>
-          {buttonSizes.map((size, index) => (
-            <button
-              key={size}
-              className={`idp-button-size ${
-                selectedSizeIndex === index ? 'clicked' : ''
-              }`}
-              onClick={() => {
-                setSize(size, index)
-              }}
-            >
-              {size}
-            </button>
-          ))}
+          {foundItem &&
+            foundItem.buttonSizes &&
+            foundItem.buttonSizes.map((size, index) => (
+              <button
+                key={size}
+                className={`idp-button-size ${
+                  selectedSizeIndex === index ? 'clicked' : ''
+                }`}
+                onClick={() => {
+                  setSize(size, index)
+                }}
+              >
+                {size}
+              </button>
+            ))}
         </div>
         <div
           className={`idp--add-to-cart--buttons--container ${

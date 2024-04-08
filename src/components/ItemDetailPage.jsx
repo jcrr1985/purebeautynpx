@@ -4,10 +4,6 @@ import { categoriesList } from './itemsData'
 import ControlledAccordions from './Accordion'
 import { showAutoClosingMessage } from '../App'
 
-import dress1 from '../assets/images/dress-1.webp'
-import earrings from '../assets/images/earrings.jpg'
-import flower from '../assets/images/flower.webp'
-
 import ImageCarousel from './Carousel2'
 
 const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
@@ -16,16 +12,25 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
   const [selectedSize, setSelectedSize] = useState([])
   const [showMoreLessButtons, setShowMoreLessButtons] = useState(false)
 
-  const [category, setCategory] = useState(null)
+  useEffect(() => {
+    console.log('selectedSize', selectedSize)
+  }, [selectedSize])
 
   const handleAddToCart = () => {
     showAutoClosingMessage('Item added to cart', 1500, 'success')
-    addToCart(foundItem, 'add')
+    addToCart(
+      {
+        ...foundItem,
+        selectedSize,
+      },
+      'add',
+    )
     setShowMoreLessButtons(true)
   }
 
-  const setSize = (size, index) => {
-    setSelectedSizeIndex(index)
+  const setSize = (size) => {
+    console.log('size', size)
+    setSelectedSize(size)
   }
 
   useEffect(() => {
@@ -42,33 +47,10 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
       )
       if (foundItem) {
         setFoundItem(foundItem)
-        setCategory(category.name)
       }
     })
     console.log('foundItem', foundItem)
   }, [itemId, foundItem])
-
-  const [buttonSizes, setButtonsbuttonSizes] = useState(floweSizes)
-
-  //useeffect for logging category
-
-  useEffect(() => {
-    switch (category ? category.toLowerCase() : '') {
-      case 'flower':
-        setButtonsbuttonSizes(floweSizes)
-        break
-      case 'earrings':
-        setButtonsbuttonSizes(earringsSizes)
-        break
-      case 'necklaces':
-        setButtonsbuttonSizes(necklacesSizes)
-        break
-      default:
-        setButtonsbuttonSizes(defaultSizes)
-    }
-  }, [category, itemId])
-
-  const [selectedSizeIndex, setSelectedSizeIndex] = useState(-1)
 
   return (
     <div className='item-detail-page'>
@@ -88,9 +70,7 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
             foundItem.buttonSizes.map((size, index) => (
               <button
                 key={size}
-                className={`idp-button-size ${
-                  selectedSizeIndex === index ? 'clicked' : ''
-                }`}
+                className={'idp-button-size'}
                 onClick={() => {
                   setSize(size, index)
                 }}
@@ -106,16 +86,7 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
         >
           {' '}
           {!showMoreLessButtons ? (
-            <button
-              disabled={selectedSizeIndex < 0}
-              title={selectedSizeIndex === 0 ? 'Select a size' : ''}
-              className={`add-to-cart${
-                selectedSizeIndex < 0 ? ' disabled' : ''
-              }`}
-              onClick={handleAddToCart}
-            >
-              Add To Cart
-            </button>
+            <button onClick={handleAddToCart}>Add To Cart</button>
           ) : (
             <div className='cart-page--buttons--container'>
               <button
@@ -149,21 +120,3 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
 }
 
 export default ItemDetailPage
-
-const floweSizes = [
-  'xx small',
-  'x small',
-  'small',
-  'medium',
-  'large',
-  'x large',
-  'xx large',
-]
-
-const earringsSizes = ['small', 'medium', 'large']
-
-const necklacesSizes = ['small', 'medium', 'large', 'x large']
-
-const defaultSizes = ['XS', 'S', 'M', 'L', 'XL']
-
-const images = [dress1, earrings, flower]

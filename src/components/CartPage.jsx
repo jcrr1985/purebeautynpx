@@ -1,5 +1,4 @@
 import ProceedToPay from './ProceedToPay'
-import MoreSuggestions from './MoreSuggestions'
 import BackButton from './BackButton'
 import CartCounter from './CartCounter'
 import ButtonsMoreLess from './ButtonsMoreLess'
@@ -49,7 +48,10 @@ const CartPage = ({
                       <strong>Materials:</strong> {item.materials}
                     </p>
                     <p>
-                      <strong>Size:</strong> {item.selectedSizes.join(', ')}
+                      <strong>Size:</strong> {item.selectedSize}
+                    </p>
+                    <p>
+                      <strong>Price:</strong> {item.price}
                     </p>
                     <div className='quantity-buttons'>
                       <ButtonsMoreLess item={item} addToCart={addToCart} />

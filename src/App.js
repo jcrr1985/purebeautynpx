@@ -68,6 +68,7 @@ function AppComponent({ showComponent }) {
 
   // Función para agregar un artículo al carrito
   const addToCart = (item, operator) => {
+    console.log('item', item)
     const existingItem = cart.find((cartItem) => cartItem.id === item.id)
     if (existingItem) {
       if (operator === 'add') {

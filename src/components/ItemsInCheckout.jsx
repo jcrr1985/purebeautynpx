@@ -47,8 +47,8 @@ const ItemsInCheckout = ({ cart, removeFromCart }) => {
             <CardContent>
               <Typography variant='body2'>Name: {item.name}</Typography>
               <Typography variant='body2'>Qty: {item.quantity}</Typography>
-              <Typography variant='body2'>Size: {item.size}</Typography>
               <Typography variant='body2'>Price: {item.price}</Typography>
+              <Typography variant='body2'>Size: {item.selectedSize}</Typography>
             </CardContent>
             <CardActions>
               <Button

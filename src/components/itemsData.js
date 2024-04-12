@@ -98,11 +98,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -132,11 +127,6 @@ export const categoriesList = [
         materials: 'Leon.',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -170,11 +160,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -204,11 +189,6 @@ export const categoriesList = [
         materials: 'Leon.',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -241,11 +221,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -276,11 +251,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -310,11 +280,6 @@ export const categoriesList = [
         materials: 'Camel wool',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -347,11 +312,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -382,11 +342,6 @@ export const categoriesList = [
         materials: 'Cashmere',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -419,11 +374,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -454,11 +404,6 @@ export const categoriesList = [
         materials: 'Cashmere',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -491,11 +436,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -525,11 +465,6 @@ export const categoriesList = [
         materials: 'Silk',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -561,11 +496,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -596,11 +526,6 @@ export const categoriesList = [
         materials: 'Silk',
 
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:
@@ -638,11 +563,6 @@ export const categoriesList = [
         materials: 'Silk',
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -678,11 +598,6 @@ export const categoriesList = [
 
         deepDescription2: [
           {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
-          {
             title: 'Size & Fit',
             description:
               "Fits true to size, take your normal size \n Designed for a slightly loose fit \n Mid-weight knit \n Model is 177cm/ 5'10' and is wearing a size Small \n Product Code: 1337796",
@@ -717,11 +632,6 @@ export const categoriesList = [
         imageSrc: suit_1,
         materials: 'Silk',
         deepDescription2: [
-          {
-            title: "Editor's Notes",
-            description:
-              "Stella McCartney’s designs always have wear-forever appeal. Blissfully soft and effortlessly cool, this cape-effect turtleneck sweater from the 'Horse Power' collection is knitted with 95% recycled cashmere. The 'Oat' shade is truly timeless. \n Discover how to expertly care for your knitwear here. \n This product Reduces Waste. Find out more about NET SUSTAIN here.",
-          },
           {
             title: 'Size & Fit',
             description:

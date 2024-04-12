@@ -68,9 +68,14 @@ function AppComponent({ showComponent }) {
 
   // Función para agregar un artículo al carrito
   const addToCart = (item, operator) => {
-    console.log('item', item)
-    const existingItem = cart.find((cartItem) => cartItem.id === item.id)
-    if (existingItem) {
+    const existingItemIndex = cart.findIndex(
+      (cartItem) =>
+        cartItem.id === item.id && cartItem.selectedSize === item.selectedSize,
+    )
+
+    if (existingItemIndex !== -1) {
+      const existingItem = cart[existingItemIndex]
+
       if (operator === 'add') {
         showAutoClosingMessage('Item added to cart', 1800, 'success')
         existingItem.quantity += 1
@@ -78,21 +83,10 @@ function AppComponent({ showComponent }) {
         showAutoClosingMessage('Item removed from cart', 1800, 'success')
         existingItem.quantity -= 1
       }
-      // Actualizar contador de ítem
-      setItemCounters((prevCounters) => ({
-        ...prevCounters,
-        [item.id]: existingItem.quantity,
-      }))
 
-      const existingItemIndex = cart.findIndex(
-        (cartItem) => cartItem.id === existingItem.id,
-      )
-      if (existingItemIndex !== -1) {
-        const updatedCarro = [...cart]
-        updatedCarro.splice(existingItemIndex, 1, existingItem)
-        setCart(updatedCarro)
-        console.log(3)
-      }
+      const updatedCart = [...cart]
+      updatedCart[existingItemIndex] = existingItem
+      setCart(updatedCart)
 
       setCartTotal(
         (prevTotal) =>
@@ -101,15 +95,19 @@ function AppComponent({ showComponent }) {
     } else {
       item.quantity = 1
       showAutoClosingMessage('Item added to cart', 1800, 'success')
-      // Inicializar contador de ítem
-      setItemCounters((prevCounters) => ({
-        ...prevCounters,
-        [item.id]: 1,
-      }))
-      const itemWithSelectedSizes = { ...item, selectedSizes }
-      setCart((prevCart) => [...prevCart, itemWithSelectedSizes])
+      const newItem = { ...item, selectedSize: item.selectedSize }
+
+      setCart((prevCart) => [...prevCart, newItem])
       setCartTotal((prevTotal) => prevTotal + item.price)
     }
+
+    // Actualizar contadores de cantidad de cada ítem en el carrito
+    setItemCounters((prevCounters) => ({
+      ...prevCounters,
+      [`${item.id}-${item.selectedSize}`]:
+        (prevCounters[`${item.id}-${item.selectedSize}`] || 0) +
+        (operator === 'add' ? 1 : -1),
+    }))
   }
 
   // Función para eliminar un artículo del carrito

@@ -651,7 +651,7 @@ button {
   gap: 10px;
 }
 
-.idp-button-size:hover {
+.idp-button:hover {
   background-color: #322237;
   color: #fff;
 }
@@ -664,11 +664,11 @@ button {
   width: 40%;
 }
 
-.idp-button-size {
+.idp-button {
   width: 11rem !important;
 }
 
-.idp-button-size.selected {
+.idp-button.selected {
   background-color: #322237;
   color: #fff;
 }

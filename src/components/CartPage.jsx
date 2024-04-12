@@ -38,7 +38,10 @@ const CartPage = ({
           <>
             <div className='grid-container'>
               {cart?.map((item, index) => (
-                <div key={index} className='cart-item up'>
+                <div
+                  key={`${item.id}-${item.selectedSize}-${index}`}
+                  className='cart-item up'
+                >
                   <img src={item.imageSrc} alt={item.description} />
                   <div className='cart-legend'>
                     <p>

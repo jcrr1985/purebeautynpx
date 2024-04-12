@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline'
 import { categoriesList } from './itemsData'
 import ControlledAccordions from './Accordion'
 import { showAutoClosingMessage } from '../App'
@@ -10,7 +11,8 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
   const { itemId } = useParams()
   const [foundItem, setFoundItem] = useState(null)
   const [selectedSize, setSelectedSize] = useState([])
-  const [showMoreLessButtons, setShowMoreLessButtons] = useState(false)
+
+  const [buttonStatus, setButtonStatus] = useState('default')
 
   useEffect(() => {
     console.log('selectedSize', selectedSize)
@@ -25,7 +27,11 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
       },
       'add',
     )
-    setShowMoreLessButtons(true)
+
+    setButtonStatus('confirmed')
+    setTimeout(() => {
+      setButtonStatus('default')
+    }, 5000)
   }
 
   const setSize = (size, index) => {
@@ -49,7 +55,6 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
         setFoundItem(foundItem)
       }
     })
-    console.log('foundItem', foundItem)
   }, [itemId, foundItem])
 
   const [selectedSizeIndex, setSelectedSizeIndex] = useState(null)
@@ -72,7 +77,7 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
             foundItem.buttonSizes.map((size, index) => (
               <button
                 key={size}
-                className={`idp-button-size ${
+                className={`idp-button ${
                   selectedSizeIndex === index ? 'clicked' : ''
                 }`}
                 onClick={() => {
@@ -83,35 +88,17 @@ const ItemDetailPage = ({ addToCart, returnSelectedSizes }) => {
               </button>
             ))}
         </div>
-        <div
-          className={`idp--add-to-cart--buttons--container ${
-            showMoreLessButtons ? 'flex-column' : ''
-          }`}
-        >
-          {' '}
-          {!showMoreLessButtons ? (
-            <button onClick={handleAddToCart}>Add To Cart</button>
-          ) : (
-            <div className='cart-page--buttons--container'>
-              <button
-                className={`btn-more-less ${
-                  showMoreLessButtons ? 'custom-width' : ''
-                }`}
-                onClick={() => {
-                  addToCart(foundItem, 'add')
-                }}
-              >
-                +
-              </button>
-              <button
-                className='btn-more-less'
-                onClick={() => addToCart(foundItem, 'substract')}
-              >
-                -
-              </button>
-            </div>
-          )}
-          <button className='add-to-wishlist'>Add to Wish List</button>
+        <div className='idp--add-to-cart--buttons--container'>
+          <button onClick={handleAddToCart} className='idp-button'>
+            {buttonStatus === 'confirmed' ? (
+              <CheckCircleOutlineIcon />
+            ) : (
+              'Add To Cart'
+            )}
+          </button>
+          <button className='add-to-wishlist idp-button'>
+            Add to Wish List
+          </button>
         </div>
       </div>
       {foundItem && (

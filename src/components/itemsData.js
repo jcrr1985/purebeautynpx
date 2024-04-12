@@ -1,15 +1,6 @@
 import dress1 from '../assets/images/dress-1.webp'
-import dress2 from '../assets/images/model1.jpg'
-import dress3 from '../assets/images/model2.jpg'
-import dress4 from '../assets/images/model3.jpg'
-import dress5 from '../assets/images/model4.jpg'
-import dress6 from '../assets/images/model5.jpg'
 import dress from '../assets/images/dress.jpg'
 import acces from '../assets/images/acces.jpg'
-import dress9 from '../assets/images/model8.jpg'
-import dress10 from '../assets/images/model9.jpg'
-import suit from '../assets/images/suit.jpg'
-
 // inner images
 
 import inner_1_1 from '../assets/images/id1_1.jpg'

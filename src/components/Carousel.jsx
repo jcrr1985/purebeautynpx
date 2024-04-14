@@ -6,13 +6,10 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft'
 import ChevronRightIcon from '@mui/icons-material/ChevronRight'
 
 const Carousel = () => {
-  const [itemsAtTime, setItemsAtTime] = useState(5)
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth)
   const [numOfPicsAtTime, setNumOfPicsAtTime] = useState(3)
 
   const handleResize = () => {
     const newWidth = window.innerWidth
-    setWindowWidth(newWidth)
 
     if (newWidth < 750) {
       setNumOfPicsAtTime(1)

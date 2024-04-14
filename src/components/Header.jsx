@@ -21,6 +21,9 @@ import DialogComponent from './Dialog'
 import axios from 'axios'
 import { showAutoClosingMessage } from '../App'
 
+import MenuIcon from '@mui/icons-material/Menu'
+import { Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material'
+
 const Header = ({ cart, itemCounters }) => {
   const [searchBarInputOpen, setSearchBarInputOpen] = useState(false)
   const location = useLocation()
@@ -29,6 +32,22 @@ const Header = ({ cart, itemCounters }) => {
   const [isLoginModalOpen, setLoginModalOpen] = useState(false)
   const [username, setUsername] = useState('')
   const [password, setPassword] = useState('')
+
+  const [isLogged, setIsLogged] = useState(false)
+
+  const [isMobile, setIsMobile] = useState(false)
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
 
   const openLoginModal = () => {
     setLoginModalOpen(true)
@@ -79,8 +98,6 @@ const Header = ({ cart, itemCounters }) => {
       showAutoClosingMessage('invalid credentials', 2000, 'error')
     }
   }
-
-  const [isLogged, setIsLogged] = useState(false)
 
   let tooltipContent
 
@@ -142,6 +159,18 @@ const Header = ({ cart, itemCounters }) => {
     },
   ]
 
+  const toggleDrawer = (open) => (event) => {
+    console.log('event', event)
+    if (
+      event.type === 'keydown' &&
+      (event.key === 'Tab' || event.key === 'Shift')
+    ) {
+      return
+    }
+
+    setIsDrawerOpen(open)
+  }
+
   return (
     <div style={{ marginBottom: '2%' }}>
       <header>
@@ -169,6 +198,44 @@ const Header = ({ cart, itemCounters }) => {
             <CartCounter cartItemQuantity={totalItemsInCart} />
           </Link>
         </div>
+        {isMobile && (
+          <div>
+            <IconButton
+              edge='start'
+              color='inherit'
+              aria-label='menu'
+              onClick={toggleDrawer(true)}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Drawer
+              anchor='right'
+              open={isDrawerOpen}
+              onClose={toggleDrawer(false)}
+            >
+              <div
+                role='presentation'
+                onClick={toggleDrawer(false)}
+                onKeyDown={toggleDrawer(false)}
+              >
+                <List>
+                  {[
+                    'All items',
+                    'Dresses',
+                    'Suits',
+                    'Outwear',
+                    'About',
+                    'Contacts',
+                  ].map((text, index) => (
+                    <ListItem button key={text}>
+                      <ListItemText primary={text} />
+                    </ListItem>
+                  ))}
+                </List>
+              </div>
+            </Drawer>
+          </div>
+        )}
       </header>
 
       <div

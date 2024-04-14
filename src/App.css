@@ -133,12 +133,6 @@ a {
 
 .main {
   height: 90vh;
-  /* background-image: url("./assets/images/background2.jpg"); */
-
-
-  background-position: center;
-  background-size: inherit;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -146,15 +140,11 @@ a {
 
 .main-right-div {
   width: 40%;
-
-}
-
-.main-right-div img {
-  transform: scale(1.2);
-  position: absolute;
-  top: 22%;
-  right: 14%;
-
+  background-image: url('../public/static/img/brooch-main.png');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 105%;
 }
 
 .rotated-text {
@@ -1005,6 +995,14 @@ a {
   background: #ccc !important;
 }
 
+.under-header {
+  section {
+    margin-bottom: 3em;
+  }
+}
+
+
+
 /** MEDIA QUERIES **/
 
 @media screen and (max-width: 768px) {
@@ -1193,5 +1191,26 @@ a {
     font-size: 1.5rem !important;
   }
 
+  .main {
+    width: 100%;
+    flex-direction: column;
+    justify-content: flex-start;
+    height: auto;
+  }
 
+  .main-content {
+    order: 2;
+    position: inherit;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: row
+  }
+
+  .main-right-div {
+    width: 100%;
+    background-image: url('../public/static/img/main_mobile.png');
+    background-size: inherit;
+    height: 50vh;
+  }
 }

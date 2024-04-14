@@ -22,6 +22,7 @@ const Carousel = () => {
   }
 
   useEffect(() => {
+    handleResize()
     window.addEventListener('resize', handleResize)
 
     return () => {
@@ -38,7 +39,7 @@ const Carousel = () => {
     const newStartIndex =
       direction === 'left'
         ? Math.max(startIndex - step, 0)
-        : Math.min(startIndex + step, categoriesList.length - 3)
+        : Math.min(startIndex + step, categoriesList.length - numOfPicsAtTime)
     setStartIndex(newStartIndex)
   }
 

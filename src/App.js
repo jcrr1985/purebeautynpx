@@ -129,7 +129,7 @@ function AppComponent({ showComponent }) {
 
         <div className='under-header'>
           {showComponent && <Main />}
-          <div id='categories'>
+          <section id='categories'>
             <Routes>
               {/* HOME */}
               <Route path='/' element={<Categories />} />
@@ -182,7 +182,7 @@ function AppComponent({ showComponent }) {
               <Route path='/success' element={<Success setCart={setCart} />} />
               <Route path='cart-empty' element={<CartEmpty />} />
             </Routes>
-          </div>
+          </section>
         </div>
         {/* {
           <Havealook

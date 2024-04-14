@@ -1,6 +1,5 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
-import mainRightImage from './../assets/images/brooch-main.png'
 
 const Main = () => {
   const navigate = useNavigate()
@@ -11,10 +10,8 @@ const Main = () => {
     categoriesElement.scrollIntoView({ behavior: 'smooth' })
   }
 
-  console.log('mainRightImage', mainRightImage)
-
   return (
-    <div className='main'>
+    <section className='main'>
       <div className='main-content'>
         <div className='mrc'>
           <p className='font-light title' style={{ width: 'fit-content' }}>
@@ -25,17 +22,8 @@ const Main = () => {
           </button>
         </div>
       </div>
-      <div
-        className='main-right-div'
-        style={{
-          backgroundImage: `url(${mainRightImage})`,
-          backgroundPosition: 'center',
-          backgroundSize: 'cover',
-          backgroundRepeat: 'no-repeat',
-          height: '105%',
-        }}
-      ></div>
-    </div>
+      <div className='main-right-div'></div>
+    </section>
   )
 }
 

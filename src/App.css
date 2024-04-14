@@ -311,7 +311,7 @@ a {
 
 .header-right {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   width: 8rem;
   align-items: center;
   position: absolute;
@@ -1125,7 +1125,6 @@ a {
 
   .header-right {
     display: flex;
-    justify-content: flex-end;
     align-items: center;
     position: relative;
     top: 1rem;

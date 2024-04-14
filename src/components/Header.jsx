@@ -197,45 +197,50 @@ const Header = ({ cart, itemCounters }) => {
             <ShoppingCartIcon />
             <CartCounter cartItemQuantity={totalItemsInCart} />
           </Link>
-        </div>
-        {isMobile && (
-          <div>
-            <IconButton
-              edge='start'
-              color='inherit'
-              aria-label='menu'
-              onClick={toggleDrawer(true)}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Drawer
-              anchor='right'
-              open={isDrawerOpen}
-              onClose={toggleDrawer(false)}
-            >
-              <div
-                role='presentation'
-                onClick={toggleDrawer(false)}
-                onKeyDown={toggleDrawer(false)}
+          {isMobile && (
+            <div>
+              <IconButton
+                edge='start'
+                color='inherit'
+                aria-label='menu'
+                onClick={toggleDrawer(true)}
               >
-                <List>
-                  {[
-                    'All items',
-                    'Dresses',
-                    'Suits',
-                    'Outwear',
-                    'About',
-                    'Contacts',
-                  ].map((text, index) => (
-                    <ListItem button key={text}>
-                      <ListItemText primary={text} />
-                    </ListItem>
-                  ))}
-                </List>
-              </div>
-            </Drawer>
-          </div>
-        )}
+                <MenuIcon />
+              </IconButton>
+              <Drawer
+                anchor='right'
+                open={isDrawerOpen}
+                onClose={toggleDrawer(false)}
+                sx={{
+                  '.MuiDrawer-paper': {
+                    width: '80%',
+                  },
+                }}
+              >
+                <div
+                  role='presentation'
+                  onClick={toggleDrawer(false)}
+                  onKeyDown={toggleDrawer(false)}
+                >
+                  <List>
+                    {[
+                      'All items',
+                      'Dresses',
+                      'Suits',
+                      'Outwear',
+                      'About',
+                      'Contacts',
+                    ].map((text, index) => (
+                      <ListItem button key={text}>
+                        <ListItemText primary={text} />
+                      </ListItem>
+                    ))}
+                  </List>
+                </div>
+              </Drawer>
+            </div>
+          )}
+        </div>
       </header>
 
       <div

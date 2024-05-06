@@ -80,13 +80,13 @@ export const categoriesList = [
     items: [
       {
         description:
-          'Pattern: blue pomegranate. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue',
+          'Pattern: blue pomegranate. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue.',
         id: 1,
         name: 'Abaya',
         category: 'Outerwear',
         price: 126,
         imageSrc: inner_1_1,
-        materials: 'Cashmere',
+        materials: 'Cashmere.',
 
         deepDescription2: [
           {
@@ -202,7 +202,7 @@ export const categoriesList = [
       },
       {
         description:
-          'Pattern: Samarkand ornament. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue',
+          'Pattern: Samarkand ornament. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue.',
         id: 5,
         name: 'Abaya',
         category: 'Outerwear',
@@ -232,7 +232,7 @@ export const categoriesList = [
         buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
-        description: 'Pattern: Adras, Uzbek ornament',
+        description: 'Pattern: Adras, Uzbek ornament.',
         id: 6,
         name: 'Overcoat',
         category: 'Outerwear',
@@ -355,7 +355,7 @@ export const categoriesList = [
       },
       {
         description:
-          'Pattern: blue pomegranate. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue',
+          'Pattern: blue pomegranate. Color: pink, black, light blue, white, grey, red, purple, brown, dark blue.',
         id: 10,
         name: 'Abaya',
         category: 'Outerwear',
@@ -386,7 +386,7 @@ export const categoriesList = [
       },
       {
         description:
-          'Pattern: blue pomegranate.  Color: pink, black, light blue, white, grey, red, purple, brown, dark blue',
+          'Pattern: blue pomegranate.  Color: pink, black, light blue, white, grey, red, purple, brown, dark blue.',
         id: 11,
         name: 'Abaya',
         category: 'Outerwear',
@@ -477,7 +477,7 @@ export const categoriesList = [
         buttonSizes: ['46', '48', '50', '52', '54', '58', '60'],
       },
       {
-        description: 'Pattern: red pomegranate',
+        description: 'Pattern: red pomegranate.',
         id: 14,
         name: 'Abaya',
         category: 'Outerwear',
@@ -580,7 +580,7 @@ export const categoriesList = [
     src: acces,
     items: [
       {
-        description: 'Pattern: red pomegranate',
+        description: 'Pattern: red pomegranate.',
         id: 19,
         name: 'Scarf',
         category: 'Accessory',

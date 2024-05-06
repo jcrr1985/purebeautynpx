@@ -66,6 +66,8 @@ import inner_id15_1 from '../assets/images/id15_1.webp'
 import inner_id15_2 from '../assets/images/id15_2.webp'
 import inner_id15_3 from '../assets/images/id15_3.webp'
 
+import inner_id18_1 from '../assets/images/id18_1.webp'
+
 import suit_1 from '../assets/images/suit_1.webp'
 import suit_2 from '../assets/images/suit_2.webp'
 

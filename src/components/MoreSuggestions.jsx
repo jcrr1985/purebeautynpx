@@ -1,5 +1,5 @@
 import React from 'react'
-import necklace from '../assets/images/necklace.jpeg'
+import earrings from '../assets/images/earrings.webp'
 
 const MoreSuggestions = ({ removeFromCart, addToCart }) => {
   const handleAddToCart = (item, operator) => {
@@ -46,7 +46,7 @@ const dummySuggestedItems = [
     name: 'Valkyrie soul',
     category: 'Brooches',
     price: 50,
-    imageSrc: necklace,
+    imageSrc: earrings,
     materials: 'Sapphires, Vanntzium',
   },
   {
@@ -54,7 +54,7 @@ const dummySuggestedItems = [
     name: 'Silver Chainmail',
     category: 'Brooches',
     price: 55,
-    imageSrc: necklace,
+    imageSrc: earrings,
     materials: 'Lolita, Aquamarine, Zerdiviano',
   },
   {
@@ -62,7 +62,7 @@ const dummySuggestedItems = [
     name: 'Sword of Vermilion',
     category: 'Earrings',
     price: 25,
-    imageSrc: necklace,
+    imageSrc: earrings,
     materials: 'Gold, Silver, Diamond',
   },
 ]

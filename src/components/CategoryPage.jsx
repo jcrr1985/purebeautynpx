@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import Navbar from './Navbar'
 import ItemElement from './ItemElement'
@@ -6,7 +6,20 @@ import itemsData from './itemsData'
 import { Grid } from '@mui/material'
 
 const CategoryPage = ({ addToCart }) => {
+  const [isMobile, setIsMobile] = useState(false)
   const { category } = useParams()
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768)
+    }
+
+    handleResize()
+
+    window.addEventListener('resize', handleResize)
+    return () => window.removeEventListener('resize', handleResize)
+  }, [])
+
   const filteredEntities =
     category === 'all-items'
       ? itemsData
@@ -18,11 +31,13 @@ const CategoryPage = ({ addToCart }) => {
     <div className='cart-page-wrapper'>
       <Grid container spacing={3}>
         <div className='all-cp'>
-          <div className='left-cp'>
-            <Grid item xs={12} md={4} lg={3}>
-              <Navbar selectedCategoria={category} />
-            </Grid>
-          </div>
+          {!isMobile && (
+            <div className='left-cp'>
+              <Grid item xs={12} md={4} lg={3}>
+                <Navbar selectedCategoria={category} />
+              </Grid>
+            </div>
+          )}
           <div className='right-cp'>
             <Grid item xs={12}>
               <Grid container spacing={3}>

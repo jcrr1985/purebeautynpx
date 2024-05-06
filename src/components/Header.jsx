@@ -23,6 +23,7 @@ import { showAutoClosingMessage } from '../App'
 
 import MenuIcon from '@mui/icons-material/Menu'
 import { Drawer, IconButton, List, ListItem, ListItemText } from '@mui/material'
+import categoriesList from './itemsData'
 
 const Header = ({ cart, itemCounters }) => {
   const [searchBarInputOpen, setSearchBarInputOpen] = useState(false)
@@ -223,17 +224,15 @@ const Header = ({ cart, itemCounters }) => {
                   onKeyDown={toggleDrawer(false)}
                 >
                   <List>
-                    {[
-                      'All items',
-                      'Dresses',
-                      'Suits',
-                      'Outwear',
-                      'About',
-                      'Contacts',
-                    ].map((text, index) => (
-                      <ListItem button key={text}>
-                        <ListItemText primary={text} />
-                      </ListItem>
+                    {categoriesList.map((category, index) => (
+                      <Link
+                        to={`/category/${category.name.toLowerCase()}`}
+                        key={category}
+                      >
+                        <ListItem button>
+                          <ListItemText primary={category.name} />
+                        </ListItem>
+                      </Link>
                     ))}
                   </List>
                 </div>
